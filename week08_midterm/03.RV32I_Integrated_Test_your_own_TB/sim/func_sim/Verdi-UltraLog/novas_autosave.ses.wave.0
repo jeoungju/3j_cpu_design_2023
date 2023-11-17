@@ -1,0 +1,79 @@
+Magic 271485
+Revision Verdi_P-2019.06-SP2-12
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 25 1920 738 147 76
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/user/project/lab_cpu/week08_midterm/03.RV32I_Integrated_Test_your_own_TB/sim/func_sim/wave.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 219.697666 308.421724
+cursor 220.000000
+marker 310.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 23
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "PC"
+activeDirFile "" "/home/user/project/lab_cpu/week08_midterm/03.RV32I_Integrated_Test_your_own_TB/sim/func_sim/wave.fsdb"
+addSignal -h 15 /cpu_tb/CPU/icpu/i_datapath/PC[31:0]
+addSignal -h 15 -holdScope PC_plus4[31:0]
+addSignal -h 15 -holdScope clk
+addSignal -h 15 /cpu_tb/CPU/icpu/n_rst
+addSubGroup "CONTROL"
+addSignal -h 15 -UNSIGNED -BIN /cpu_tb/CPU/icpu/i_datapath/PCSrc[1:0]
+addSignal -h 15 -UNSIGNED -BIN -holdScope ResultSrc[1:0]
+addSignal -h 15 /cpu_tb/CPU/icpu/MemWrite
+addSignal -c ID_YELLOW5 -ls solid -lw 1 -h 15 -UNSIGNED -BIN /cpu_tb/CPU/icpu/i_datapath/ALUSrcA[1:0]
+addSignal -c ID_PURPLE5 -ls solid -lw 1 -h 15 -holdScope ALUSrcB
+addSignal -h 15 -UNSIGNED -BIN -holdScope ImmSrc[2:0]
+addSignal -h 15 /cpu_tb/CPU/icpu/Branch
+addSignal -h 15 /cpu_tb/CPU/icpu/i_datapath/RegWrite
+endSubGroup "CONTROL"
+addSubGroup "SrcA, Imm"
+endSubGroup "SrcA, Imm"
+addSignal -c ID_YELLOW5 -ls solid -lw 1 -h 15 -UNSIGNED -HEX /cpu_tb/CPU/icpu/i_datapath/SrcA[31:0]
+addSignal -h 15 -holdScope SrcB[31:0]
+addSignal -c ID_PURPLE5 -ls solid -lw 1 -h 15 -UNSIGNED -HEX -holdScope ImmExt[31:0]
+addSubGroup "Result"
+addSignal -h 15 /cpu_tb/CPU/icpu/i_datapath/rf/wa[4:0]
+addSignal -h 15 -UNSIGNED -BIN /cpu_tb/CPU/icpu/i_datapath/ALUControl[4:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope ALUResult[31:0]
+addSignal -h 15 -UNSIGNED -HEX /cpu_tb/CPU/icpu/i_datapath/rf/wd[31:0]
+endSubGroup "Result"
+addGroup "G3"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+

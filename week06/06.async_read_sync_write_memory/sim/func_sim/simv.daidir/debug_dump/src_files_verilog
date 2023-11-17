@@ -1,0 +1,4 @@
+/home/user/project/lab_cpu/week06/06.async_read_sync_write_memory/sim/func_sim/mem_path.vh
+/home/user/project/lab_cpu/week06/06.async_read_sync_write_memory/sim/func_sim/sim_define.v
+/home/user/project/lab_cpu/week06/06.async_read_sync_write_memory/src/rtl/ASYNC_RAM_DP_WBE.v
+/home/user/project/lab_cpu/week06/06.async_read_sync_write_memory/testbench/testbench.v

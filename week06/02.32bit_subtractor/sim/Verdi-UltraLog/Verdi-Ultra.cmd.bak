@@ -1,0 +1,100 @@
+debImport "-sv" "-f" "run.f"
+wvCreateWindow
+schCreateWindow -delim "." -win $_nSchema1 -scope "testbench"
+schSetOptions -win $_nSchema3 -portName on
+schSetOptions -win $_nSchema3 -pinName on
+schSetOptions -win $_nSchema3 -instName on
+schSetOptions -win $_nSchema3 -localNetName on
+schSetOptions -win $_nSchema3 -completeName on
+schSetOptions -win $_nSchema3 -highContrastMode on
+schSelect -win $_nSchema3 -inst "u_32bit_sub"
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvOpenFile -win $_nWave2 \
+           {/home/user/project/lab_cpu/week06/02.32bit_subtractor/sim/testbench.fsdb}
+schSelect -win $_nSchema3 -inst "u_32bit_sub"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+wvSelectGroup -win $_nWave2 {G2}
+wvSelectSignal -win $_nWave2 {( "G1" 3 )} 
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvSelectSignal -win $_nWave2 {( "G1" 1 )} 
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvSetPosition -win $_nWave2 {("G1" 3)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetCursor -win $_nWave2 37.056293 -snap {("G3" 0)}
+wvZoomAll -win $_nWave2
+wvSetRadix -win $_nWave2 -2Com
+wvSelectSignal -win $_nWave2 {( "G2" 1 )} 
+wvSetRadix -win $_nWave2 -format UDec
+wvSelectGroup -win $_nWave2 {G2}
+wvSelectSignal -win $_nWave2 {( "G2" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 1 )} 
+wvSetRadix -win $_nWave2 -format Hex
+wvSelectSignal -win $_nWave2 {( "G2" 1 )} 
+wvSetRadix -win $_nWave2 -format Bin
+wvSetRadix -win $_nWave2 -Unsigned
+wvSelectSignal -win $_nWave2 {( "G2" 1 )} 
+wvSetRadix -win $_nWave2 -format Hex
+wvSetCursor -win $_nWave2 411.200868 -snap {("G3" 0)}
+wvSetCursor -win $_nWave2 725.283943 -snap {("G3" 0)}
+wvSelectSignal -win $_nWave2 {( "G1" 2 )} {( "G2" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 1 2 )} {( "G2" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 1 2 )} {( "G2" 1 )} 
+wvSetRadix -win $_nWave2 -format UDec
+wvSetCursor -win $_nWave2 767.988221 -snap {("G3" 0)}
+wvSetCursor -win $_nWave2 768.676999 -snap {("G3" 0)}
+wvSetRadix -win $_nWave2 -2Com
+wvSetRadix -win $_nWave2 -2Com
+wvSelectSignal -win $_nWave2 {( "G1" 2 )} 
+wvSetRadix -win $_nWave2 -2Com
+wvSetCursor -win $_nWave2 761.789213 -snap {("G3" 0)}
+wvSetCursor -win $_nWave2 765.921885 -snap {("G3" 0)}
+wvSetCursor -win $_nWave2 763.855549 -snap {("G2" 1)}
+wvSetCursor -win $_nWave2 731.482951 -snap {("G2" 1)}
+wvSetCursor -win $_nWave2 721.840050 -snap {("G3" 0)}
+wvSelectSignal -win $_nWave2 {( "G1" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 1 2 )} {( "G2" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 1 2 )} {( "G2" 1 )} 
+wvSetRadix -win $_nWave2 -format Hex
+wvSetRadix -win $_nWave2 -2Com
+wvSelectGroup -win $_nWave2 {G3}
+schDeselectAll -win $_nSchema3
+schSelect -win $_nSchema3 -inst "u_32bit_sub"
+wvSetCursor -win $_nWave2 779.697458 -snap {("G1" 1)}
+wvSetCursor -win $_nWave2 779.697458 -snap {("G1" 2)}
+wvSetCursor -win $_nWave2 699.799132 -snap {("G2" 0)}
+wvSetCursor -win $_nWave2 703.931804 -snap {("G1" 2)}
+wvSetCursor -win $_nWave2 741.814631 -snap {("G1" 1)}
+wvSetCursor -win $_nWave2 747.324861 -snap {("G1" 2)}
+wvSelectSignal -win $_nWave2 {( "G1" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 1 )} 
+wvSetRadix -win $_nWave2 -format Bin
+wvSelectGroup -win $_nWave2 {G1}
+wvSelectSignal -win $_nWave2 {( "G1" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 1 )} 
+wvSetRadix -win $_nWave2 -format Hex
+wvSelectSignal -win $_nWave2 {( "G1" 2 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 1 2 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 1 2 )} 
+wvSetRadix -win $_nWave2 -format UDec
+wvSelectGroup -win $_nWave2 {G1}
+wvSelectSignal -win $_nWave2 {( "G1" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 1 )} 
+wvSetRadix -win $_nWave2 -format Hex
+wvSetCursor -win $_nWave2 432.553007 -snap {("G3" 0)}
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+wvZoomAll -win $_nWave2
+wvSetCursor -win $_nWave2 613.013019 -snap {("G3" 0)}
+wvSaveSignal -win $_nWave2 \
+           "/home/user/project/lab_cpu/week06/02.32bit_subtractor/sim/signal.rc"
+debExit

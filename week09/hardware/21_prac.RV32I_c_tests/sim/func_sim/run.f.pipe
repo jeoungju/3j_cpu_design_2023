@@ -1,0 +1,7 @@
+./sim_define.v
+
+
+../../src/rtl/SMU_RV32I_System.v
+
+//../../testbench/cpu_tb.v
+../../testbench/isa_testbench.v

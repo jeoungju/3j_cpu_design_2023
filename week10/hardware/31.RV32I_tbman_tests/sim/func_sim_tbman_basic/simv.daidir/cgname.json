@@ -1,0 +1,44 @@
+{
+    "std": [
+        "std",
+        "reYIK",
+        "module",
+        1
+    ],
+    "adder_1bit": [
+        "adder_1bit",
+        "KaZs1",
+        "module",
+        2
+    ],
+    "alu_add": [
+        "alu_add",
+        "iQZ2i",
+        "module",
+        3
+    ],
+    "Addr_Decoder": [
+        "Addr_Decoder",
+        "gMGVA",
+        "module",
+        4
+    ],
+    "data_mux": [
+        "data_mux",
+        "Dxf2Z",
+        "module",
+        5
+    ],
+    "c_tests_tb": [
+        "c_tests_tb",
+        "e7D59",
+        "module",
+        6
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        7
+    ]
+}

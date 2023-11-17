@@ -1,0 +1,27 @@
+*design* DebussyLib (btIdent Verdi_P-2019.06-SP2-12)
+Command arguments:
+    +define+verilog
+    -f run.f
+        ./sim_define.v
+        ../../src/rtl/refCPU/rev01_protect/ASYNC_RAM_DP_WBE.v
+        ../../src/rtl/refCPU/rev01_protect/reg_file_async.v
+        ../../src/rtl/refCPU/rev01_protect/rv32i_cpu_protected.vp
+        ../../src/rtl/refCPU/rev01_protect/RV32I_System.v
+        ../../testbench/c_tests_tb.v
+
+
+*Error* Syntax error at ;
+"../../testbench/c_tests_tb.v", 58: 
+Highest level modules:
+c_tests_tb
+
+
+*Error* failed to find identifier hex_file
+"../../testbench/c_tests_tb.v", 70: 
+
+*Error* failed to find identifier hex_file
+"../../testbench/c_tests_tb.v", 72: 
+
+*Error* failed to find identifier hex_file
+"../../testbench/c_tests_tb.v", 73: 
+Total	4 error(s),   0 warning(s)

@@ -1,0 +1,14 @@
+*design* DebussyLib (btIdent Verdi_P-2019.06-SP2-12)
+Command arguments:
+    +define+verilog
+    -sv
+    -f run.f
+        ./sim_define.v
+        +incdir+../../src/rtl
+        ../../src/rtl/dualport_mem_synch_rw_dualclk.sv
+        ../../testbench/testbench.v
+
+Highest level modules:
+testbench
+
+Total	0 error(s),   0 warning(s)

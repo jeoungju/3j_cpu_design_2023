@@ -1,0 +1,19 @@
+Command Line: /tools/synopsys/verdi/P-2019.06-SP2-12/platform/LINUXAMD64/bin/Novas -Ultra -sv -f run.f
+uname(Linux smu409-24 3.10.0-1160.83.1.el7.x86_64 #1 SMP Wed Jan 25 16:41:43 UTC 2023 x86_64)
+type= DS_SIGNAL element= 1 field= 2
+VERILOG testbench
+VERILOG dut_not_gate
+VERILOG a
+-----
+second field= signal
+type= DS_STRING
+a
+type= DS_SIGNAL element= 1 field= 2
+VERILOG testbench
+VERILOG dut_not_gate
+VERILOG a
+-----
+second field= signal
+type= DS_STRING
+a
+au time 187.270359 11.359995 3.655658 delta 256053248 256053248 total 695627776 695627776

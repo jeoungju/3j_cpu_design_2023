@@ -1,0 +1,204 @@
+debImport "-sv" "-f" "run.f"
+wvCreateWindow
+schCreateWindow -delim "." -win $_nSchema1 -scope "testbench"
+schSetOptions -win $_nSchema3 -portName on
+schSetOptions -win $_nSchema3 -pinName on
+schSetOptions -win $_nSchema3 -instName on
+schSetOptions -win $_nSchema3 -localNetName on
+schSetOptions -win $_nSchema3 -PGPin off
+schSetOptions -win $_nSchema3 -completeName on
+schSetOptions -win $_nSchema3 -PGPin on
+schSetOptions -win $_nSchema3 -parameterList on
+schSetOptions -win $_nSchema3 -highContrastMode on
+schZoom {4435} {-713} {9185} {3549} -win $_nSchema3
+schZoomOut -win $_nSchema3 -pos 9435 1131
+schZoomOut -win $_nSchema3 -pos 9435 1131
+schZoomOut -win $_nSchema3 -pos 9434 1131
+schFit -win $_nSchema3
+schSelect -win $_nSchema3 -inst "dut_not_gate"
+schPushViewIn -win $_nSchema3
+schPopViewUp -win $_nSchema3
+schSelect -win $_nSchema3 -instport "dut_not_gate" "b"
+schSelect -win $_nSchema3 -instport "dut_not_gate" "b"
+schPushViewIn -win $_nSchema3
+schDeselectAll -win $_nSchema3
+schPopViewUp -win $_nSchema3
+schSelect -win $_nSchema3 -instport "dut_not_gate" "b"
+schPushViewIn -win $_nSchema3
+schPopViewUp -win $_nSchema3
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvOpenFile -win $_nWave2 \
+           {/home/user/project/lab_cpu/week05/not_gate/sim/wave fsdb.fsdb}
+wvGetSignalOpen -win $_nWave2
+wvGetSignalSetScope -win $_nWave2 "/testbench"
+wvGetSignalSetScope -win $_nWave2 "/testbench/dut_not_gate"
+wvGetSignalSetScope -win $_nWave2 "/testbench"
+wvGetSignalSetScope -win $_nWave2 "/testbench/dut_not_gate"
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvAddSignal -win $_nWave2 -clear
+wvAddSignal -win $_nWave2 -group {"G1" \
+{/testbench/dut_not_gate/a} \
+{/testbench/dut_not_gate/b} \
+}
+wvAddSignal -win $_nWave2 -group {"G2" \
+}
+wvSelectSignal -win $_nWave2 {( "G1" 1 2 )} 
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvAddSignal -win $_nWave2 -clear
+wvAddSignal -win $_nWave2 -group {"G1" \
+{/testbench/dut_not_gate/a} \
+{/testbench/dut_not_gate/b} \
+}
+wvAddSignal -win $_nWave2 -group {"G2" \
+}
+wvSelectSignal -win $_nWave2 {( "G1" 1 2 )} 
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvGetSignalClose -win $_nWave2
+wvZoomAll -win $_nWave2
+wvZoomAll -win $_nWave2
+wvZoomAll -win $_nWave2
+wvZoomAll -win $_nWave2
+wvZoom -win $_nWave2 7967.842684 11180.682475
+wvZoom -win $_nWave2 9294.602436 9859.497344
+wvZoom -win $_nWave2 9637.002588 9699.405670
+wvZoomAll -win $_nWave2
+wvZoom -win $_nWave2 8738.924234 9696.934644
+wvZoom -win $_nWave2 9063.063094 9216.544230
+wvZoom -win $_nWave2 9128.130574 9152.275669
+wvZoomAll -win $_nWave2
+wvZoomAll -win $_nWave2
+wvZoomAll -win $_nWave2
+wvZoom -win $_nWave2 8902.486987 10409.600925
+wvZoom -win $_nWave2 9802.920011 10100.158792
+wvZoomAll -win $_nWave2
+wvZoomAll -win $_nWave2
+wvZoomAll -win $_nWave2
+wvZoomAll -win $_nWave2
+wvZoomAll -win $_nWave2
+wvZoomAll -win $_nWave2
+wvSetCursor -win $_nWave2 9977.327935 -snap {("G1" 2)}
+wvZoom -win $_nWave2 10409.600925 10479.699248
+wvZoomAll -win $_nWave2
+wvSetCursor -win $_nWave2 10982.070561 -snap {("G2" 0)}
+wvSetCursor -win $_nWave2 12489.184500 -snap {("G2" 0)}
+wvSetCursor -win $_nWave2 9755.349913 -snap {("G2" 0)}
+wvSetCursor -win $_nWave2 8598.727588 -snap {("G2" 0)}
+wvSetCursor -win $_nWave2 8598.727588 -snap {("G2" 0)}
+wvZoom -win $_nWave2 5292.423366 9147.831116
+wvZoomAll -win $_nWave2
+wvSetCursor -win $_nWave2 10958.704453 -snap {("G2" 0)}
+wvZoomOut -win $_nWave2
+wvZoom -win $_nWave2 11998.496241 12068.594563
+wvZoomAll -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G1" 2 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 2 )} 
+wvSelectGroup -win $_nWave2 {G2}
+wvSelectGroup -win $_nWave2 {G2}
+wvSaveSignal -win $_nWave2 \
+           "/home/user/project/lab_cpu/week05/not_gate/sim/signal.rc"
+wvSelectSignal -win $_nWave2 {( "G1" 1 )} 
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvSelectGroup -win $_nWave2 {G1}
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvRestoreSignal -win $_nWave2 \
+           "/home/user/project/lab_cpu/week05/not_gate/sim/signal.rc" \
+           -overWriteAutoAlias on -appendSignals on
+schDeselectAll -win $_nSchema3
+schFit -win $_nSchema3
+schZoom {3469} {124} {4608} {1927} -win $_nSchema3
+schFit -win $_nSchema3
+schSelect -win $_nSchema3 -signal "a"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G1" 5 )} 
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G1" 4)}
+wvSelectSignal -win $_nWave2 {( "G1" 4 )} 
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G1" 3)}
+wvSelectSignal -win $_nWave2 {( "G1" 3 )} 
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G1" 2)}
+schSelect -win $_nSchema3 -inst "dut_not_gate"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvSelectGroup -win $_nWave2 {G2}
+wvSetOptions -win $_nWave2 -hierName on
+schFit -win $_nSchema3
+schSelect -win $_nSchema3 -signal "a"
+schFit -win $_nSchema3
+schFit -win $_nSchema3
+schFit -win $_nSchema3
+schDeselectAll -win $_nSchema3
+schFit -win $_nSchema3
+schSelect -win $_nSchema3 -signal "a"
+schFit -win $_nSchema3
+schFit -win $_nSchema3
+schFit -win $_nSchema3
+schSelect -win $_nSchema3 -inst "dut_not_gate"
+schSelect -win $_nSchema3 -instport "dut_not_gate" "a"
+schFit -win $_nSchema3
+schFit -win $_nSchema3
+schFit -win $_nSchema3
+schDeselectAll -win $_nSchema3
+wvSetMarker -win $_nWave2 10026.817490
+wvSetMarker -win $_nWave2 9980.017875
+wvSetMarker -win $_nWave2 10132.116623
+wvSetMarker -win $_nWave2 8845.127214
+wvSetCursor -win $_nWave2 11196.807862 -snap {("G2" 0)}
+wvSetCursor -win $_nWave2 10026.817490 -snap {("G2" 0)}
+wvZoom -win $_nWave2 9991.717778 11056.409017
+wvZoomAll -win $_nWave2
+wvSetCursor -win $_nWave2 10005.354752 -snap {("G2" 0)}
+wvSetCursor -win $_nWave2 9978.313253 -snap {("G2" 0)}
+wvSetCursor -win $_nWave2 11533.199465 -snap {("G2" 0)}
+wvSetCursor -win $_nWave2 5448.862115 -snap {("G2" 0)}
+wvSetMarker -win $_nWave2 13615.394913
+wvSetMarker -win $_nWave2 12898.795181
+wvSetMarker -win $_nWave2 10492.101740
+wvSetMarker -win $_nWave2 14156.224900
+wvSetMarker -win $_nWave2 7517.536814
+wvSetMarker -win $_nWave2 5597.590361
+wvSetMarker -win $_nWave2 4015.662651
+wvSetMarker -win $_nWave2 13655.957162
+wvSetMarker -win $_nWave2 15995.046854
+wvShowDeltaFreq -win $_nWave2 -freq
+wvSetMarker -win $_nWave2 12750.066934
+wvSetMarker -win $_nWave2 12750.066934
+wvSetMarker -win $_nWave2 12750.066934
+wvSetMarker -win $_nWave2 10000.000000
+wvSetMarker -win $_nWave2 10978.848728
+wvSetMarker -win $_nWave2 11059.973226
+wvSetMarker -win $_nWave2 9964.792503
+wvSetMarker -win $_nWave2 10072.958501
+wvSetMarker -win $_nWave2 351.539491
+wvSetMarker -win $_nWave2 0.000000
+wvSetMarker -win $_nWave2 7950.200803
+wvSetMarker -win $_nWave2 8058.366801
+wvSetMarker -win $_nWave2 108.165997
+wvSetMarker -win $_nWave2 108.165997
+wvSetMarker -win $_nWave2 108.165997
+wvSetMarker -win $_nWave2 108.165997
+wvSetMarker -win $_nWave2 13.520750
+wvSetMarker -win $_nWave2 13.520750
+wvSetMarker -win $_nWave2 0.000000
+wvSetMarker -win $_nWave2 243.373494
+wvSetMarker -win $_nWave2 0.000000
+debExit

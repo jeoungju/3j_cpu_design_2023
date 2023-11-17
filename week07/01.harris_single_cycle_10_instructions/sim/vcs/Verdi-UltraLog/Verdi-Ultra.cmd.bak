@@ -1,0 +1,558 @@
+debImport "-sv" "-f" "run.f"
+srcTBBTreeSelect -win $_nTrace1 -path "testbench"
+srcTBBTreeSelect -win $_nTrace1 -path "testbench"
+srcTBTreeAction -win $_nTrace1 -path "testbench"
+srcTBBTreeSelect -win $_nTrace1 -path "testbench"
+srcTBBTreeSelect -win $_nTrace1 -path "testbench"
+wvCreateWindow
+schCreateWindow -delim "." -win $_nSchema1 -scope "testbench"
+schSetOptions -win $_nSchema3 -portName on
+schSetOptions -win $_nSchema3 -pinName on
+schSetOptions -win $_nSchema3 -instName on
+schSetOptions -win $_nSchema3 -completeName on
+schSetOptions -win $_nSchema3 -localNetName on
+schSetOptions -win $_nSchema3 -highContrastMode on
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvOpenFile -win $_nWave2 \
+           {/home/user/project/2023fa_cpu_design/week07/01.harris_single_cycle_10_instructions/sim/vcs/wave.fsdb}
+schSelect -win $_nSchema3 -inst "dut"
+schDeselectAll -win $_nSchema3
+schZoom {-1077} {1215} {15867} {9178} -win $_nSchema3
+schSelect -win $_nSchema3 -inst "dut"
+schSelect -win $_nSchema3 -inst "dut"
+schDeselectAll -win $_nSchema3
+schSelect -win $_nSchema3 -signal "clk"
+wvAddSignal -win $_nWave2 "/testbench/clk"
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvSetPosition -win $_nWave2 {("G1" 1)}
+schSelect -win $_nSchema3 -signal "reset"
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvAddSignal -win $_nWave2 "/testbench/reset"
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvSetCursor -win $_nWave2 6135.311542 -snap {("G2" 0)}
+wvZoomAll -win $_nWave2
+wvSelectGroup -win $_nWave2 {G1}
+wvRenameGroup -win $_nWave2 {G1} {clk & reset}
+wvSetCursor -win $_nWave2 51960.862647 -snap {("G2" 0)}
+wvZoomAll -win $_nWave2
+schSelect -win $_nSchema3 -inst "dut"
+schPushViewIn -win $_nSchema3
+schPopViewUp -win $_nSchema3
+schSelect -win $_nSchema3 -inst "dut"
+schPushViewIn -win $_nSchema3
+schZoom {11112} {3086} {25676} {11704} -win $_nSchema3
+schSelect -win $_nSchema3 -signal "PC\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetCursor -win $_nWave2 38380.000000 -snap {("G3" 0)}
+wvSaveSignal -win $_nWave2 \
+           "/home/user/project/2023fa_cpu_design/week07/01.harris_single_cycle_10_instructions/sim/vcs/signal.rc"
+wvSetCursor -win $_nWave2 25586.666667 -snap {("G2" 1)}
+wvSelectSignal -win $_nWave2 {( "G2" 1 )} 
+wvSetRadix -win $_nWave2 -format Bin
+wvSelectSignal -win $_nWave2 {( "G2" 1 )} 
+wvSetRadix -win $_nWave2 -format Hex
+wvSetOptions -win $_nWave2 -leadingZeros on
+verdiWindowResize -win $_Verdi_1 "443" "20" "1457" "975"
+wvZoomAll -win $_nWave2
+verdiWindowResize -win $_Verdi_1 "330" "20" "1570" "975"
+schDeselectAll -win $_nSchema3
+schSelect -win $_nSchema3 -signal "Instr\[31:0\]"
+schDeselectAll -win $_nSchema3
+schFit -win $_nSchema3
+schSelect -win $_nSchema3 -inst "imem"
+schZoom {3601} {3740} {13421} {10956} -win $_nSchema3
+schSelect -win $_nSchema3 -signal "Instr\[31:0\]"
+schSelect -win $_nSchema3 -signal "Instr\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+wvSelectGroup -win $_nWave2 {G2}
+wvRenameGroup -win $_nWave2 {G2} {IMEM}
+schDeselectAll -win $_nSchema3
+schFit -win $_nSchema3
+schSelect -win $_nSchema3 -inst "rvsingle"
+schPushViewIn -win $_nSchema3
+schSelect -win $_nSchema3 -inst "u_datapath"
+schPushViewIn -win $_nSchema3
+schZoomIn -win $_nSchema3 -pos 50250 3462
+schZoomOut -win $_nSchema3 -pos 50248 2240
+schSelect -win $_nSchema3 -inst "u_register_file"
+schDeselectAll -win $_nSchema3
+schSelect -win $_nSchema3 -inst "u_register_file"
+schSelect -win $_nSchema3 -signal "ImmExt\[31:0\]"
+schSelect -win $_nSchema3 -inst "u_Extend"
+schSelect -win $_nSchema3 -inst "u_ALU"
+schSelect -win $_nSchema3 -inst "u_register_file"
+schPopViewUp -win $_nSchema3
+schSelect -win $_nSchema3 -inst "u_datapath"
+schPushViewIn -win $_nSchema3
+schZoom {45731} {7482} {56874} {19480} -win $_nSchema3
+schSelect -win $_nSchema3 -signal "Instr\[19:15\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G3" 1)}
+wvSetPosition -win $_nWave2 {("G3" 1)}
+schSelect -win $_nSchema3 -signal "Instr\[24:20\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+schSelect -win $_nSchema3 -instport "u_register_file" "rs1\[4:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+schSelect -win $_nSchema3 -instport "u_register_file" "rs1\[4:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+wvSelectGroup -win $_nWave2 {G3}
+wvRenameGroup -win $_nWave2 {G3} {REGFILE}
+schSelect -win $_nSchema3 -signal "SrcA\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+schSelect -win $_nSchema3 -signal "bef_SrcB\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+wvZoomAll -win $_nWave2
+wvZoomAll -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "REGFILE" 3 )} 
+wvSelectSignal -win $_nWave2 {( "REGFILE" 3 )} 
+wvChangeDisplayAttr -win $_nWave2 -c ID_YELLOW5 -lw 1 -ls solid
+wvSelectGroup -win $_nWave2 {G4}
+wvSelectSignal -win $_nWave2 {( "REGFILE" 3 )} 
+schSelect -win $_nSchema3 -signal "bef_SrcB\[31:0\]"
+schSelect -win $_nSchema3 -signal "SrcA\[31:0\]"
+schChangeDisplayAttr -color ID_RED3
+schChangeDisplayAttr -color ID_RED3
+schChangeDisplayAttr -color ID_RED3
+schChangeDisplayAttr -color ID_RED3
+schChangeDisplayAttr -color ID_RED3
+schChangeDisplayAttr -color ID_RED3
+schChangeDisplayAttr -color ID_RED3
+schChangeDisplayAttr -color ID_RED3
+schChangeDisplayAttr -color ID_YELLOW5
+schDeselectAll -win $_nSchema3
+schSelect -win $_nSchema3 -signal "SrcA\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+wvSelectGroup -win $_nWave2 {G4}
+wvSelectSignal -win $_nWave2 {( "REGFILE" 5 )} 
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G4" 0)}
+wvSetPosition -win $_nWave2 {("REGFILE" 4)}
+wvSetCursor -win $_nWave2 46825.898204 -snap {("G4" 0)}
+wvSaveSignal -win $_nWave2 \
+           "/home/user/project/2023fa_cpu_design/week07/01.harris_single_cycle_10_instructions/sim/vcs/signal.rc"
+schSelect -win $_nSchema3 -signal "SrcB\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+wvSetPosition -win $_nWave2 {("G4" 0)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G4" 1)}
+wvSetPosition -win $_nWave2 {("G4" 1)}
+schSelect -win $_nSchema3 -signal "SrcA\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+wvSetPosition -win $_nWave2 {("G4" 1)}
+wvSetPosition -win $_nWave2 {("G4" 0)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G4" 0)}
+wvSetPosition -win $_nWave2 {("G4" 1)}
+schSelect -win $_nSchema3 -signal "ALUControl\[2:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+wvSetPosition -win $_nWave2 {("G4" 3)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G4" 3)}
+wvSelectGroup -win $_nWave2 {G4}
+wvSelectSignal -win $_nWave2 {( "REGFILE" 4 )} 
+wvSelectGroup -win $_nWave2 {G4}
+wvRenameGroup -win $_nWave2 {G4} {ALU}
+wvSetCursor -win $_nWave2 84028.068862 -snap {("IMEM" 0)}
+wvSetOptions -win $_nWave2 -snap off
+wvSelectStuckSignals -win $_nWave2
+wvSetCursor -win $_nWave2 88049.925150
+wvSelectStuckSignals -win $_nWave2
+wvSaveSignal -win $_nWave2 \
+           "/home/user/project/2023fa_cpu_design/week07/01.harris_single_cycle_10_instructions/sim/vcs/signal.rc"
+wvSelectGroup -win $_nWave2 {clk & reset}
+wvSelectGroup -win $_nWave2 {IMEM}
+schSelect -win $_nSchema3 -port "ALUResult\[31:0\]"
+schPopViewUp -win $_nSchema3
+schSelect -win $_nSchema3 -inst "u_datapath"
+schPushViewIn -win $_nSchema3
+schSelect -win $_nSchema3 -signal "ALUResult\[31:0\]"
+schSelect -win $_nSchema3 -instpin "u_ALU" "result\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "ALU" 3 4 )} 
+wvSelectGroup -win $_nWave2 {G5}
+wvSelectSignal -win $_nWave2 {( "ALU" 4 )} 
+wvSetPosition -win $_nWave2 {("G5" 0)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G5" 1)}
+wvSetPosition -win $_nWave2 {("G5" 1)}
+schSelect -win $_nSchema3 -port "ALUResult\[31:0\]"
+schPopViewUp -win $_nSchema3
+schZoom {23659} {2896} {33958} {15121} -win $_nSchema3
+schZoom {22917} {7794} {29355} {14869} -win $_nSchema3
+schFit -win $_nSchema3
+schSelect -win $_nSchema3 -inst "u_controller"
+schPushViewIn -win $_nSchema3
+schPopViewUp -win $_nSchema3
+schSelect -win $_nSchema3 -inst "u_datapath"
+schPushViewIn -win $_nSchema3
+schFit -win $_nSchema3
+wvSelectGroup -win $_nWave2 {REGFILE}
+wvSelectGroup -win $_nWave2 {REGFILE}
+schZoom {53581} {4051} {78774} {22117} -win $_nSchema3
+schZoom {43589} {6402} {59027} {17972} -win $_nSchema3
+schZoom {45311} {9998} {47265} {16219} -win $_nSchema3
+schSelect -win $_nSchema3 -signal "RegWrite"
+schSelect -win $_nSchema3 -toggle -signal "Instr\[31:0\]"
+schSelect -win $_nSchema3 -toggle -signal "Result\[31:0\]"
+wvSetPosition -win $_nWave2 {("G5" 0)}
+wvSetPosition -win $_nWave2 {("clk & reset" 0)}
+wvSetPosition -win $_nWave2 {("IMEM" 0)}
+wvSetPosition -win $_nWave2 {("REGFILE" 0)}
+wvSetPosition -win $_nWave2 {("ALU" 1)}
+wvSetPosition -win $_nWave2 {("ALU" 0)}
+wvSetPosition -win $_nWave2 {("REGFILE" 4)}
+wvAddSignal -win $_nWave2 "/testbench/dut/rvsingle/u_datapath/RegWrite" \
+           "/testbench/dut/rvsingle/u_datapath/Instr\[31:0\]" \
+           "/testbench/dut/rvsingle/u_datapath/Result\[31:0\]"
+wvSetPosition -win $_nWave2 {("REGFILE" 4)}
+wvSetPosition -win $_nWave2 {("REGFILE" 7)}
+wvZoomAll -win $_nWave2
+schDeselectAll -win $_nSchema3
+schFit -win $_nSchema3
+schPopViewUp -win $_nSchema3
+schSelect -win $_nSchema3 -inst "u_controller"
+schPushViewIn -win $_nSchema3
+schSelect -win $_nSchema3 -signal "PCSrc"
+schSelect -win $_nSchema3 -toggle -signal "ResultSrc\[1:0\]"
+schSelect -win $_nSchema3 -toggle -signal "MemWrite"
+schSelect -win $_nSchema3 -toggle -signal "ALUSrc"
+schSelect -win $_nSchema3 -toggle -signal "ImmSrc\[1:0\]"
+schSelect -win $_nSchema3 -toggle -signal "RegWrite"
+schSelect -win $_nSchema3 -toggle -signal "Jump"
+schSelect -win $_nSchema3 -toggle -signal "ALUop\[1:0\]"
+wvScrollDown -win $_nWave2 3
+wvSetPosition -win $_nWave2 {("ALU" 1)}
+wvSetPosition -win $_nWave2 {("clk & reset" 0)}
+wvSetPosition -win $_nWave2 {("IMEM" 0)}
+wvSetPosition -win $_nWave2 {("REGFILE" 0)}
+wvSetPosition -win $_nWave2 {("REGFILE" 1)}
+wvSetPosition -win $_nWave2 {("REGFILE" 2)}
+wvSetPosition -win $_nWave2 {("REGFILE" 3)}
+wvSetPosition -win $_nWave2 {("REGFILE" 4)}
+wvSetPosition -win $_nWave2 {("REGFILE" 5)}
+wvSetPosition -win $_nWave2 {("REGFILE" 6)}
+wvSetPosition -win $_nWave2 {("ALU" 1)}
+wvSetPosition -win $_nWave2 {("G5" 0)}
+wvSetPosition -win $_nWave2 {("G5" 1)}
+wvSetPosition -win $_nWave2 {("G6" 0)}
+wvAddSignal -win $_nWave2 "/testbench/dut/rvsingle/u_controller/PCSrc" \
+           "/testbench/dut/rvsingle/u_controller/ResultSrc\[1:0\]" \
+           "/testbench/dut/rvsingle/u_controller/MemWrite" \
+           "/testbench/dut/rvsingle/u_controller/ALUSrc" \
+           "/testbench/dut/rvsingle/u_controller/ImmSrc\[1:0\]" \
+           "/testbench/dut/rvsingle/u_controller/RegWrite" \
+           "/testbench/dut/rvsingle/u_controller/Jump" \
+           "/testbench/dut/rvsingle/u_controller/ALUop\[1:0\]"
+wvSetPosition -win $_nWave2 {("G6" 0)}
+wvSetPosition -win $_nWave2 {("G6" 8)}
+wvSetPosition -win $_nWave2 {("G6" 8)}
+wvSelectSignal -win $_nWave2 {( "G5" 1 )} 
+wvSelectGroup -win $_nWave2 {G6}
+wvRenameGroup -win $_nWave2 {G6} {CONTROLL}
+wvScrollUp -win $_nWave2 2
+wvScrollDown -win $_nWave2 3
+schDeselectAll -win $_nSchema3
+schPopViewUp -win $_nSchema3
+schSelect -win $_nSchema3 -signal "PCSrc"
+schSelect -win $_nSchema3 -toggle -signal "ResultSrc\[1:0\]"
+schSelect -win $_nSchema3 -toggle -signal "MemWrite"
+schSelect -win $_nSchema3 -toggle -signal "ALUSrc"
+schSelect -win $_nSchema3 -toggle -signal "ImmSrc\[1:0\]"
+schSelect -win $_nSchema3 -toggle -signal "ALUControl\[2:0\]"
+wvSelectSignal -win $_nWave2 {( "CONTROLL" 1 )} 
+wvSelectSignal -win $_nWave2 {( "CONTROLL" 1 2 3 4 5 6 7 8 )} 
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("CONTROLL" 0)}
+wvSetPosition -win $_nWave2 {("ALU" 1)}
+wvSetPosition -win $_nWave2 {("IMEM" 0)}
+wvSetPosition -win $_nWave2 {("clk & reset" 0)}
+wvSetPosition -win $_nWave2 {("IMEM" 0)}
+wvSetPosition -win $_nWave2 {("REGFILE" 0)}
+wvSetPosition -win $_nWave2 {("REGFILE" 1)}
+wvSetPosition -win $_nWave2 {("REGFILE" 2)}
+wvSetPosition -win $_nWave2 {("ALU" 1)}
+wvSetPosition -win $_nWave2 {("REGFILE" 5)}
+wvSetPosition -win $_nWave2 {("REGFILE" 6)}
+wvSetPosition -win $_nWave2 {("REGFILE" 7)}
+wvSetPosition -win $_nWave2 {("ALU" 0)}
+wvSetPosition -win $_nWave2 {("ALU" 1)}
+wvSetPosition -win $_nWave2 {("ALU" 2)}
+wvSetPosition -win $_nWave2 {("ALU" 3)}
+wvSetPosition -win $_nWave2 {("G5" 0)}
+wvSetPosition -win $_nWave2 {("G5" 1)}
+wvSetPosition -win $_nWave2 {("CONTROLL" 0)}
+wvSetPosition -win $_nWave2 {("G7" 0)}
+wvSetPosition -win $_nWave2 {("CONTROLL" 0)}
+wvAddSignal -win $_nWave2 "/testbench/dut/rvsingle/PCSrc" \
+           "/testbench/dut/rvsingle/ResultSrc\[1:0\]" \
+           "/testbench/dut/rvsingle/MemWrite" "/testbench/dut/rvsingle/ALUSrc" \
+           "/testbench/dut/rvsingle/ImmSrc\[1:0\]" \
+           "/testbench/dut/rvsingle/ALUControl\[2:0\]"
+wvSetPosition -win $_nWave2 {("CONTROLL" 0)}
+wvSetPosition -win $_nWave2 {("CONTROLL" 6)}
+wvScrollDown -win $_nWave2 1
+schSelect -win $_nSchema3 -signal "RegWrite"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvSetCursor -win $_nWave2 31313.023952
+wvSelectGroup -win $_nWave2 {clk & reset}
+wvSelectSignal -win $_nWave2 {( "clk & reset" 2 )} 
+wvSelectGroup -win $_nWave2 {IMEM}
+wvZoom -win $_nWave2 14828.636364 24132.878788
+wvZoomAll -win $_nWave2
+wvScrollDown -win $_nWave2 3
+wvScrollUp -win $_nWave2 3
+wvSetCursor -win $_nWave2 18385.628743
+schDeselectAll -win $_nSchema3
+schSelect -win $_nSchema3 -inst "u_datapath"
+schPushViewIn -win $_nSchema3
+schZoom {43631} {1368} {67998} {24666} -win $_nSchema3
+schSelect -win $_nSchema3 -signal "ImmExt\[31:0\]"
+wvSetPosition -win $_nWave2 {("ALU" 1)}
+wvSetPosition -win $_nWave2 {("clk & reset" 0)}
+wvSetPosition -win $_nWave2 {("ALU" 1)}
+wvSetPosition -win $_nWave2 {("IMEM" 1)}
+wvSetPosition -win $_nWave2 {("IMEM" 2)}
+wvSetPosition -win $_nWave2 {("REGFILE" 0)}
+wvSetPosition -win $_nWave2 {("REGFILE" 1)}
+wvSetPosition -win $_nWave2 {("REGFILE" 2)}
+wvSetPosition -win $_nWave2 {("REGFILE" 4)}
+wvSetPosition -win $_nWave2 {("REGFILE" 5)}
+wvSetPosition -win $_nWave2 {("REGFILE" 6)}
+wvSetPosition -win $_nWave2 {("REGFILE" 7)}
+wvSetPosition -win $_nWave2 {("ALU" 0)}
+wvSetPosition -win $_nWave2 {("ALU" 1)}
+wvSetPosition -win $_nWave2 {("ALU" 2)}
+wvSetPosition -win $_nWave2 {("ALU" 3)}
+wvSetPosition -win $_nWave2 {("G5" 0)}
+wvSetPosition -win $_nWave2 {("G5" 1)}
+wvSetPosition -win $_nWave2 {("CONTROLL" 0)}
+wvSetPosition -win $_nWave2 {("CONTROLL" 1)}
+wvSetPosition -win $_nWave2 {("CONTROLL" 0)}
+wvSetPosition -win $_nWave2 {("G5" 1)}
+wvSetPosition -win $_nWave2 {("G5" 0)}
+wvSetPosition -win $_nWave2 {("ALU" 3)}
+wvSetPosition -win $_nWave2 {("ALU" 2)}
+wvSetPosition -win $_nWave2 {("ALU" 1)}
+wvSetPosition -win $_nWave2 {("ALU" 0)}
+wvSetPosition -win $_nWave2 {("REGFILE" 7)}
+wvSetPosition -win $_nWave2 {("ALU" 0)}
+wvSetPosition -win $_nWave2 {("ALU" 1)}
+wvSetPosition -win $_nWave2 {("ALU" 2)}
+wvSetPosition -win $_nWave2 {("ALU" 3)}
+wvSetPosition -win $_nWave2 {("G5" 0)}
+wvSetPosition -win $_nWave2 {("G5" 1)}
+wvSetPosition -win $_nWave2 {("CONTROLL" 0)}
+wvSetPosition -win $_nWave2 {("CONTROLL" 1)}
+wvSetPosition -win $_nWave2 {("CONTROLL" 2)}
+wvSetPosition -win $_nWave2 {("CONTROLL" 3)}
+wvSetPosition -win $_nWave2 {("CONTROLL" 4)}
+wvSetPosition -win $_nWave2 {("CONTROLL" 5)}
+wvSetPosition -win $_nWave2 {("CONTROLL" 4)}
+wvSetPosition -win $_nWave2 {("CONTROLL" 3)}
+wvSetPosition -win $_nWave2 {("CONTROLL" 2)}
+wvSetPosition -win $_nWave2 {("CONTROLL" 1)}
+wvSetPosition -win $_nWave2 {("CONTROLL" 0)}
+wvSetPosition -win $_nWave2 {("G5" 1)}
+wvSetPosition -win $_nWave2 {("G5" 0)}
+wvSetPosition -win $_nWave2 {("ALU" 3)}
+wvSetPosition -win $_nWave2 {("ALU" 2)}
+wvSetPosition -win $_nWave2 {("ALU" 1)}
+wvSetPosition -win $_nWave2 {("ALU" 0)}
+wvSetPosition -win $_nWave2 {("REGFILE" 7)}
+wvSetPosition -win $_nWave2 {("REGFILE" 6)}
+wvSetPosition -win $_nWave2 {("REGFILE" 5)}
+wvSetPosition -win $_nWave2 {("REGFILE" 4)}
+wvSetPosition -win $_nWave2 {("REGFILE" 3)}
+wvSetPosition -win $_nWave2 {("REGFILE" 2)}
+wvSetPosition -win $_nWave2 {("REGFILE" 1)}
+wvSetPosition -win $_nWave2 {("REGFILE" 0)}
+wvSetPosition -win $_nWave2 {("IMEM" 2)}
+wvSetPosition -win $_nWave2 {("IMEM" 1)}
+wvSetPosition -win $_nWave2 {("IMEM" 0)}
+wvSetPosition -win $_nWave2 {("clk & reset" 2)}
+wvSetPosition -win $_nWave2 {("clk & reset" 1)}
+wvSetPosition -win $_nWave2 {("clk & reset" 2)}
+wvSetPosition -win $_nWave2 {("IMEM" 0)}
+wvSetPosition -win $_nWave2 {("IMEM" 1)}
+wvSetPosition -win $_nWave2 {("IMEM" 2)}
+wvSetPosition -win $_nWave2 {("REGFILE" 0)}
+wvSetPosition -win $_nWave2 {("REGFILE" 1)}
+wvSetPosition -win $_nWave2 {("REGFILE" 2)}
+wvSetPosition -win $_nWave2 {("REGFILE" 3)}
+wvSetPosition -win $_nWave2 {("REGFILE" 5)}
+wvSetPosition -win $_nWave2 {("REGFILE" 6)}
+wvSetPosition -win $_nWave2 {("REGFILE" 7)}
+wvSetPosition -win $_nWave2 {("ALU" 0)}
+wvSetPosition -win $_nWave2 {("ALU" 1)}
+wvSetPosition -win $_nWave2 {("ALU" 2)}
+wvSetPosition -win $_nWave2 {("ALU" 1)}
+wvSetPosition -win $_nWave2 {("ALU" 0)}
+wvSetPosition -win $_nWave2 {("REGFILE" 7)}
+wvSetPosition -win $_nWave2 {("REGFILE" 6)}
+wvSetPosition -win $_nWave2 {("REGFILE" 5)}
+wvSetPosition -win $_nWave2 {("REGFILE" 4)}
+wvSetPosition -win $_nWave2 {("REGFILE" 3)}
+wvSetPosition -win $_nWave2 {("REGFILE" 2)}
+wvSetPosition -win $_nWave2 {("REGFILE" 1)}
+wvSetPosition -win $_nWave2 {("REGFILE" 0)}
+wvSetPosition -win $_nWave2 {("IMEM" 2)}
+wvSetPosition -win $_nWave2 {("IMEM" 1)}
+wvSetPosition -win $_nWave2 {("IMEM" 0)}
+wvSetPosition -win $_nWave2 {("clk & reset" 2)}
+wvSetPosition -win $_nWave2 {("clk & reset" 1)}
+wvSetPosition -win $_nWave2 {("clk & reset" 0)}
+wvSetPosition -win $_nWave2 {("clk & reset" 1)}
+wvSetPosition -win $_nWave2 {("clk & reset" 2)}
+wvSetPosition -win $_nWave2 {("IMEM" 0)}
+wvSetPosition -win $_nWave2 {("IMEM" 1)}
+wvSetPosition -win $_nWave2 {("IMEM" 2)}
+wvSetPosition -win $_nWave2 {("REGFILE" 0)}
+wvSetPosition -win $_nWave2 {("REGFILE" 1)}
+wvSetPosition -win $_nWave2 {("REGFILE" 2)}
+wvSetPosition -win $_nWave2 {("REGFILE" 4)}
+wvSetPosition -win $_nWave2 {("REGFILE" 5)}
+wvSetPosition -win $_nWave2 {("REGFILE" 6)}
+wvSetPosition -win $_nWave2 {("REGFILE" 7)}
+wvSetPosition -win $_nWave2 {("ALU" 0)}
+wvSetPosition -win $_nWave2 {("ALU" 1)}
+wvSetPosition -win $_nWave2 {("ALU" 2)}
+wvSetPosition -win $_nWave2 {("ALU" 3)}
+wvSetPosition -win $_nWave2 {("G5" 0)}
+wvSetPosition -win $_nWave2 {("G5" 1)}
+wvSetPosition -win $_nWave2 {("CONTROLL" 0)}
+wvSetPosition -win $_nWave2 {("CONTROLL" 1)}
+wvSetPosition -win $_nWave2 {("CONTROLL" 2)}
+wvSetPosition -win $_nWave2 {("CONTROLL" 1)}
+wvSetPosition -win $_nWave2 {("CONTROLL" 0)}
+wvSetPosition -win $_nWave2 {("G5" 1)}
+wvSetPosition -win $_nWave2 {("G5" 0)}
+wvSetPosition -win $_nWave2 {("ALU" 3)}
+wvSetPosition -win $_nWave2 {("ALU" 2)}
+wvSetPosition -win $_nWave2 {("ALU" 3)}
+wvAddSignal -win $_nWave2 "/testbench/dut/rvsingle/u_datapath/ImmExt\[31:0\]"
+wvSetPosition -win $_nWave2 {("ALU" 3)}
+wvSetPosition -win $_nWave2 {("ALU" 4)}
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvSetCursor -win $_nWave2 92646.332335
+wvZoomAll -win $_nWave2
+wvSetCursor -win $_nWave2 86182.634731
+wvSetCursor -win $_nWave2 84171.706587
+wvSetCursor -win $_nWave2 83166.242515
+wvScrollDown -win $_nWave2 2
+wvSetCursor -win $_nWave2 14507.410180
+wvSaveSignal -win $_nWave2 \
+           "/home/user/project/2023fa_cpu_design/week07/01.harris_single_cycle_10_instructions/sim/vcs/signal.rc"
+wvSetCursor -win $_nWave2 13071.032934
+wvSetCursor -win $_nWave2 13932.859281
+wvSetCursor -win $_nWave2 15369.236527
+wvSetCursor -win $_nWave2 19678.368263
+wvSetCursor -win $_nWave2 27722.080838
+wvSetCursor -win $_nWave2 15800.149701
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+schZoom {36865} {4124} {65554} {23664} -win $_nSchema3
+schZoom {39772} {6960} {59675} {22508} -win $_nSchema3
+schSelect -win $_nSchema3 -signal "Result\[31:0\]"
+wvSetPosition -win $_nWave2 {("ALU" 1)}
+wvSetPosition -win $_nWave2 {("REGFILE" 2)}
+wvSetPosition -win $_nWave2 {("REGFILE" 1)}
+wvSetPosition -win $_nWave2 {("REGFILE" 0)}
+wvSetPosition -win $_nWave2 {("IMEM" 2)}
+wvSetPosition -win $_nWave2 {("REGFILE" 0)}
+wvSetPosition -win $_nWave2 {("REGFILE" 1)}
+wvSetPosition -win $_nWave2 {("REGFILE" 2)}
+wvSetPosition -win $_nWave2 {("REGFILE" 3)}
+wvSetPosition -win $_nWave2 {("REGFILE" 4)}
+wvSetPosition -win $_nWave2 {("REGFILE" 5)}
+wvSetPosition -win $_nWave2 {("ALU" 1)}
+wvSetPosition -win $_nWave2 {("REGFILE" 6)}
+wvSetPosition -win $_nWave2 {("REGFILE" 7)}
+wvSetPosition -win $_nWave2 {("ALU" 0)}
+wvSetPosition -win $_nWave2 {("ALU" 1)}
+wvSetPosition -win $_nWave2 {("ALU" 2)}
+wvSetPosition -win $_nWave2 {("ALU" 3)}
+wvSetPosition -win $_nWave2 {("ALU" 4)}
+wvSetPosition -win $_nWave2 {("G5" 0)}
+wvSetPosition -win $_nWave2 {("G5" 1)}
+wvAddSignal -win $_nWave2 "/testbench/dut/rvsingle/u_datapath/Result\[31:0\]"
+wvSetPosition -win $_nWave2 {("G5" 1)}
+wvSetPosition -win $_nWave2 {("G5" 2)}
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvSetCursor -win $_nWave2 56162.350299
+wvSelectStuckSignals -win $_nWave2
+wvSetCursor -win $_nWave2 56162.350299
+wvSetCursor -win $_nWave2 38494.910180
+wvSetCursor -win $_nWave2 34042.140719
+wvSetCursor -win $_nWave2 20540.194611
+wvSetCursor -win $_nWave2 21545.658683
+wvSetCursor -win $_nWave2 21832.934132
+wvSetCursor -win $_nWave2 23843.862275
+wvSetCursor -win $_nWave2 24705.688623
+wvSetCursor -win $_nWave2 33323.952096
+wvSelectSignal -win $_nWave2 {( "G5" 2 )} 
+wvSelectGroup -win $_nWave2 {G7}
+wvSaveSignal -win $_nWave2 \
+           "/home/user/project/2023fa_cpu_design/week07/01.harris_single_cycle_10_instructions/sim/vcs/signal.rc"

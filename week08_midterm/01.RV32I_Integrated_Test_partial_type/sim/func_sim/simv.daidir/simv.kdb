@@ -1,0 +1,18 @@
+rc file Version 1.0
+
+[Design]
+COMPILE_PATH=/home/user/project/2023fa_cpu_design/week08_midterm/01.RV32I_Integrated_Test_partial_type/sim/func_sim
+VCS_HOME=/tools/synopsys/vcs-all/R-2020.12-SP2
+VERDI_HOME=/tools/synopsys/verdi/R-2020.12-SP2
+SystemC=FALSE
+UUM=FALSE
+KDB=FALSE
+USE_NOVAS_HOME=FALSE
+COSIM=FALSE
+TOP=flopenr cpu_tb 
+OPTION=-ssz -ssv -ssy 
+ELAB_OPTION=-ssz -ssv -ssy 
+
+[Value]
+WREALX=ffff534e50535f58
+WREALZ=ffff534e50535f5a

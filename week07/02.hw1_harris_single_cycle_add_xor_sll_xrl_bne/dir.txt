@@ -1,0 +1,32 @@
+.
+|-- Clean.bat
+|-- Clean.csh
+|-- Clean.sh
+|-- bench
+|   `-- verilog
+|       `-- testbench.sv
+|-- design
+|   `-- verilog
+|       `-- put_your_code
+|-- dir.txt
+|-- model
+|   `-- verilog
+|       |-- dmem.sv
+|       |-- imem.sv
+|       |-- riscvtest.s
+|       |-- riscvtest.txt
+|       |-- riscvtest_v2.s
+|       `-- riscvtest_v2.txt
+`-- sim
+    |-- Clean.bat
+    |-- Clean.csh
+    |-- Clean.sh
+    |-- Makefile
+    `-- vcs
+        |-- Makefile
+        |-- riscvtest.txt -> ../../model/verilog/riscvtest_v2.txt
+        |-- run.f
+        |-- signal.rc
+        `-- sim_define.v
+
+8 directories, 21 files

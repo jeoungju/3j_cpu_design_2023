@@ -1,0 +1,42 @@
+debImport "-sv" "-f" "run.f"
+wvCreateWindow
+schCreateWindow -delim "." -win $_nSchema1 -scope "testbench"
+schSetOptions -win $_nSchema3 -portName on
+schSetOptions -win $_nSchema3 -pinName on
+schSetOptions -win $_nSchema3 -instName on
+schSetOptions -win $_nSchema3 -completeName on
+schSetOptions -win $_nSchema3 -localNetName on
+schSetOptions -win $_nSchema3 -highContrastMode on
+wvRestoreSignal -win $_nWave2 \
+           "/home/user/project/lab_cpu/week06/01.32bit_adder/sim/signal.rc" \
+           -overWriteAutoAlias on -appendSignals on
+wvSelectSignal -win $_nWave2 {( "G1" 4 )} 
+wvSetPosition -win $_nWave2 {("G1" 4)}
+wvSetPosition -win $_nWave2 {("G1" 5)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G1" 5)}
+wvSelectSignal -win $_nWave2 {( "G1" 5 )} 
+wvSelectGroup -win $_nWave2 {G2}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G1" 5)}
+wvSetPosition -win $_nWave2 {("G1" 4)}
+wvSetPosition -win $_nWave2 {("G1" 3)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G1" 3)}
+wvSetPosition -win $_nWave2 {("G1" 6)}
+wvSetPosition -win $_nWave2 {("G1" 6)}
+wvSetPosition -win $_nWave2 {("G1" 3)}
+wvSelectSignal -win $_nWave2 {( "G1" 2 )} 
+wvSelectGroup -win $_nWave2 {G1}
+wvSelectGroup -win $_nWave2 {G1}
+wvSelectSignal -win $_nWave2 {( "G1" 1 )} 
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvSetCursor -win $_nWave2 312.113721 -snap {("G2" 0)}
+wvZoomAll -win $_nWave2
+wvSetCursor -win $_nWave2 530.093943 -snap {("G2" 0)}
+wvSaveSignal -win $_nWave2 \
+           "/home/user/project/lab_cpu/week06/01.32bit_adder/sim/signal.rc"
+debExit

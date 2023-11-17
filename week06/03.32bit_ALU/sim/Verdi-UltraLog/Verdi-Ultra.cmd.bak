@@ -1,0 +1,10 @@
+debImport "-sv" "-f" "run.f"
+wvCreateWindow
+schCreateWindow -delim "." -win $_nSchema1 -scope "testbench"
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvOpenFile -win $_nWave2 \
+           {/home/user/project/lab_cpu/week06/03.32bit_ALU/sim/testbench.fsdb}
+wvRestoreSignal -win $_nWave2 \
+           "/home/user/project/lab_cpu/week06/03.32bit_ALU/sim/signal.rc" \
+           -overWriteAutoAlias on -appendSignals on
+debExit

@@ -1,0 +1,57 @@
+@Verdi-Ultra rc file Version 1.0
+[General]
+saveDB = TRUE
+relativePath = FALSE
+saveSingleView = FALSE
+saveNWaveWinId = 
+VerdiVersion = Verdi_P-2019.06-SP2-12
+[KeyNote]
+Line1 = Automatic Backup 0
+Line2 = Save Open Database Information: Yes
+Line3 = Path Option: Absolute Paths
+Line4 = Windows Option: All Windows
+[OneSearch]
+isExisted = TRUE
+[TestBench]
+ConstrViewShow = 0
+InherViewShow = 0
+FSDBMsgShow = 0
+AnnotationShow = 0
+Console = FALSE
+powerDumped = 0
+[hb]
+viewport = 121 167 900 700 0 0 230 898
+activeNode = "flopenr"
+activeScope = "flopenr"
+activeFile = "../../src/rtl/myCPU/rev00/building_blocks/flopenr.sv"
+interactiveMode = False
+viewType = Source
+simulatorMode = False
+sourceBeginLine = 0
+baMode = False
+srcLineNum = True
+AutoWrap = True
+IdentifyFalseLogic = False
+syncSignal = False
+traceMode = Hierarchical
+showTraceInSchema = True
+paMode = False
+funcMode = False
+powerAwareAnnot = True
+amsAnnot = True
+traceCrossHier = True
+DnDtraceCrossHierOnly = True
+traceIncTopPort = False
+leadingZero = False
+signalPane = False
+Scope1 = "flopenr"
+multipleSelection = 1 0 2 0 0
+sdfCheckUndef = FALSE
+simFlow = FALSE
+[hb.design]
+importCmd = "-sv" "-f" "run.f" 
+invokeDir = /home/user/project/lab_cpu/week09/hardware/11.RV32I_isa_tests/sim/func_sim
+[hb.sourceTab.1]
+scope = flopenr
+File = /home/user/project/lab_cpu/week09/hardware/11.RV32I_isa_tests/src/rtl/myCPU/rev00/building_blocks/flopenr.sv
+Line = 1

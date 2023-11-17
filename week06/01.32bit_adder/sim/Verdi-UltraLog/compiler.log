@@ -1,0 +1,18 @@
+*design* DebussyLib (btIdent Verdi_P-2019.06-SP2-12)
+Command arguments:
+    +define+verilog
+    -sv
+    -f run.f
+        ../src/rtl/full_adder.v
+        ../src/rtl/cla_unit_8bit.v
+        ../src/rtl/cla_8bit.v
+        ../src/rtl/cla_32bit.v
+        ../testbench/testbench.v
+
+
+*Warning* too many digits in hexadecimal
+"../testbench/testbench.v", 24: 
+Highest level modules:
+testbench
+
+Total	0 error(s),   1 warning(s)

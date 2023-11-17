@@ -1,0 +1,62 @@
+debImport "-sv" "-f" "run.f"
+srcHBSelect "flopenr" -win $_nTrace1
+srcHBSelect "flopenr" -win $_nTrace1
+srcSetScope -win $_nTrace1 "flopenr" -delim "."
+srcHBSelect "flopenr" -win $_nTrace1
+srcHBSelect "cpu_tb" -win $_nTrace1
+srcSetScope -win $_nTrace1 "cpu_tb" -delim "."
+srcHBSelect "cpu_tb" -win $_nTrace1
+wvCreateWindow
+schCreateWindow -delim "." -win $_nSchema1 -scope "cpu_tb"
+schSetOptions -win $_nSchema3 -portName on
+schSetOptions -win $_nSchema3 -pinName on
+schSetOptions -win $_nSchema3 -instName on
+schSetOptions -win $_nSchema3 -localNetName on
+schSetOptions -win $_nSchema3 -completeName on
+schSetOptions -win $_nSchema3 -parameterList on
+schSetOptions -win $_nSchema3 -highContrastMode on
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvOpenFile -win $_nWave2 \
+           {/home/user/project/lab_cpu/week08_midterm/02.RV32I_Integrated_Test/sim/func_sim/wave.fsdb}
+schZoomIn -win $_nSchema3 -pos 13894 7040
+schZoomIn -win $_nSchema3 -pos 13571 5559
+schZoomIn -win $_nSchema3 -pos 13571 5558
+schSelect -win $_nSchema3 -inst "cpu_tb\(@1\):Init2:205:786:Init"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvZoomAll -win $_nWave2
+wvZoomAll -win $_nWave2
+wvZoomAll -win $_nWave2
+wvZoomAll -win $_nWave2
+wvZoomAll -win $_nWave2
+schDeselectAll -win $_nSchema3
+schSelect -win $_nSchema3 -signal "cycle\[31:0\]"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+schFit -win $_nSchema3
+schFit -win $_nSchema3
+schFit -win $_nSchema3
+schFit -win $_nSchema3
+schFit -win $_nSchema3
+schFit -win $_nSchema3
+schSelect -win $_nSchema3 -inst "CPU"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+debExit

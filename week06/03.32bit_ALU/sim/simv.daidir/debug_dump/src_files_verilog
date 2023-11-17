@@ -1,0 +1,6 @@
+/home/user/project/lab_cpu/week06/03.32bit_ALU/src/rtl/alu_32bit.v
+/home/user/project/lab_cpu/week06/03.32bit_ALU/src/rtl/cla_32bit.v
+/home/user/project/lab_cpu/week06/03.32bit_ALU/src/rtl/cla_8bit.v
+/home/user/project/lab_cpu/week06/03.32bit_ALU/src/rtl/cla_unit_8bit.v
+/home/user/project/lab_cpu/week06/03.32bit_ALU/src/rtl/full_adder.v
+/home/user/project/lab_cpu/week06/03.32bit_ALU/testbench/testbench.v

@@ -1,0 +1,41 @@
+.
+|-- Clean.bat
+|-- Clean.csh
+|-- Clean.sh
+|-- bench
+|   `-- verilog
+|       `-- testbench.sv
+|-- design
+|   `-- verilog
+|       `-- put_your_code
+|-- dir.txt
+|-- model
+|   `-- verilog
+|       |-- asm_code
+|       |   |-- asm_code.asm
+|       |   |-- asm_dumpFile.txt
+|       |   |-- machine_code.txt
+|       |   |-- rars1_6.jar
+|       |   |-- readme
+|       |   `-- run.sh
+|       |-- dmem.sv
+|       |-- imem.sv
+|       |-- riscvtest.s
+|       |-- riscvtest.txt
+|       |-- riscvtest_v2.s
+|       |-- riscvtest_v2.txt
+|       |-- riscvtest_v3.s -> asm_code/asm_code.asm
+|       `-- riscvtest_v3.txt
+`-- sim
+    |-- Clean.bat
+    |-- Clean.csh
+    |-- Clean.sh
+    |-- Makefile
+    `-- vcs
+        |-- Makefile
+        |-- riscvtest.txt -> ../../model/verilog/riscvtest_v3.txt
+        |-- run.f
+        |-- signal.rc
+        `-- sim_define.v
+
+9 directories, 29 files

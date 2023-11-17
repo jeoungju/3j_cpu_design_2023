@@ -1,0 +1,4 @@
+/home/user/project/lab_cpu/week06/07.sync_read_sync_write_memory/sim/func_sim/mem_path.vh
+/home/user/project/lab_cpu/week06/07.sync_read_sync_write_memory/sim/func_sim/sim_define.v
+/home/user/project/lab_cpu/week06/07.sync_read_sync_write_memory/src/rtl/dualport_mem_synch_rw.sv
+/home/user/project/lab_cpu/week06/07.sync_read_sync_write_memory/testbench/testbench.v

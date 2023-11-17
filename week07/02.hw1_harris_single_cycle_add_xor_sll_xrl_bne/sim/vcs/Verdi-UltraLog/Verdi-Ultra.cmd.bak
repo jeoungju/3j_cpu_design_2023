@@ -1,0 +1,111 @@
+debImport "-sv" "-f" "run.f"
+srcTBBTreeSelect -win $_nTrace1 -path "testbench"
+srcTBBTreeSelect -win $_nTrace1 -path "testbench"
+srcTBTreeAction -win $_nTrace1 -path "testbench"
+wvCreateWindow
+schCreateWindow -delim "." -win $_nSchema1 -scope "testbench"
+schSetOptions -win $_nSchema3 -portName on
+schSetOptions -win $_nSchema3 -pinName on
+schSetOptions -win $_nSchema3 -instName on
+schSetOptions -win $_nSchema3 -localNetName on
+schSetOptions -win $_nSchema3 -completeName on
+schSetOptions -win $_nSchema3 -highContrastMode on
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvOpenFile -win $_nWave2 \
+           {/home/user/project/lab_cpu/week07/02.hw1_harris_single_cycle_add_xor_sll_xrl_bne/sim/vcs/wave.fsdb}
+schSelect -win $_nSchema3 -inst "dut"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+schFit -win $_nSchema3
+wvSetCursor -win $_nWave2 101289.398281 -snap {("G2" 0)}
+wvZoom -win $_nWave2 0.000000 1097826.086957
+wvZoom -win $_nWave2 878260.869565 2049275.362319
+wvZoom -win $_nWave2 146376.811594 3952173.913043
+wvZoomAll -win $_nWave2
+wvZoom -win $_nWave2 0.000000 3000724.637681
+wvZoom -win $_nWave2 0.000000 1829710.144928
+wvZoom -win $_nWave2 805072.463768 1463768.115942
+wvZoom -win $_nWave2 951449.275362 1390579.710145
+wvZoom -win $_nWave2 0.000000 114501.058926
+wvSelectGroup -win $_nWave2 {G2}
+schSelect -win $_nSchema3 -inst "dut"
+schPushViewIn -win $_nSchema3
+schSelect -win $_nSchema3 -inst "imem"
+schPushViewIn -win $_nSchema3
+schPopViewUp -win $_nSchema3
+schSelect -win $_nSchema3 -inst "dmem"
+schPushViewIn -win $_nSchema3
+schPopViewUp -win $_nSchema3
+schSelect -win $_nSchema3 -inst "rvsingle"
+schPushViewIn -win $_nSchema3
+schPopViewUp -win $_nSchema3
+schPopViewUp -win $_nSchema3
+schSelect -win $_nSchema3 -inst "dut"
+schPushViewIn -win $_nSchema3
+schSelect -win $_nSchema3 -inst "imem"
+schPushViewIn -win $_nSchema3
+schPopViewUp -win $_nSchema3
+schSelect -win $_nSchema3 -inst "dmem"
+schPushViewIn -win $_nSchema3
+schPopViewUp -win $_nSchema3
+schPopViewUp -win $_nSchema3
+schSelect -win $_nSchema3 -inst "dut"
+schPushViewIn -win $_nSchema3
+schSelect -win $_nSchema3 -inst "rvsingle"
+schPushViewIn -win $_nSchema3
+schSelect -win $_nSchema3 -inst "u_controller"
+schPushViewIn -win $_nSchema3
+schZoomIn -win $_nSchema3 -pos 3513 4338
+schZoomIn -win $_nSchema3 -pos 3652 4647
+schZoomOut -win $_nSchema3 -pos 5255 7325
+schZoomOut -win $_nSchema3 -pos 6152 6838
+schZoomOut -win $_nSchema3 -pos 5196 6607
+schZoomOut -win $_nSchema3 -pos 5196 6606
+schZoomIn -win $_nSchema3 -pos -1860 5833
+schZoomIn -win $_nSchema3 -pos -1861 5872
+schSelect -win $_nSchema3 -signal "Btaken"
+schZoomOut -win $_nSchema3 -pos 9523 7465
+schZoomOut -win $_nSchema3 -pos 9523 7465
+schZoomIn -win $_nSchema3 -pos 14412 9184
+schZoomIn -win $_nSchema3 -pos 14276 9015
+schSelect -win $_nSchema3 -signal "Branch"
+schZoomOut -win $_nSchema3 -pos 8267 3024
+schPushViewIn -win $_nSchema3
+schSelect -win $_nSchema3 -signal "Btaken"
+schSelect -win $_nSchema3 -inst "mdec"
+schDeselectAll -win $_nSchema3
+wvSetCursor -win $_nWave2 20751.266410 -snap {("G2" 0)}
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+schCloseWindow -win $_nSchema3
+wvCreateWindow
+schCreateWindow -delim "." -win $_nSchema1 -scope "testbench"
+schSetOptions -win $_nSchema5 -portName on
+schSetOptions -win $_nSchema5 -pinName on
+schSetOptions -win $_nSchema5 -instName on
+schSetOptions -win $_nSchema5 -localNetName on
+schSetOptions -win $_nSchema5 -completeName on
+schSetOptions -win $_nSchema5 -highContrastMode on
+schSelect -win $_nSchema5 -inst "dut"
+schPushViewIn -win $_nSchema5
+schSelect -win $_nSchema5 -inst "imem"
+schAddSelectedToWave -win $_nSchema5 -clipboard
+wvDrop -win $_nWave2
+wvSetPosition -win $_nWave4 {("G1" 0)}
+wvOpenFile -win $_nWave4 \
+           {/home/user/project/lab_cpu/week07/02.hw1_harris_single_cycle_add_xor_sll_xrl_bne/sim/vcs/wave.fsdb}
+schSelect -win $_nSchema5 -inst "imem"
+schSelect -win $_nSchema5 -inst "imem"
+schAddSelectedToWave -win $_nSchema5 -clipboard
+wvDrop -win $_nWave2
+schSelect -win $_nSchema5 -inst "imem"
+schAddSelectedToWave -win $_nSchema5 -clipboard
+wvDrop -win $_nWave2
+wvSetFileTimeRange -win $_nWave4 -time_unit 1p 0 10000000
+wvGetSignalOpen -win $_nWave4
+wvGetSignalSetScope -win $_nWave4 "/flopenr"
+wvGetSignalSetScope -win $_nWave4 "/testbench"
+wvGetSignalSetScope -win $_nWave4 "/testbench/dut"
+wvGetSignalSetScope -win $_nWave4 "/testbench/dut/rvsingle"
+wvGetSignalClose -win $_nWave4

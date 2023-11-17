@@ -1,0 +1,78 @@
+debImport "-sv" "-f" "run.f"
+wvCreateWindow
+schCreateWindow -delim "." -win $_nSchema1 -scope "testbench"
+wvRestoreSignal -win $_nWave2 \
+           "/home/user/project/lab_cpu/week06/05.Register_file/sim/signal.rc" \
+           -overWriteAutoAlias on -appendSignals on
+schSetOptions -win $_nSchema3 -portName on
+schSetOptions -win $_nSchema3 -pinName on
+schSetOptions -win $_nSchema3 -instName on
+schSetOptions -win $_nSchema3 -localNetName on
+schSetOptions -win $_nSchema3 -completeName on
+schSetOptions -win $_nSchema3 -highContrastMode on
+wvSetCursor -win $_nWave2 112.428135 -snap {("G2" 0)}
+wvSelectSignal -win $_nWave2 {( "G1" 8 )} 
+wvSetPosition -win $_nWave2 {("G1" 8)}
+wvSetPosition -win $_nWave2 {("G1" 7)}
+wvSetPosition -win $_nWave2 {("G1" 6)}
+wvSetPosition -win $_nWave2 {("G1" 5)}
+wvSetPosition -win $_nWave2 {("G1" 4)}
+wvSetPosition -win $_nWave2 {("G1" 3)}
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvZoomAll -win $_nWave2
+wvZoomAll -win $_nWave2
+wvSetCursor -win $_nWave2 1084.128440 -snap {("G2" 0)}
+wvZoomAll -win $_nWave2
+wvZoomAll -win $_nWave2
+wvZoomAll -win $_nWave2
+wvZoomAll -win $_nWave2
+wvZoomAll -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G1" 2 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 2 3 )} 
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvSetPosition -win $_nWave2 {("G1" 3)}
+wvSetPosition -win $_nWave2 {("G1" 4)}
+wvSetPosition -win $_nWave2 {("G1" 5)}
+wvSetPosition -win $_nWave2 {("G1" 6)}
+wvSetPosition -win $_nWave2 {("G1" 7)}
+wvSetPosition -win $_nWave2 {("G1" 8)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 2)}
+wvSetPosition -win $_nWave2 {("G2" 2)}
+wvSelectGroup -win $_nWave2 {G3}
+wvSetCursor -win $_nWave2 532.695209 -snap {("G3" 0)}
+wvSelectSignal -win $_nWave2 {( "G2" 2 )} 
+wvZoomAll -win $_nWave2
+wvZoomAll -win $_nWave2
+wvSetCursor -win $_nWave2 1102.866463 -snap {("G3" 0)}
+wvZoomAll -win $_nWave2
+verdiWindowResize -win $_Verdi_1 "788" "20" "1047" "977"
+wvSetCursor -win $_nWave2 1126.127362 -snap {("G2" 2)}
+wvZoomAll -win $_nWave2
+wvSetCursor -win $_nWave2 552.665816 -snap {("G2" 1)}
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+wvZoomAll -win $_nWave2
+wvZoomAll -win $_nWave2
+wvZoomAll -win $_nWave2
+wvSetCursor -win $_nWave2 941.206633 -snap {("G2" 2)}
+wvSetCursor -win $_nWave2 375.142857 -snap {("G2" 2)}
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+wvZoomAll -win $_nWave2
+verdiWindowResize -win $_Verdi_1 "824" "20" "1011" "977"
+verdiWindowResize -win $_Verdi_1 "265" "20" "1570" "977"
+wvZoomAll -win $_nWave2
+wvSetCursor -win $_nWave2 1539.651109 -snap {("G3" 0)}
+wvZoomAll -win $_nWave2
+wvSaveSignal -win $_nWave2 \
+           "/home/user/project/lab_cpu/week06/05.Register_file/sim/signal.rc"
+debExit

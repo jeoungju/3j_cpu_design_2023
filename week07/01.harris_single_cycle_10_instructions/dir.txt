@@ -1,0 +1,45 @@
+.
+|-- Clean.bat
+|-- Clean.csh
+|-- Clean.sh
+|-- bench
+|   `-- verilog
+|       `-- testbench.sv
+|-- design
+|   `-- verilog
+|       |-- alu.sv
+|       |-- aludec.sv
+|       |-- building_blocks
+|       |   |-- adder.sv
+|       |   |-- extend.sv
+|       |   |-- flopenr.sv
+|       |   |-- flopr.sv
+|       |   |-- mux2.sv
+|       |   `-- mux3.sv
+|       |-- controller.sv
+|       |-- datapath.sv
+|       |-- maindec.sv
+|       |-- regfile.sv
+|       |-- riscvsingle.sv
+|       `-- top.sv
+|-- dir.txt
+|-- model
+|   `-- verilog
+|       |-- dmem.sv
+|       |-- dmem_og.sv
+|       |-- imem.sv
+|       |-- riscvtest.s
+|       `-- riscvtest.txt
+`-- sim
+    |-- Clean.bat
+    |-- Clean.csh
+    |-- Clean.sh
+    |-- Makefile
+    `-- vcs
+        |-- Makefile
+        |-- riscvtest.txt -> ../../model/verilog/riscvtest.txt
+        |-- run.f
+        |-- signal.rc
+        `-- sim_define.v
+
+9 directories, 33 files

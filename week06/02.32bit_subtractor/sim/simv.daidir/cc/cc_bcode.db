@@ -1,0 +1,2 @@
+sid testbench
+bcid 0 0 WIDTH,32 CALL_ARG_VAL,2,0 NOT OPT_CONST,1 ADD RET

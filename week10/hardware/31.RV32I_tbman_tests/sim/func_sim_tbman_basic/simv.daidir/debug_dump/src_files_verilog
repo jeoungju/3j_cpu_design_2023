@@ -1,0 +1,12 @@
+/home/user/project/lab_cpu/week10/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_basic/mem_path.vh
+/home/user/project/lab_cpu/week10/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_basic/sim_define.v
+/home/user/project/lab_cpu/week10/hardware/31.RV32I_tbman_tests/src/rtl/refCPU/rev02_protect/10peripheral_tbman/01.tbman/tbman_apbs.v
+/home/user/project/lab_cpu/week10/hardware/31.RV32I_tbman_tests/src/rtl/refCPU/rev02_protect/10peripheral_tbman/01.tbman/tbman_regs.v
+/home/user/project/lab_cpu/week10/hardware/31.RV32I_tbman_tests/src/rtl/refCPU/rev02_protect/10peripheral_tbman/01.tbman/tbman_wrap.v
+/home/user/project/lab_cpu/week10/hardware/31.RV32I_tbman_tests/src/rtl/refCPU/rev02_protect/10peripheral_tbman/Addr_Decoder.vp
+/home/user/project/lab_cpu/week10/hardware/31.RV32I_tbman_tests/src/rtl/refCPU/rev02_protect/10peripheral_tbman/data_mux.vp
+/home/user/project/lab_cpu/week10/hardware/31.RV32I_tbman_tests/src/rtl/refCPU/rev02_protect/ASYNC_RAM_DP_WBE.v
+/home/user/project/lab_cpu/week10/hardware/31.RV32I_tbman_tests/src/rtl/refCPU/rev02_protect/RV32I_System.vp
+/home/user/project/lab_cpu/week10/hardware/31.RV32I_tbman_tests/src/rtl/refCPU/rev02_protect/reg_file_async.v
+/home/user/project/lab_cpu/week10/hardware/31.RV32I_tbman_tests/src/rtl/refCPU/rev02_protect/rv32i_cpu_protected.vp
+/home/user/project/lab_cpu/week10/hardware/31.RV32I_tbman_tests/testbench/c_tests_tb.v

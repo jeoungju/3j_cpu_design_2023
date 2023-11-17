@@ -1,0 +1,3 @@
+debImport "-sv" "-f" "run.f"
+verdiWindowResize -win $_Verdi_1 "490" "20" "1395" "854"
+debExit

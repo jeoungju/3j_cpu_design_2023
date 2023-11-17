@@ -1,0 +1,3 @@
+Command Line: /tools/synopsys/verdi/P-2019.06-SP2-12/platform/LINUXAMD64/bin/Novas -Ultra -sv -f run.f
+uname(Linux smu409-24 3.10.0-1160.83.1.el7.x86_64 #1 SMP Wed Jan 25 16:41:43 UTC 2023 x86_64)
+au time 720.622833 16.248012 9.265230 delta 408170496 408170496 total 847745024 847745024
