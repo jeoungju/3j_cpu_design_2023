@@ -650,3 +650,4 @@ wvScrollUp -win $_nWave2 1
 wvScrollUp -win $_nWave2 1
 wvScrollDown -win $_nWave2 1
 wvScrollUp -win $_nWave2 1
+debExit

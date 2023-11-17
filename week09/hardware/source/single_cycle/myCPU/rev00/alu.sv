@@ -28,7 +28,7 @@ module alu(
     wire [32:0] b_2s_carry;
     assign b_2s_carry = {1'b0,b_not} + 33'h1;
 
-    //assign add_sub_b = (ALUControl == 5'b10000 || ALUControl == 5'b00101 || ALUControl == 5'b00001 || ALUControl == 5'b01001) ? ~b_in + 32'h1 : b_in;
+
     assign add_sub_b = (ALUControl == 5'b10001 || ALUControl == 5'b00101 || ALUControl == 5'b00001 || ALUControl == 5'b01001) ? ~b_in : b_in;
 
     adder u_add_32bit_add(
@@ -41,18 +41,7 @@ module alu(
         .C(C),
         .V(V)
     );    
-/*
-    adder u_add_32bit_sub(
-        .a(a_in),
-        .b(sub_b),
-        .ci(b_2s_carry[32]),
-        .sum(sub_result),
-        .N(N),
-        .Z(Z),
-        .C(C),
-        .V(V)
-    );  
-    */
+
     always@(*)begin
         if (ALUControl == 5'b00000 || ALUControl == 5'b10001 || ALUControl == 5'b00101 || ALUControl == 5'b00001 || ALUControl == 5'b01001) begin
             {aN, aZ, aC, aV} = {N, Z, C, V};
