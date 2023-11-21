@@ -1,0 +1,57 @@
+@Verdi-Ultra rc file Version 1.0
+[General]
+saveDB = TRUE
+relativePath = FALSE
+saveSingleView = FALSE
+saveNWaveWinId = 
+VerdiVersion = Verdi_P-2019.06-SP2-12
+[KeyNote]
+Line1 = Automatic Backup 0
+Line2 = Save Open Database Information: Yes
+Line3 = Path Option: Absolute Paths
+Line4 = Windows Option: All Windows
+[OneSearch]
+isExisted = TRUE
+[TestBench]
+ConstrViewShow = 0
+InherViewShow = 0
+FSDBMsgShow = 0
+AnnotationShow = 0
+Console = FALSE
+powerDumped = 0
+[hb]
+viewport = 0 0 900 700 0 0 230 898
+activeNode = "UPF"
+activeScope = "UPF"
+activeFile = "/tools/synopsys/verdi/P-2019.06-SP2-12/etc/kdb/power/upf/novas_upf.sv"
+interactiveMode = False
+viewType = Source
+simulatorMode = False
+sourceBeginLine = 2
+baMode = False
+srcLineNum = True
+AutoWrap = True
+IdentifyFalseLogic = False
+syncSignal = False
+traceMode = Hierarchical
+showTraceInSchema = True
+paMode = False
+funcMode = False
+powerAwareAnnot = True
+amsAnnot = True
+traceCrossHier = True
+DnDtraceCrossHierOnly = True
+traceIncTopPort = False
+leadingZero = False
+signalPane = False
+Scope1 = "UPF"
+multipleSelection = 1 0 2 0 0
+sdfCheckUndef = FALSE
+simFlow = FALSE
+[hb.design]
+importCmd = "-sv" "-f" "run.f" 
+invokeDir = /home/user/project/lab_cpu/3j_cpu_design_2023/week10/software/tbman_tests/tbman_printf
+[hb.sourceTab.1]
+scope = UPF
+File = /tools/synopsys/verdi/P-2019.06-SP2-12/etc/kdb/power/upf/novas_upf.sv
+Line = 3

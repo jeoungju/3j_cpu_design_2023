@@ -1,0 +1,81 @@
+*design* DebussyLib (btIdent Verdi_P-2019.06-SP2-12)
+Command arguments:
+    +define+verilog
+    -sv
+    run.f
+
+
+*Error* Syntax error at .
+"run.f", 1: 
+
+*Error* Syntax error at .
+"run.f", 3: 
+
+*Error* Syntax error at .
+"run.f", 4: 
+
+*Error* Syntax error at .
+"run.f", 5: 
+
+*Error* Syntax error at .
+"run.f", 6: 
+
+*Error* Syntax error at .
+"run.f", 7: 
+
+*Error* Syntax error at .
+"run.f", 8: 
+
+*Error* Syntax error at .
+"run.f", 9: 
+
+*Error* Syntax error at .
+"run.f", 10: 
+
+*Error* Syntax error at .
+"run.f", 11: 
+
+*Error* Syntax error at .
+"run.f", 12: 
+
+*Error* Syntax error at .
+"run.f", 14: 
+
+*Error* Syntax error at .
+"run.f", 15: 
+
+*Error* Syntax error at .
+"run.f", 16: 
+
+*Error* Syntax error at .
+"run.f", 17: 
+
+*Error* Syntax error at .
+"run.f", 18: 
+
+*Error* Syntax error at .
+"run.f", 19: 
+
+*Error* Syntax error at .
+"run.f", 20: 
+
+*Error* Syntax error at .
+"run.f", 23: 
+
+*Error* Syntax error at .
+"run.f", 24: 
+
+*Error* Syntax error at .
+"run.f", 26: 
+
+*Error* Syntax error at .
+"run.f", 27: 
+
+*Error* Syntax error at .
+"run.f", 28: 
+
+*Error* Syntax error at .
+"run.f", 31: 
+Highest level modules:
+
+Total	24 error(s),   0 warning(s)

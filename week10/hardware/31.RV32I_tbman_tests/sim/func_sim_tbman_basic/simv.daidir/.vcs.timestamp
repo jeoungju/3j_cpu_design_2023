@@ -45,7 +45,7 @@ XDG_RUNTIME_DIR=/run/user/1000
 XDG_MENU_PREFIX=gnome-
 XDG_DATA_DIRS=/home/user/.local/share/flatpak/exports/share/:/var/lib/flatpak/exports/share/:/usr/local/share/:/usr/share/
 XDG_CURRENT_DESKTOP=GNOME-Classic:GNOME
-XAUTHORITY=/run/gdm/auth-for-user-9GRbYn/database
+XAUTHORITY=/run/gdm/auth-for-user-WKlsAZ/database
 WINDOWPATH=1
 VTE_VERSION=5204
 VMR_MODE_FLAG=32
@@ -64,9 +64,9 @@ UNAME=/bin/uname
 TOOL_HOME=/tools/synopsys/vcs-all/R-2020.12-SP2/linux
 SYNOPSYS_LC_ROOT=/tools/synopsys/lc/Q-2019.12-SP5
 SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
-SSH_AGENT_PID=2622
+SSH_AGENT_PID=2950
 SNPS_VERDI_INTERNAL_LP_XML_NEW_FLOW=1
-SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/2478,unix/unix:/tmp/.ICE-unix/2478
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/2806,unix/unix:/tmp/.ICE-unix/2806
 SCRNAME=vcs
 SCRIPT_NAME=vcs
 QT_IM_MODULE=ibus
@@ -87,7 +87,7 @@ IMSETTINGS_INTEGRATE_DESKTOP=yes
 ICC2_HOME=/tools/synopsys/icc2/Q-2019.12-SP6
 HISTCONTROL=ignoredups
 GNOME_TERMINAL_SERVICE=:1.105
-GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/eda9ab00_b4c1_4e80_ae0f_6a0622347947
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/e52e699c_4d93_4d54_b076_fd82d6dd5097
 GNOME_SHELL_SESSION_MODE=classic
 GNOME_DESKTOP_SESSION_ID=this-is-deprecated
 GDM_LANG=ko_KR.UTF-8
@@ -95,23 +95,36 @@ GDMSESSION=gnome-classic
 DVE_HOME=/tools/synopsys/vcs-all/R-2020.12-SP2/gui/dve
 DESKTOP_SESSION=gnome-classic
 DC_HOME=/tools/synopsys/syn/P-2019.03-SP5-6
-DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-fubLQwpeWN,guid=a92af8b194b2cf79f84ef03165540562
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-4g2MlId3xU,guid=dda2c6ff4e96cb2ee9571f7b655c5c9f
 COLORTERM=truecolor
 0
-15
+28
 1699405630 mem_path.vh
-1699405630 ../../testbench/c_tests_tb.v
-1699405630 ../../src/rtl/refCPU/rev02_protect/RV32I_System.vp
-1699405630 ../../src/rtl/refCPU/rev02_protect/10peripheral_tbman/01.tbman/tbman_wrap.v
-1699405630 ../../src/rtl/refCPU/rev02_protect/10peripheral_tbman/01.tbman/tbman_regs.v
-1699405630 ../../src/rtl/refCPU/rev02_protect/10peripheral_tbman/01.tbman/tbman_apbs.v
-1699405630 ../../src/rtl/refCPU/rev02_protect/10peripheral_tbman/data_mux.vp
-1699405630 ../../src/rtl/refCPU/rev02_protect/10peripheral_tbman/Addr_Decoder.vp
-1699405630 ../../src/rtl/refCPU/rev02_protect/rv32i_cpu_protected.vp
-1699405630 ../../src/rtl/refCPU/rev02_protect/reg_file_async.v
-1699405630 ../../src/rtl/refCPU/rev02_protect/ASYNC_RAM_DP_WBE.v
+1700576169 ../../testbench/c_tests_tb.v
+1699405630 ../../src/rtl/myCPU/rev00/10peripheral_tbman/01.tbman/tbman_wrap.v
+1699405630 ../../src/rtl/myCPU/rev00/10peripheral_tbman/01.tbman/tbman_regs.v
+1699405630 ../../src/rtl/myCPU/rev00/10peripheral_tbman/01.tbman/tbman_apbs.v
+1700575845 ../../src/rtl/myCPU/rev00/10peripheral_tbman/data_mux.v
+1700575843 ../../src/rtl/myCPU/rev00/10peripheral_tbman/Addr_Decoder.v
+1699407948 ../../src/rtl/myCPU/rev00/building_blocks/mux3.sv
+1699407948 ../../src/rtl/myCPU/rev00/building_blocks/mux2.sv
+1700570314 ../../src/rtl/myCPU/rev00/building_blocks/flopr.sv
+1699407948 ../../src/rtl/myCPU/rev00/building_blocks/flopenr.sv
+1700016469 ../../src/rtl/myCPU/rev00/building_blocks/extend.sv
+1700570780 ../../src/rtl/myCPU/rev00/building_blocks/be_logic.sv
+1699407948 ../../src/rtl/myCPU/rev00/building_blocks/adder.sv
+1700576835 ../../src/rtl/myCPU/rev00/RV32I_System.v
+1700015991 ../../src/rtl/myCPU/rev00/riscvsingle.sv
+1700015989 ../../src/rtl/myCPU/rev00/reg_file_async.v
+1700574531 ../../src/rtl/myCPU/rev00/maindec.sv
+1700016025 ../../src/rtl/myCPU/rev00/datapath.sv
+1700015984 ../../src/rtl/myCPU/rev00/controller.sv
+1699407948 ../../src/rtl/myCPU/rev00/branch_logic.sv
+1700578343 ../../src/rtl/myCPU/rev00/aludec.sv
+1699408359 ../../src/rtl/myCPU/rev00/ASYNC_RAM_DP_WBE.v
+1700577737 ../../src/rtl/myCPU/rev00/alu.sv
 1699405630 ./sim_define.v
-1699405630 run.f
+1700578526 run.f
 1615803819 /tools/synopsys/verdi/P-2019.06-SP2-12/share/PLI/VCS/LINUX/verdi.tab
 1622257860 /tools/synopsys/vcs-all/R-2020.12-SP2/linux/lib/vcsdp_lite.tab
 4
@@ -119,5 +132,5 @@ COLORTERM=truecolor
 1622258416 /tools/synopsys/vcs-all/R-2020.12-SP2/linux/lib/liberrorinf.so
 1622258234 /tools/synopsys/vcs-all/R-2020.12-SP2/linux/lib/libsnpsmalloc.so
 1622258612 /tools/synopsys/vcs-all/R-2020.12-SP2/linux/lib/libvfs.so
-1700010559 simv.daidir
+1700578529 simv.daidir
 -1 partitionlib

@@ -5,17 +5,29 @@
         "module",
         1
     ],
-    "adder_1bit": [
-        "adder_1bit",
-        "KaZs1",
+    "cla_8bit": [
+        "cla_8bit",
+        "c8pr1",
         "module",
-        2
+        6
     ],
-    "alu_add": [
-        "alu_add",
-        "iQZ2i",
+    "full_adder": [
+        "full_adder",
+        "BEdzp",
         "module",
-        3
+        7
+    ],
+    "flopenr": [
+        "flopenr",
+        "rCRUN",
+        "module",
+        8
+    ],
+    "mux3": [
+        "mux3",
+        "rsgQu",
+        "module",
+        9
     ],
     "c_tests_tb": [
         "c_tests_tb",

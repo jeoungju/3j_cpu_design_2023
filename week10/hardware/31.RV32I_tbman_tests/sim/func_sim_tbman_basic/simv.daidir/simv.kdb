@@ -1,7 +1,7 @@
 rc file Version 1.0
 
 [Design]
-COMPILE_PATH=/home/user/project/lab_cpu/week10/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_basic
+COMPILE_PATH=/home/user/project/lab_cpu/3j_cpu_design_2023/week10/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_basic
 VCS_HOME=/tools/synopsys/vcs-all/R-2020.12-SP2
 VERDI_HOME=/tools/synopsys/verdi/P-2019.06-SP2-12
 SystemC=FALSE
@@ -9,7 +9,7 @@ UUM=FALSE
 KDB=TRUE
 USE_NOVAS_HOME=FALSE
 COSIM=FALSE
-TOP=c_tests_tb 
+TOP=flopenr c_tests_tb 
 OPTION=-ssv -ssy 
 ELAB_OPTION=-ssv -ssy 
 ELAB=TRUE

@@ -1,6 +1,6 @@
 psSimBaseName                      	simv
 psLogFileName                      	NULL
-pDaiDir                            	/home/user/project/lab_cpu/week09/hardware/21_week09_hw1.RV32I_c_tests/sim/func_sim/simv.daidir
+pDaiDir                            	/home/user/project/lab_cpu/3j_cpu_design_2023/week09/hardware/21_week09_hw1.RV32I_c_tests/sim/func_sim/simv.daidir
 destPath                           	csrc/
 fSharedMaster                      	0
 fHsimPCSharedLibSpecified          	0
@@ -964,7 +964,7 @@ fHsimMxConnFrc                     	0
 fHsimNewForceCbkVec                	0
 fHsimNewForceCbkVecDiag            	0
 fHsimMdbReplaceVpdHighConn         	1
-fHsimVpdHighConnReplaced           	0
+fHsimVpdHighConnReplaced           	1
 fHsimVpdOptSVTypes                 	1
 fHsimDlyInitFrc                    	0
 fHsimCompactVpdFn                  	1

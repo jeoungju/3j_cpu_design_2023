@@ -162,8 +162,8 @@ Cannot get runtime environment variables: environ is NULL
 Runtime command line arguments:
 argv[0]=simv
 163 profile - 100
-          CPU/Mem usage: 0.050 sys,  0.230 user,  158.00M mem
-164 Elapsed time:    0:00:00    Wed Nov 15 10:09:18 2023
+          CPU/Mem usage: 0.050 sys,  0.220 user,  158.05M mem
+164 Elapsed time:    0:00:00    Tue Nov 21 23:55:29 2023
 165 pliAppInit
 166 FSDB_GATE is set.
 167 FSDB_RTL is set.
@@ -181,51 +181,52 @@ argv[0]=simv
 179 *  may cause abnormal behavior, please contact Synopsys support for   *
 180 *  assistance.                                                        *
 181 ***********************************************************************
-182 sps_call_fsdbDumpfile_main at 0 : ../../testbench/c_tests_tb.v(127)
+182 sps_call_fsdbDumpfile_main at 0 : ../../testbench/c_tests_tb.v(128)
 183 argv[0]: (wave.fsdb)
-184 *Verdi* : Create FSDB file 'wave.fsdb'
-185 compile option from '/home/user/project/lab_cpu/week10/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_basic/simv.daidir/vcs_rebuild'.
-186   "vcs '-R' '-debug_acc+all' '-sverilog' '-kdb' '-timescale=1ns/1ns' '-f' 'run.f' 2>&1"
-187 DVDI_is_vir_unload_enabled is enable
-188 FSDB_VCS_ENABLE_FAST_VC is enable
-189 sps_call_fsdbDumpvars_vd_main at 0 : ../../testbench/c_tests_tb.v(128)
-190 argv[0]: (0)
-191 [spi_vcs_vd_ppi_create_root]: no upf option
-192 FSDB dumper cannot dump UPF related power signal ($power_tree): no ppiPowerNetwork.
-193 Power dumping is enabled and VIR_REDUCTION may not work.
-194 *Verdi* : Begin traversing the scopes, layer (0).
-195 *Verdi* : End of traversing.
-196 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 0.050 sys,  0.230 user,  253.76M mem
-                   incr: 0.000 sys,  0.000 user,  7.45M mem
-                   accu: 0.000 sys,  0.000 user,  7.45M mem
-              accu incr: 0.000 sys,  0.000 user,  7.45M mem
+184 *Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+185 *Verdi* : Create FSDB file 'wave.fsdb'
+186 compile option from '/home/user/project/lab_cpu/3j_cpu_design_2023/week10/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_basic/simv.daidir/vcs_rebuild'.
+187   "vcs '-R' '-debug_acc+all' '-sverilog' '-kdb' '-timescale=1ns/1ns' '-f' 'run.f' 2>&1"
+188 DVDI_is_vir_unload_enabled is enable
+189 FSDB_VCS_ENABLE_FAST_VC is enable
+190 sps_call_fsdbDumpvars_vd_main at 0 : ../../testbench/c_tests_tb.v(129)
+191 argv[0]: (0)
+192 [spi_vcs_vd_ppi_create_root]: no upf option
+193 FSDB dumper cannot dump UPF related power signal ($power_tree): no ppiPowerNetwork.
+194 Power dumping is enabled and VIR_REDUCTION may not work.
+195 *Verdi* : Begin traversing the scopes, layer (0).
+196 *Verdi* : End of traversing.
+197 pliAppHDL_DumpVarComplete traverse var: profile - 
+          CPU/Mem usage: 0.060 sys,  0.220 user,  254.97M mem
+                   incr: 0.010 sys,  0.000 user,  8.60M mem
+                   accu: 0.010 sys,  0.000 user,  8.60M mem
+              accu incr: 0.010 sys,  0.000 user,  8.60M mem
 
-          Count usage: 14 var,  14 idcode,  12 callback
-                 incr: 14 var,  14 idcode,  12 callback
-                 accu: 14 var,  14 idcode,  12 callback
-            accu incr: 14 var,  14 idcode,  12 callback
-197 Elapsed time:    0:00:00    Wed Nov 15 10:09:18 2023
-198 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 0.050 sys,  0.230 user,  254.81M mem
-                   incr: 0.000 sys,  0.000 user,  1.05M mem
-                   accu: 0.000 sys,  0.000 user,  8.50M mem
-              accu incr: 0.000 sys,  0.000 user,  1.05M mem
+          Count usage: 1110 var,  889 idcode,  157 callback
+                 incr: 1110 var,  889 idcode,  157 callback
+                 accu: 1110 var,  889 idcode,  157 callback
+            accu incr: 1110 var,  889 idcode,  157 callback
+198 Elapsed time:    0:00:00    Tue Nov 21 23:55:29 2023
+199 pliAppHDL_DumpVarComplete: profile - 
+          CPU/Mem usage: 0.060 sys,  0.220 user,  256.16M mem
+                   incr: 0.000 sys,  0.000 user,  1.19M mem
+                   accu: 0.010 sys,  0.000 user,  9.79M mem
+              accu incr: 0.000 sys,  0.000 user,  1.19M mem
 
-          Count usage: 14 var,  14 idcode,  12 callback
+          Count usage: 1110 var,  889 idcode,  157 callback
                  incr: 0 var,  0 idcode,  0 callback
-                 accu: 14 var,  14 idcode,  12 callback
+                 accu: 1110 var,  889 idcode,  157 callback
             accu incr: 0 var,  0 idcode,  0 callback
-199 Elapsed time:    0:00:00    Wed Nov 15 10:09:18 2023
-200 End of simulation at 2650000
-201 Elapsed time:    0:00:00    Wed Nov 15 10:09:18 2023
-202 Begin FSDB profile info:
-203 FSDB Writer : bc1(270) bcn(131) mtf/stf(0/0)
-FSDB Writer elapsed time : flush(0.003973) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
+200 Elapsed time:    0:00:00    Tue Nov 21 23:55:29 2023
+201 End of simulation at 2650000
+202 Elapsed time:    0:00:00    Tue Nov 21 23:55:29 2023
+203 Begin FSDB profile info:
+204 FSDB Writer : bc1(1536) bcn(5199) mtf/stf(0/0)
+FSDB Writer elapsed time : flush(0.005619) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
 FSDB Writer cpu time : MT Compression : 0
-204 End FSDB profile info
-205 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:0 BlockUsed:1
-206                        ProduceTime:0.298805145 ConsumerTime:0.000000000 Buffer:64MB
-207 SimExit
-208 Elapsed time:    0:00:00    Wed Nov 15 10:09:18 2023
-209 Sim process exit
+205 End FSDB profile info
+206 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:0 BlockUsed:1
+207                        ProduceTime:0.302126434 ConsumerTime:0.000000000 Buffer:64MB
+208 SimExit
+209 Elapsed time:    0:00:00    Tue Nov 21 23:55:29 2023
+210 Sim process exit

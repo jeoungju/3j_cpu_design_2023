@@ -2,4 +2,4 @@ Command Line: /tools/synopsys/vcs-all/R-2020.12-SP2/linux/bin/elabcom -logdir si
 uname(Linux smu409-24 3.10.0-1160.83.1.el7.x86_64 #1 SMP Wed Jan 25 16:41:43 UTC 2023 x86_64)
 [INFO] error/warning message 'C00388' has been suppressed.
 [INFO] error/warning message 'C00389' has been suppressed.
-au time 0.036652 0.012926 0.007548 delta 148570112 148570112 total 231940096 231940096
+au time 0.024506 0.014575 0.004986 delta 148357120 148357120 total 231727104 231727104

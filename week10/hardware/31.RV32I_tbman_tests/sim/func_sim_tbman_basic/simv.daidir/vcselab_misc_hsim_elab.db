@@ -1,6 +1,6 @@
 psSimBaseName                      	simv
 psLogFileName                      	NULL
-pDaiDir                            	/home/user/project/lab_cpu/week10/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_basic/simv.daidir
+pDaiDir                            	/home/user/project/lab_cpu/3j_cpu_design_2023/week10/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_basic/simv.daidir
 destPath                           	csrc/
 fSharedMaster                      	0
 fHsimPCSharedLibSpecified          	0

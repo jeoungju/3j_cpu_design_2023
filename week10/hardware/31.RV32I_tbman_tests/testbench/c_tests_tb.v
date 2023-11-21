@@ -114,6 +114,7 @@ SMU_RV32I_System # (
     repeat (100) @(posedge clk);
     $finish();
     */
+
   end
 
   initial begin
