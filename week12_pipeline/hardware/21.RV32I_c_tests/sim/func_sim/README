@@ -1,0 +1,5 @@
+make
+
+./simv +hex_file=fib.hex
+./simv +hex_file=strcmp.hex
+./simv +hex_file=vecadd.hex
