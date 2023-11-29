@@ -2,6 +2,7 @@
 
 ../../src/rtl/myCPU/pipeline/rev00/alu.sv
 ../../src/rtl/myCPU/pipeline/rev00/PCSrc_logic.sv
+../../src/rtl/myCPU/pipeline/rev00/hazard_unit.sv
 ../../src/rtl/myCPU/pipeline/rev00/ASYNC_RAM_DP_WBE.v
 ../../src/rtl/myCPU/pipeline/rev00/aludec.sv
 ../../src/rtl/myCPU/pipeline/rev00/branch_logic.sv
@@ -19,9 +20,5 @@
 ../../src/rtl/myCPU/pipeline/rev00/building_blocks/flopr.sv
 ../../src/rtl/myCPU/pipeline/rev00/building_blocks/mux2.sv
 ../../src/rtl/myCPU/pipeline/rev00/building_blocks/mux3.sv
-
-
-
-
 
 ../../testbench/cpu_tb.v

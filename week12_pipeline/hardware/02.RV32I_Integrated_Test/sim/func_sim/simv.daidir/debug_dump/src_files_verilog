@@ -16,6 +16,7 @@
 /home/user/project/lab_cpu/3j_cpu_design_2023/week12_pipeline/hardware/02.RV32I_Integrated_Test/src/rtl/myCPU/pipeline/rev00/building_blocks/mux3.sv
 /home/user/project/lab_cpu/3j_cpu_design_2023/week12_pipeline/hardware/02.RV32I_Integrated_Test/src/rtl/myCPU/pipeline/rev00/controller.sv
 /home/user/project/lab_cpu/3j_cpu_design_2023/week12_pipeline/hardware/02.RV32I_Integrated_Test/src/rtl/myCPU/pipeline/rev00/datapath.sv
+/home/user/project/lab_cpu/3j_cpu_design_2023/week12_pipeline/hardware/02.RV32I_Integrated_Test/src/rtl/myCPU/pipeline/rev00/hazard_unit.sv
 /home/user/project/lab_cpu/3j_cpu_design_2023/week12_pipeline/hardware/02.RV32I_Integrated_Test/src/rtl/myCPU/pipeline/rev00/maindec.sv
 /home/user/project/lab_cpu/3j_cpu_design_2023/week12_pipeline/hardware/02.RV32I_Integrated_Test/src/rtl/myCPU/pipeline/rev00/reg_file_async.v
 /home/user/project/lab_cpu/3j_cpu_design_2023/week12_pipeline/hardware/02.RV32I_Integrated_Test/src/rtl/myCPU/pipeline/rev00/riscvsingle.sv

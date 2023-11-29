@@ -15,7 +15,14 @@ module datapath(
     WriteData,      
     nzcv,        // for controller
     Byte_Enable,
-    Csr
+    Csr,
+    // Forwading
+    ForwardAE,
+    ForwardBE,
+    RS1_E,
+    RS2_E,
+    RD_M,
+    RD_W
 );
     //input
     input clk, n_rst,  ALUSrcB, RegWrite;  //@
@@ -31,6 +38,16 @@ module datapath(
     output [31:0] WriteData;
     output [3:0] nzcv;
     output [3:0] Byte_Enable; //@@
+
+    //Data Foward
+    input [1:0] ForwardAE, ForwardBE;
+    output [4:0] RS1_E, RS2_E;
+    output [4:0] RD_M, RD_W;
+
+    wire [31:0] bef_SrcB_E_B, bef_SrcA_E_A;
+    wire [4:0] RD_E;
+
+    /////////////////////////////////////
 
     wire [31:0] PC_next, PC_target, PC_plus4, BE_RD;
     
@@ -132,6 +149,8 @@ module datapath(
         .rd2        (bef_SrcB_D)
     );
 
+    
+
         extend u_Extend(
         .ImmSrc(ImmSrc),
         .in(Instr[31:7]),
@@ -159,6 +178,9 @@ module datapath(
     flopr #( .WIDTH(32), .RESET_VALUE(0) ) u_ImmExt_E ( .clk(clk), .n_rst(n_rst), .d(ImmExt_D), .q(ImmExt_E) );
     flopr #( .WIDTH(4), .RESET_VALUE(0) ) u_nzcv_E ( .clk(clk), .n_rst(n_rst), .d(nzcv), .q(nzcv_E) );
     flopr #( .WIDTH(32), .RESET_VALUE(0) ) u_Instr_E( .clk(clk), .n_rst(n_rst), .d(Instr), .q(Instr_E) );
+    flopr #( .WIDTH(5), .RESET_VALUE(0) ) u_RS1_E( .clk(clk), .n_rst(n_rst), .d(Instr[19:15]), .q(RS1_E) );
+    flopr #( .WIDTH(5), .RESET_VALUE(0) ) u_RS2_E( .clk(clk), .n_rst(n_rst), .d(Instr[24:20]), .q(RS2_E) );
+    flopr #( .WIDTH(5), .RESET_VALUE(0) ) u_RD_E( .clk(clk), .n_rst(n_rst), .d(Instr[11:7]), .q(RD_E) );
     //flopr #( .WIDTH(5), .RESET_VALUE(0) ) u_ALUControl_E ( .clk(clk), .n_rst(n_rst), .d(ALUControl), .q(ALUControl_E) );
     
 
@@ -166,7 +188,37 @@ module datapath(
 
 /////////////////////////////////// Execute //////////////////////////////////////////////
 
-        alu u_ALU(
+    mux3 u_ForA_mux3( //ALU mux with ALUSrcA update  @@@
+        .in0(bef_SrcA_E),
+        .in1(Result_W),
+        .in2(ALUResult_M),
+        .sel(ForwardAE),
+        .out(bef_SrcA_E_A)
+    );
+    mux3 u_ForB_mux3( //ALU mux with ALUSrcA update  @@@
+        .in0(bef_SrcB_E),
+        .in1(Result_W),
+        .in2(ALUResult_M),
+        .sel(ForwardBE),
+        .out(bef_SrcB_E_B)
+    );
+
+        mux2 u_alu_mux2(
+        .in0(bef_SrcB_E_B),
+        .in1(ImmExt_E),
+        .sel(ALUSrcB),
+        .out(SrcB)
+    );
+
+    mux3 u_alu_mux3( //ALU mux with ALUSrcA update  @@@
+        .in0(bef_SrcA_E_A),
+        .in1(PC_E),
+        .in2(32'h0),
+        .sel(ALUSrcA),
+        .out(SrcA)
+    );
+
+     alu u_ALU(
         .a_in(SrcA),
         .b_in(SrcB),
         .ALUControl(ALUControl),
@@ -174,25 +226,11 @@ module datapath(
         .nzcv(nzcv)
     );
 
-        mux2 u_alu_mux2(
-        .in0(bef_SrcB_E),
-        .in1(ImmExt_E),
-        .sel(ALUSrcB),
-        .out(SrcB)
-    );
-
-    mux3 u_alu_mux3( //ALU mux with ALUSrcA update  @@@
-        .in0(bef_SrcA_E),
-        .in1(PC_E),
-        .in2(32'h0),
-        .sel(ALUSrcA),
-        .out(SrcA)
-    );
-
     flopr #( .WIDTH(32), .RESET_VALUE(0) ) u_PC_Plus_M( .clk(clk), .n_rst(n_rst), .d(PC_plus4_E), .q(PC_plus4_M) );
     flopr #( .WIDTH(32), .RESET_VALUE(0) ) u_Instr_M( .clk(clk), .n_rst(n_rst), .d(Instr_E), .q(Instr_M) );
     flopr #( .WIDTH(32), .RESET_VALUE(0) ) u_ALUResult_M( .clk(clk), .n_rst(n_rst), .d(ALUResult_E), .q(ALUResult_M) );
      flopr #( .WIDTH(32), .RESET_VALUE(0) ) u_WD_M( .clk(clk), .n_rst(n_rst), .d(bef_SrcB_E), .q(WriteData_M) );
+     flopr #( .WIDTH(5), .RESET_VALUE(0) ) u_RD_M( .clk(clk), .n_rst(n_rst), .d(RD_E), .q(RD_M) );
 
 
 ///////////////////////////////////// Memory //////////////////////////////////////////
@@ -201,6 +239,7 @@ module datapath(
     flopr #( .WIDTH(32), .RESET_VALUE(0) ) u_PC_Plus_W( .clk(clk), .n_rst(n_rst), .d(PC_plus4_M), .q(PC_plus4_W) );
     flopr #( .WIDTH(32), .RESET_VALUE(0) ) u_ReadData_W( .clk(clk), .n_rst(n_rst), .d(ReadData), .q(ReadData_W) );
     flopr #( .WIDTH(32), .RESET_VALUE(0) ) u_Instr_W( .clk(clk), .n_rst(n_rst), .d(Instr_M), .q(Instr_W) );
+    flopr #( .WIDTH(5), .RESET_VALUE(0) ) u_RD_W( .clk(clk), .n_rst(n_rst), .d(RD_M), .q(RD_W) );
 
 //////////////////////////////////// Write Back //////////////////////////////////////////
 

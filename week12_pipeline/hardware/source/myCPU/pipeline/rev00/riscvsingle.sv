@@ -30,6 +30,9 @@ module riscvsingle(
     wire [2:0] ImmSrc; //@
     wire [4:0] ALUControl;
 
+	wire [4:0] RS1_E, RS2_E;
+	wire [4:0] RD_M, RD_W;
+	wire [1:0] ForwardAE, ForwardBE;
 /*
 	//////////               Instr Fetch                      //////////
 
@@ -113,12 +116,26 @@ module riscvsingle(
 		.WriteData(WriteData),      
 		.nzcv(nzcv),
 		.Byte_Enable(Byte_Enable),
-		.Csr(Csr)
+		.Csr(Csr),
+		.ForwardAE(ForwardAE),
+		.ForwardBE(ForwardBE),
+		.RS1_E(RS1_E),
+		.RS2_E(RS2_E),
+		.RD_M(RD_M),
+    	.RD_W(RD_W)
 	);
 
-	/*
-	hazard_unit
+	
+	hazard_unit u_hazard_unit (
+		.RS1_E(RS1_E),
+		.RS2_E(RS2_E),
+		.RD_M(RD_M),
+    	.RD_W(RD_W),
+		.ForwardAE(ForwardAE),
+		.ForwardBE(ForwardBE)
+	);
+	
 
-	*/
+	
 
 endmodule

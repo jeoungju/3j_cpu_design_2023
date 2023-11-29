@@ -3,7 +3,7 @@ rc file Version 1.0
 [Design]
 COMPILE_PATH=/home/user/project/lab_cpu/3j_cpu_design_2023/week12_pipeline/hardware/02.RV32I_Integrated_Test/sim/func_sim
 VCS_HOME=/tools/synopsys/vcs-all/R-2020.12-SP2
-VERDI_HOME=/tools/synopsys/verdi/P-2019.06-SP2-12
+VERDI_HOME=/tools/synopsys/verdi/R-2020.12-SP2
 SystemC=FALSE
 UUM=FALSE
 KDB=FALSE

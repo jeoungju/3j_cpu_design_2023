@@ -107,7 +107,7 @@ module SMU_RV32I_System (
 
   flopr #( 
     .WIDTH(32), 
-    .RESET_VALUE(0) ) 
+    .RESET_VALUE(32'h33) ) 
   u_flopr_instrD ( 
     .clk(clk), 
     .n_rst(reset_ff), 
