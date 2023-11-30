@@ -48,7 +48,7 @@ CRT0=
 # C run time startup
 CRTN=
 # Machine specific libraries
-SYSLIBS=/tools/synopsys/verdi/R-2020.12-SP2/share/PLI/VCS/LINUX64/pli.a -ldl  -lc -lm -lpthread -ldl
+SYSLIBS=/tools/synopsys/verdi/P-2019.06-SP2-12/share/PLI/VCS/LINUX64/pli.a -ldl  -lc -lm -lpthread -ldl
 
 # Default defines
 SHELL=/bin/sh

@@ -22,7 +22,17 @@ module datapath(
     RS1_E,
     RS2_E,
     RD_M,
-    RD_W
+    RD_W,
+    //Stall
+    RS1_D,
+    RS2_D,
+    RD_E,
+    lwstall,
+    StallD,
+    StallF,
+    //Flush
+    FlushD,
+    FlushE
 );
     //input
     input clk, n_rst,  ALUSrcB, RegWrite;  //@
@@ -44,16 +54,29 @@ module datapath(
     output [4:0] RS1_E, RS2_E;
     output [4:0] RD_M, RD_W;
 
+    //Stall
+    input lwstall;
+    output [4:0] RS1_D, RS2_D;
+    output [4:0] RD_E;
+
+    assign RS1_D = Instr[19:15];
+    assign RS2_D = Instr[24:20];
+
+    //Flush
+    input StallD, StallF;
+    input FlushD;
+    input FlushE;
+
     wire [31:0] bef_SrcB_E_B, bef_SrcA_E_A;
-    wire [4:0] RD_E;
+    //wire [4:0] RD_E;
 
     /////////////////////////////////////
 
     wire [31:0] PC_next, PC_target, PC_plus4, BE_RD;
     
     wire [31:0] ImmExt;                       
-    wire [31:0] SrcB, bef_SrcB;
-    wire [31:0] SrcA, bef_SrcA;
+    wire [31:0] SrcB;
+    wire [31:0] SrcA;
     //wire [31:0] Result;
 
     ////// F / D ///////
@@ -65,11 +88,9 @@ module datapath(
     wire [31:0] PC_E;
     wire [31:0] PC_plus4_E;
     wire [31:0] bef_SrcA_E, bef_SrcB_E;
-    wire[31:0] ImmExt_E;
+    wire [31:0] ImmExt_E;
     wire [31:0] Instr_E;
     wire [31:0] ALUResult_E;
-    wire [3:0] nzcv_E;
-    //wire [4:0] ALUControl_E;
     ////// E / M ///////
     wire [31:0] Instr_M;
     wire [31:0] PC_plus4_M;
@@ -84,13 +105,12 @@ module datapath(
 
     ////////////////////////////////
     wire [31:0] BE_WD;
-    wire [31:0] BE_WD_D;
+    //wire [31:0] BE_WD_D;
 
     //parameter  WIDTH = 32
     parameter   RESET_PC = 32'h1000_0000;
     assign ALUResult = ALUResult_M;
     assign WriteData = BE_WD;
-    assign nzcv = nzcv_E;
 
     /*
     output [31:0] PC, ALUResult;
@@ -101,6 +121,8 @@ module datapath(
 
      // ex) flopr #( .WIDTH(32), .RESET_VALUE(0) ) u_( .clk(clk), .n_rst(n_rst), .d(), .q() );
 
+     // ex) flopenr #( .WIDTH(32), .RESET_VALUE(0) ) u_( .clk(clk), .n_rst(n_rst), .en(), .d(), .q() );
+
 /////////////////////////// Instruction Fetch //////////////////////////////////////////
     mux3 u_pc_mux3(
         .in0(PC_plus4),
@@ -110,17 +132,19 @@ module datapath(
         .out(PC_next)
     );
 
-        flopr # (
+        flopenr # (
         .WIDTH(32),
         .RESET_VALUE (RESET_PC)
     ) u_pc_register(
         .clk(clk),
         .n_rst(n_rst),
+        .en(StallF),
         .d(PC_next),
         .q(PC)
     );
 
-    flopr #( .WIDTH(32), .RESET_VALUE(0) ) u_PC_D( .clk(clk), .n_rst(n_rst), .d(PC), .q(PC_D) );
+    flopenr_clr #( .WIDTH(32), .RESET_VALUE(RESET_PC) ) u_PC_D( 
+        .clk(clk), .n_rst(n_rst), .en(StallD), .clr(FlushD), .d(PC), .q(PC_D) );
 
     adder u_pc_plus4(
         .a(PC), 
@@ -134,7 +158,8 @@ module datapath(
     );
     
 
-    flopr #( .WIDTH(32), .RESET_VALUE(0) ) u_PC_Plus_D( .clk(clk), .n_rst(n_rst), .d(PC_plus4), .q(PC_plus4_D) );
+    flopenr_clr #( .WIDTH(32), .RESET_VALUE(0) ) u_PC_Plus_D( 
+        .clk(clk), .n_rst(n_rst), .en(StallD), .clr(FlushD), .d(PC_plus4), .q(PC_plus4_D) );
 /////////////////////////// Instruction Decorder //////////////////////////////////////
 
         reg_file_async rf (
@@ -143,7 +168,8 @@ module datapath(
         .we         (RegWrite),
         .ra1        (Instr[19:15]),
         .ra2        (Instr[24:20]),
-        .wa         (Instr_W[11:7]),
+        //.wa         (Instr_W[11:7]),
+        .wa         (RD_W),
         .wd         (Result_W),
         .rd1        (bef_SrcA_D),
         .rd2        (bef_SrcB_D)
@@ -158,7 +184,8 @@ module datapath(
         .out(ImmExt_D)
     );
 
-    flopr #( .WIDTH(32), .RESET_VALUE(0) ) u_PC_E( .clk(clk), .n_rst(n_rst), .d(PC_D), .q(PC_E) );
+    flopenr_clr #( .WIDTH(32), .RESET_VALUE(0) ) u_PC_E( 
+        .clk(clk), .n_rst(n_rst), .en(lwstall), .clr(FlushE), .d(PC_D), .q(PC_E) );
 
     adder u_pc_target(
         .a(PC_E), 
@@ -172,15 +199,23 @@ module datapath(
     );
 
 
-    flopr #( .WIDTH(32), .RESET_VALUE(0) ) u_PC_Plus_E( .clk(clk), .n_rst(n_rst), .d(PC_plus4_D), .q(PC_plus4_E) );
-    flopr #( .WIDTH(32), .RESET_VALUE(0) ) u_SrcA_E ( .clk(clk), .n_rst(n_rst), .d(bef_SrcA_D), .q(bef_SrcA_E) );
-    flopr #( .WIDTH(32), .RESET_VALUE(0) ) u_SrcB_E ( .clk(clk), .n_rst(n_rst), .d(bef_SrcB_D), .q(bef_SrcB_E) );
-    flopr #( .WIDTH(32), .RESET_VALUE(0) ) u_ImmExt_E ( .clk(clk), .n_rst(n_rst), .d(ImmExt_D), .q(ImmExt_E) );
-    flopr #( .WIDTH(4), .RESET_VALUE(0) ) u_nzcv_E ( .clk(clk), .n_rst(n_rst), .d(nzcv), .q(nzcv_E) );
-    flopr #( .WIDTH(32), .RESET_VALUE(0) ) u_Instr_E( .clk(clk), .n_rst(n_rst), .d(Instr), .q(Instr_E) );
-    flopr #( .WIDTH(5), .RESET_VALUE(0) ) u_RS1_E( .clk(clk), .n_rst(n_rst), .d(Instr[19:15]), .q(RS1_E) );
-    flopr #( .WIDTH(5), .RESET_VALUE(0) ) u_RS2_E( .clk(clk), .n_rst(n_rst), .d(Instr[24:20]), .q(RS2_E) );
-    flopr #( .WIDTH(5), .RESET_VALUE(0) ) u_RD_E( .clk(clk), .n_rst(n_rst), .d(Instr[11:7]), .q(RD_E) );
+    flopenr_clr #( .WIDTH(32), .RESET_VALUE(0) ) u_PC_Plus_E( 
+        .clk(clk), .n_rst(n_rst), .en(lwstall), .clr(FlushE), .d(PC_plus4_D), .q(PC_plus4_E) );
+    flopenr_clr #( .WIDTH(32), .RESET_VALUE(0) ) u_SrcA_E ( 
+        .clk(clk), .n_rst(n_rst), .en(lwstall), .clr(FlushE), .d(bef_SrcA_D), .q(bef_SrcA_E) );
+    flopenr_clr #( .WIDTH(32), .RESET_VALUE(0) ) u_SrcB_E ( 
+        .clk(clk), .n_rst(n_rst), .en(lwstall), .clr(FlushE), .d(bef_SrcB_D), .q(bef_SrcB_E) );
+    flopenr_clr #( .WIDTH(32), .RESET_VALUE(0) ) u_ImmExt_E ( 
+        .clk(clk), .n_rst(n_rst), .en(lwstall), .clr(FlushE), .d(ImmExt_D), .q(ImmExt_E) );
+
+    flopenr_clr #( .WIDTH(32), .RESET_VALUE(32'h0000_0033) ) u_Instr_E( 
+        .clk(clk), .n_rst(n_rst), .en(lwstall), .clr(FlushE), .d(Instr), .q(Instr_E) );
+    flopenr_clr #( .WIDTH(5), .RESET_VALUE(0) ) u_RS1_E( 
+        .clk(clk), .n_rst(n_rst), .en(lwstall), .clr(FlushE), .d(Instr[19:15]), .q(RS1_E) );
+    flopenr_clr #( .WIDTH(5), .RESET_VALUE(0) ) u_RS2_E( 
+        .clk(clk), .n_rst(n_rst), .en(lwstall), .clr(FlushE), .d(Instr[24:20]), .q(RS2_E) );
+    flopenr_clr #( .WIDTH(5), .RESET_VALUE(0) ) u_RD_E( 
+        .clk(clk), .n_rst(n_rst), .en(lwstall), .clr(FlushE), .d(Instr[11:7]), .q(RD_E) );
     //flopr #( .WIDTH(5), .RESET_VALUE(0) ) u_ALUControl_E ( .clk(clk), .n_rst(n_rst), .d(ALUControl), .q(ALUControl_E) );
     
 
@@ -227,9 +262,10 @@ module datapath(
     );
 
     flopr #( .WIDTH(32), .RESET_VALUE(0) ) u_PC_Plus_M( .clk(clk), .n_rst(n_rst), .d(PC_plus4_E), .q(PC_plus4_M) );
-    flopr #( .WIDTH(32), .RESET_VALUE(0) ) u_Instr_M( .clk(clk), .n_rst(n_rst), .d(Instr_E), .q(Instr_M) );
+    flopr #( .WIDTH(32), .RESET_VALUE(32'h0000_0033) ) u_Instr_M( 
+        .clk(clk), .n_rst(n_rst), .d(Instr_E), .q(Instr_M) );
     flopr #( .WIDTH(32), .RESET_VALUE(0) ) u_ALUResult_M( .clk(clk), .n_rst(n_rst), .d(ALUResult_E), .q(ALUResult_M) );
-     flopr #( .WIDTH(32), .RESET_VALUE(0) ) u_WD_M( .clk(clk), .n_rst(n_rst), .d(bef_SrcB_E), .q(WriteData_M) );
+     flopr #( .WIDTH(32), .RESET_VALUE(0) ) u_WD_M( .clk(clk), .n_rst(n_rst), .d(bef_SrcB_E_B), .q(WriteData_M) );
      flopr #( .WIDTH(5), .RESET_VALUE(0) ) u_RD_M( .clk(clk), .n_rst(n_rst), .d(RD_E), .q(RD_M) );
 
 
@@ -238,7 +274,8 @@ module datapath(
     flopr #( .WIDTH(32), .RESET_VALUE(0) ) u_ALUResult_W( .clk(clk), .n_rst(n_rst), .d(ALUResult_M), .q(ALUResult_W) );
     flopr #( .WIDTH(32), .RESET_VALUE(0) ) u_PC_Plus_W( .clk(clk), .n_rst(n_rst), .d(PC_plus4_M), .q(PC_plus4_W) );
     flopr #( .WIDTH(32), .RESET_VALUE(0) ) u_ReadData_W( .clk(clk), .n_rst(n_rst), .d(ReadData), .q(ReadData_W) );
-    flopr #( .WIDTH(32), .RESET_VALUE(0) ) u_Instr_W( .clk(clk), .n_rst(n_rst), .d(Instr_M), .q(Instr_W) );
+    flopr #( .WIDTH(32), .RESET_VALUE(32'h0000_0033) ) u_Instr_W( 
+        .clk(clk), .n_rst(n_rst), .d(Instr_M), .q(Instr_W) );
     flopr #( .WIDTH(5), .RESET_VALUE(0) ) u_RD_W( .clk(clk), .n_rst(n_rst), .d(RD_M), .q(RD_W) );
 
 //////////////////////////////////// Write Back //////////////////////////////////////////
@@ -270,28 +307,18 @@ module datapath(
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
 
-
-
-
-
-
-
-
-
-
-
     reg[31:0] tohost_csr;
 
     always @(posedge clk or negedge n_rst) begin
         if(Csr == 1'b1) begin
-            case(Instr[14:12])
-                3'b001 : tohost_csr = bef_SrcA;
-                3'b101 : tohost_csr = ImmExt;
-                default : tohost_csr = 32'h0;
+            case(Instr_E[14:12])
+                3'b001 : tohost_csr <= bef_SrcA_E_A;
+                3'b101 : tohost_csr <= ImmExt_E;
+                default : tohost_csr <= 32'h0;
             endcase
         end
         else begin
-            tohost_csr = 32'h0;
+            tohost_csr <= 32'h0;
         end
     end
     

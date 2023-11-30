@@ -11,6 +11,7 @@
 /home/user/project/lab_cpu/3j_cpu_design_2023/week12_pipeline/hardware/02.RV32I_Integrated_Test/src/rtl/myCPU/pipeline/rev00/building_blocks/be_logic.sv
 /home/user/project/lab_cpu/3j_cpu_design_2023/week12_pipeline/hardware/02.RV32I_Integrated_Test/src/rtl/myCPU/pipeline/rev00/building_blocks/extend.sv
 /home/user/project/lab_cpu/3j_cpu_design_2023/week12_pipeline/hardware/02.RV32I_Integrated_Test/src/rtl/myCPU/pipeline/rev00/building_blocks/flopenr.sv
+/home/user/project/lab_cpu/3j_cpu_design_2023/week12_pipeline/hardware/02.RV32I_Integrated_Test/src/rtl/myCPU/pipeline/rev00/building_blocks/flopenr_clr.sv
 /home/user/project/lab_cpu/3j_cpu_design_2023/week12_pipeline/hardware/02.RV32I_Integrated_Test/src/rtl/myCPU/pipeline/rev00/building_blocks/flopr.sv
 /home/user/project/lab_cpu/3j_cpu_design_2023/week12_pipeline/hardware/02.RV32I_Integrated_Test/src/rtl/myCPU/pipeline/rev00/building_blocks/mux2.sv
 /home/user/project/lab_cpu/3j_cpu_design_2023/week12_pipeline/hardware/02.RV32I_Integrated_Test/src/rtl/myCPU/pipeline/rev00/building_blocks/mux3.sv

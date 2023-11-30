@@ -37,7 +37,7 @@ module SMU_RV32I_System (
 
   wire [31:0] fetch_addr;
   wire [31:0] imem_inst;
-  //wire [31:0] inst;
+  wire [31:0] inst;
   wire [31:0] data_addr;
   wire [31:0] write_data;
   wire [3:0]  ByteEnable;
@@ -66,11 +66,11 @@ module SMU_RV32I_System (
 
   wire [31:0] read_imem_data_mem;
 
-  wire [31:0] InstrD;
+  //wire [31:0] InstrD;
 
   assign data_re = ~data_we;
   assign read_data = read_imem_data_mem;
-  //assign inst = imem_inst;
+  assign inst = imem_inst;
   //~cs_mem_n
 
   riscvsingle #(
@@ -79,7 +79,7 @@ module SMU_RV32I_System (
     .clk(clk),
     .n_rst(reset_ff),
     .PC(fetch_addr),
-    .Instr(InstrD),
+    .Instr(inst),
     .MemWriteM(data_we),
     .ALUResult(data_addr),
     .WriteData(write_data),
@@ -104,15 +104,5 @@ module SMU_RV32I_System (
     .q0       (imem_inst),
     .q1       (read_imem_data_mem)
   );
-
-  flopr #( 
-    .WIDTH(32), 
-    .RESET_VALUE(32'h33) ) 
-  u_flopr_instrD ( 
-    .clk(clk), 
-    .n_rst(reset_ff), 
-    .d(imem_inst), 
-    .q(InstrD) 
-    );
 
 endmodule

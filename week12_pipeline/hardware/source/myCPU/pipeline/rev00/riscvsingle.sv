@@ -29,72 +29,58 @@ module riscvsingle(
 	wire [1:0] ResultSrc;
     wire [2:0] ImmSrc; //@
     wire [4:0] ALUControl;
-
+	//Forwading
 	wire [4:0] RS1_E, RS2_E;
 	wire [4:0] RD_M, RD_W;
+	wire RegWrite_M;
 	wire [1:0] ForwardAE, ForwardBE;
-/*
-	//////////               Instr Fetch                      //////////
 
+	wire [4:0] RS1_D, RS2_D;
+    wire [4:0] RD_E;
+    wire [1:0] ResultSrc_E;
+    wire lwstall;
+	wire [31:0] InstrD;
 
-	//////////               Instr Decoder                 //////////
+	wire FlushD;
+	wire FlushE;
 
-	wire [1:0] ResultSrcD;
-	wire MemWriteD;
-	wire [1:0] ALUSrcAD;
-	wire ALUSrcBD;
-	wire [1:0] ImmSrcD;
-	wire RegWriteD;
-	wire [4:0] ALUControlD;
-	wire JumpD;
-	wire BranchD;
-	
-	//////////                   Execute                      //////////
+	wire StallD, StallF;
 
-	wire [1:0] ResultSrcE;
-	wire MemWriteE;
-	wire [1:0] ALUSrcAE;
-	wire ALUSrcBE;
-	wire RegWriteE;
-	wire [4:0] ALUControlE;
-	wire JumpE;
-	wire BranchE;
-
-	//////////               Memory                          //////////
-
-	wire [1:0] ResultSrcM;
-	wire MemWriteM;
-	wire RegWriteM;
-
-	//////////               Write Back                      //////////
-
-	wire [1:0] ResultSrcW;
-	wire RegWriteW;
-
-
-
-///////////////////////////////////////////////////////////////////
-
-*/
+	flopenr_clr #( 
+    .WIDTH(32), 
+    .RESET_VALUE(32'h0000_0033) ) 
+  	u_instrD ( 
+    .clk(clk), 
+    .n_rst(n_rst), 
+    .en(StallD),
+    .clr(FlushD),
+    .d(Instr), 
+    .q(InstrD) 
+    );
 
 	controller u_controller(
 		.clk(clk),
 		.n_rst(n_rst),
         .nzcv(nzcv),
-        .opcode(Instr[6:0]),
-        .funct3(Instr[14:12]),
-        .funct7(Instr[30]),
+        .opcode(InstrD[6:0]),
+        .funct3(InstrD[14:12]),
+        .funct7(InstrD[30]),
+		.lwstall(lwstall),
         .PCSrc(PCSrc),
         .ResultSrc_W(ResultSrc),
+		.ResultSrc_E(ResultSrc_E), 
         .MemWrite_M(MemWriteM),
         .ALUSrcA_E(ALUSrcA),
         .ALUSrcB_E(ALUSrcB),
         .ImmSrc(ImmSrc),
+		.RegWrite_M(RegWrite_M),
         .RegWrite_W(RegWrite),
         .ALUControl_E(ALUControl),
-        .Jump_E(Jump),
-        .Branch_E(Branch),
-		.Csr(Csr)
+		.Csr_E(Csr),
+		.StallD(StallD),
+		.StallF(StallF),
+		.FlushD(FlushD),
+    	.FlushE(FlushE)
     );
 
 	datapath #(
@@ -102,7 +88,7 @@ module riscvsingle(
 	) i_datapath(
 		.clk(clk),
 		.n_rst(n_rst),
-		.Instr(Instr),        
+		.Instr(InstrD),        
 		.ReadData(ReadData),    
 		.PCSrc(PCSrc),      
 		.ResultSrc(ResultSrc),
@@ -122,7 +108,15 @@ module riscvsingle(
 		.RS1_E(RS1_E),
 		.RS2_E(RS2_E),
 		.RD_M(RD_M),
-    	.RD_W(RD_W)
+    	.RD_W(RD_W),
+		.RS1_D(RS1_D),
+    	.RS2_D(RS2_D),
+    	.RD_E(RD_E),
+  	    .lwstall(lwstall),
+		.StallD(StallD),
+		.StallF(StallF),
+		.FlushD(FlushD),
+    	.FlushE(FlushE)
 	);
 
 	
@@ -131,8 +125,20 @@ module riscvsingle(
 		.RS2_E(RS2_E),
 		.RD_M(RD_M),
     	.RD_W(RD_W),
+		.RegWrite_M(RegWrite_M),
+		.RegWrite_W(RegWrite),
 		.ForwardAE(ForwardAE),
-		.ForwardBE(ForwardBE)
+		.ForwardBE(ForwardBE),
+		.RS1_D(RS1_D),
+    	.RS2_D(RS2_D),
+    	.RD_E(RD_E),
+    	.ResultSrc_E(ResultSrc_E),
+  	    .lwstall(lwstall),
+		.StallD(StallD),
+		.StallF(StallF),
+		.PCSrc(PCSrc),
+		.FlushD(FlushD),
+		.FlushE(FlushE)
 	);
 	
 

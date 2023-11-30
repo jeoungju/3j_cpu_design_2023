@@ -442,7 +442,7 @@ if (1) begin
     check_result_dmem(DATA_ADDR8, 32'h78000000, "S-Type SB 4");
 end
 
-if (1) begin
+if (0) begin
     // Test U-Type Insts --------------------------------------------------
     // - LUI, AUIPC
     reset();
@@ -459,7 +459,7 @@ if (1) begin
     check_result_rf(4,  32'h8fff0004, "U-Type AUIPC"); // assume PC is 1000_0004
 end
 
-if (0) begin
+if (1) begin
     // Test J-Type Insts --------------------------------------------------
     // - JAL
     reset();
@@ -484,7 +484,7 @@ if (0) begin
     check_result_rf(5'd6, 0, "J-Type JAL");
 end
 
-if (0) begin
+if (1) begin
     // Test I-Type JALR Insts ---------------------------------------------
     reset();
 
@@ -508,7 +508,7 @@ if (0) begin
     check_result_rf(5'd6, 0, "J-Type JALR");
 end
 
-if (0) begin
+if (1) begin
     // Test B-Type Insts --------------------------------------------------
     // - BEQ, BNE, BLT, BGE, BLTU, BGEU
 
@@ -593,7 +593,7 @@ if (0) begin
     end
 end
 
-if (0) begin
+if (1) begin
    // Test CSR Insts -----------------------------------------------------
    // - CSRRW, CSRRWI
    reset();

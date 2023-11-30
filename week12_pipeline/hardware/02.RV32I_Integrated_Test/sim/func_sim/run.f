@@ -17,6 +17,7 @@
 ../../src/rtl/myCPU/pipeline/rev00/building_blocks/be_logic.sv
 ../../src/rtl/myCPU/pipeline/rev00/building_blocks/extend.sv
 ../../src/rtl/myCPU/pipeline/rev00/building_blocks/flopenr.sv
+../../src/rtl/myCPU/pipeline/rev00/building_blocks/flopenr_clr.sv
 ../../src/rtl/myCPU/pipeline/rev00/building_blocks/flopr.sv
 ../../src/rtl/myCPU/pipeline/rev00/building_blocks/mux2.sv
 ../../src/rtl/myCPU/pipeline/rev00/building_blocks/mux3.sv

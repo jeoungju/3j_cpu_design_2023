@@ -117,7 +117,7 @@ module be_logic(
         end
         else begin
             BE_WD = WD;
-            Byte_Enable = 4'b0000;
+            Byte_Enable = 4'b1111;
         end
     end
 
