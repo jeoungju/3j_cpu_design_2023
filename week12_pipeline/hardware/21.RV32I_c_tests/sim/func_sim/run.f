@@ -1,6 +1,8 @@
 ./sim_define.v
 
 ../../src/rtl/myCPU/pipeline/rev01/alu.sv
+../../src/rtl/myCPU/pipeline/rev01/PCSrc_logic.sv
+../../src/rtl/myCPU/pipeline/rev01/hazard_unit.sv
 ../../src/rtl/myCPU/pipeline/rev01/ASYNC_RAM_DP_WBE.v
 ../../src/rtl/myCPU/pipeline/rev01/aludec.sv
 ../../src/rtl/myCPU/pipeline/rev01/branch_logic.sv
@@ -15,16 +17,18 @@
 ../../src/rtl/myCPU/pipeline/rev01/building_blocks/be_logic.sv
 ../../src/rtl/myCPU/pipeline/rev01/building_blocks/extend.sv
 ../../src/rtl/myCPU/pipeline/rev01/building_blocks/flopenr.sv
+../../src/rtl/myCPU/pipeline/rev01/building_blocks/flopenr_clr.sv
 ../../src/rtl/myCPU/pipeline/rev01/building_blocks/flopr.sv
 ../../src/rtl/myCPU/pipeline/rev01/building_blocks/mux2.sv
 ../../src/rtl/myCPU/pipeline/rev01/building_blocks/mux3.sv
 
-
+/*
 ../../src/rtl/myCPU/pipeline/rev01/10peripheral_tbman/Addr_Decoder.v
 ../../src/rtl/myCPU/pipeline/rev01/10peripheral_tbman/data_mux.v
 
 ../../src/rtl/myCPU/pipeline/rev01/10peripheral_tbman/01.tbman/tbman_apbs.v
 ../../src/rtl/myCPU/pipeline/rev01/10peripheral_tbman/01.tbman/tbman_regs.v
 ../../src/rtl/myCPU/pipeline/rev01/10peripheral_tbman/01.tbman/tbman_wrap.v
+*/
 
 ../../testbench/c_tests_tb.v

@@ -146,7 +146,7 @@ Limit information:
 cputime		unlimited
 filesize		unlimited
 datasize		unlimited
-stacksize		8192 kbytes
+stacksize		131072 kbytes
 coredumpsize		0 kbytes
 memoryuse		unlimited
 vmemoryuse		unlimited
@@ -160,8 +160,8 @@ Cannot get runtime environment variables: environ is NULL
 Runtime command line arguments:
 argv[0]=simv
 161 profile - 100
-          CPU/Mem usage: 0.050 sys,  0.250 user,  158.02M mem
-162 Elapsed time:    0:00:00    Tue Nov 21 16:48:43 2023
+          CPU/Mem usage: 0.050 sys,  0.230 user,  158.03M mem
+162 Elapsed time:    0:00:00    Fri Dec  1 19:01:10 2023
 163 pliAppInit
 164 FSDB_GATE is set.
 165 FSDB_RTL is set.
@@ -195,36 +195,36 @@ argv[0]=simv
 193 *Verdi* : Begin traversing the scopes, layer (0).
 194 *Verdi* : End of traversing.
 195 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 0.060 sys,  0.260 user,  254.96M mem
-                   incr: 0.010 sys,  0.010 user,  8.75M mem
-                   accu: 0.010 sys,  0.010 user,  8.75M mem
-              accu incr: 0.010 sys,  0.010 user,  8.75M mem
+          CPU/Mem usage: 0.060 sys,  0.240 user,  254.96M mem
+                   incr: 0.000 sys,  0.000 user,  8.75M mem
+                   accu: 0.000 sys,  0.000 user,  8.75M mem
+              accu incr: 0.000 sys,  0.000 user,  8.75M mem
 
           Count usage: 1008 var,  813 idcode,  132 callback
                  incr: 1008 var,  813 idcode,  132 callback
                  accu: 1008 var,  813 idcode,  132 callback
             accu incr: 1008 var,  813 idcode,  132 callback
-196 Elapsed time:    0:00:00    Tue Nov 21 16:48:43 2023
+196 Elapsed time:    0:00:00    Fri Dec  1 19:01:10 2023
 197 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 0.060 sys,  0.260 user,  256.15M mem
+          CPU/Mem usage: 0.060 sys,  0.240 user,  256.16M mem
                    incr: 0.000 sys,  0.000 user,  1.19M mem
-                   accu: 0.010 sys,  0.010 user,  9.95M mem
+                   accu: 0.000 sys,  0.000 user,  9.95M mem
               accu incr: 0.000 sys,  0.000 user,  1.19M mem
 
           Count usage: 1008 var,  813 idcode,  132 callback
                  incr: 0 var,  0 idcode,  0 callback
                  accu: 1008 var,  813 idcode,  132 callback
             accu incr: 0 var,  0 idcode,  0 callback
-198 Elapsed time:    0:00:00    Tue Nov 21 16:48:43 2023
+198 Elapsed time:    0:00:00    Fri Dec  1 19:01:10 2023
 199 End of simulation at 7570
-200 Elapsed time:    0:00:00    Tue Nov 21 16:48:43 2023
+200 Elapsed time:    0:00:00    Fri Dec  1 19:01:10 2023
 201 Begin FSDB profile info:
 202 FSDB Writer : bc1(2325) bcn(10298) mtf/stf(0/0)
-FSDB Writer elapsed time : flush(0.005936) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
+FSDB Writer elapsed time : flush(0.005637) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
 FSDB Writer cpu time : MT Compression : 0
 203 End FSDB profile info
 204 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:0 BlockUsed:1
-205                        ProduceTime:0.332337988 ConsumerTime:0.000000000 Buffer:64MB
+205                        ProduceTime:0.327232265 ConsumerTime:0.000000000 Buffer:64MB
 206 SimExit
-207 Elapsed time:    0:00:00    Tue Nov 21 16:48:43 2023
+207 Elapsed time:    0:00:00    Fri Dec  1 19:01:10 2023
 208 Sim process exit

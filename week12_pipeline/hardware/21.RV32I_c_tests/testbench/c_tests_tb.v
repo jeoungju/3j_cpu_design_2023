@@ -28,6 +28,8 @@ module c_tests_tb();
   //  .serial_out()     // output
   //);
 
+
+
 SMU_RV32I_System # (
     .CLOCK_FREQ(CPU_CLOCK_FREQ),
     .RESET_PC(32'h1000_0000),

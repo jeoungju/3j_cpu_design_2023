@@ -43,7 +43,7 @@ XDG_RUNTIME_DIR=/run/user/1000
 XDG_MENU_PREFIX=gnome-
 XDG_DATA_DIRS=/home/user/.local/share/flatpak/exports/share/:/var/lib/flatpak/exports/share/:/usr/local/share/:/usr/share/
 XDG_CURRENT_DESKTOP=GNOME-Classic:GNOME
-XAUTHORITY=/run/gdm/auth-for-user-IpfJm9/database
+XAUTHORITY=/run/gdm/auth-for-user-27bjY8/database
 WINDOWPATH=1
 VTE_VERSION=5204
 VMR_MODE_FLAG=64
@@ -62,8 +62,8 @@ UNAME=/bin/uname
 TOOL_HOME=/tools/synopsys/vcs-all/R-2020.12-SP2/linux64
 SYNOPSYS_LC_ROOT=/tools/synopsys/lc/Q-2019.12-SP5
 SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
-SSH_AGENT_PID=2517
-SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/2373,unix/unix:/tmp/.ICE-unix/2373
+SSH_AGENT_PID=2524
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/2380,unix/unix:/tmp/.ICE-unix/2380
 SCRNAME=vcs
 SCRIPT_NAME=vcs
 QT_IM_MODULE=ibus
@@ -83,8 +83,8 @@ IMSETTINGS_MODULE=none
 IMSETTINGS_INTEGRATE_DESKTOP=yes
 ICC2_HOME=/tools/synopsys/icc2/Q-2019.12-SP6
 HISTCONTROL=ignoredups
-GNOME_TERMINAL_SERVICE=:1.111
-GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/dc031612_77b6_41b5_be9c_3915286868a1
+GNOME_TERMINAL_SERVICE=:1.105
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/98a26daf_476c_4ed6_8f5a_0a15c0594e09
 GNOME_SHELL_SESSION_MODE=classic
 GNOME_DESKTOP_SESSION_ID=this-is-deprecated
 GDM_LANG=ko_KR.UTF-8
@@ -92,36 +92,34 @@ GDMSESSION=gnome-classic
 DVE_HOME=/tools/synopsys/vcs-all/R-2020.12-SP2/gui/dve
 DESKTOP_SESSION=gnome-classic
 DC_HOME=/tools/synopsys/syn/P-2019.03-SP5-6
-DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-5NOwPhAFUk,guid=e9bf13edcb3c548d441f8e5a655d42db
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-tCldVf5ioy,guid=110024b22f49399af97e04d265695731
 COLORTERM=truecolor
 0
-28
+26
 1700616021 mem_path.vh
-1700616021 ../../testbench/c_tests_tb.v
-1700617826 ../../src/rtl/myCPU/pipeline/rev01/10peripheral_tbman/01.tbman/tbman_wrap.v
-1700617826 ../../src/rtl/myCPU/pipeline/rev01/10peripheral_tbman/01.tbman/tbman_regs.v
-1700617826 ../../src/rtl/myCPU/pipeline/rev01/10peripheral_tbman/01.tbman/tbman_apbs.v
-1700617826 ../../src/rtl/myCPU/pipeline/rev01/10peripheral_tbman/data_mux.v
-1700620407 ../../src/rtl/myCPU/pipeline/rev01/10peripheral_tbman/Addr_Decoder.v
-1700617826 ../../src/rtl/myCPU/pipeline/rev01/building_blocks/mux3.sv
-1700617826 ../../src/rtl/myCPU/pipeline/rev01/building_blocks/mux2.sv
-1700617826 ../../src/rtl/myCPU/pipeline/rev01/building_blocks/flopr.sv
-1700617826 ../../src/rtl/myCPU/pipeline/rev01/building_blocks/flopenr.sv
-1700617826 ../../src/rtl/myCPU/pipeline/rev01/building_blocks/extend.sv
-1700617826 ../../src/rtl/myCPU/pipeline/rev01/building_blocks/be_logic.sv
-1700617826 ../../src/rtl/myCPU/pipeline/rev01/building_blocks/adder.sv
-1700617826 ../../src/rtl/myCPU/pipeline/rev01/RV32I_System.v
-1700617826 ../../src/rtl/myCPU/pipeline/rev01/riscvsingle.sv
-1700617826 ../../src/rtl/myCPU/pipeline/rev01/reg_file_async.v
-1700617826 ../../src/rtl/myCPU/pipeline/rev01/maindec.sv
-1700617826 ../../src/rtl/myCPU/pipeline/rev01/datapath.sv
-1700617826 ../../src/rtl/myCPU/pipeline/rev01/controller.sv
-1700617826 ../../src/rtl/myCPU/pipeline/rev01/branch_logic.sv
-1700617826 ../../src/rtl/myCPU/pipeline/rev01/aludec.sv
-1700617826 ../../src/rtl/myCPU/pipeline/rev01/ASYNC_RAM_DP_WBE.v
-1700617826 ../../src/rtl/myCPU/pipeline/rev01/alu.sv
+1701426309 ../../testbench/c_tests_tb.v
+1701341490 ../../src/rtl/myCPU/pipeline/rev01/building_blocks/mux3.sv
+1701341492 ../../src/rtl/myCPU/pipeline/rev01/building_blocks/mux2.sv
+1701341493 ../../src/rtl/myCPU/pipeline/rev01/building_blocks/flopr.sv
+1701406258 ../../src/rtl/myCPU/pipeline/rev01/building_blocks/flopenr_clr.sv
+1701341497 ../../src/rtl/myCPU/pipeline/rev01/building_blocks/flopenr.sv
+1701341510 ../../src/rtl/myCPU/pipeline/rev01/building_blocks/extend.sv
+1701354453 ../../src/rtl/myCPU/pipeline/rev01/building_blocks/be_logic.sv
+1701341514 ../../src/rtl/myCPU/pipeline/rev01/building_blocks/adder.sv
+1701341471 ../../src/rtl/myCPU/pipeline/rev01/RV32I_System.v
+1701364240 ../../src/rtl/myCPU/pipeline/rev01/riscvsingle.sv
+1701363330 ../../src/rtl/myCPU/pipeline/rev01/reg_file_async.v
+1701417188 ../../src/rtl/myCPU/pipeline/rev01/maindec.sv
+1701423336 ../../src/rtl/myCPU/pipeline/rev01/datapath.sv
+1701410167 ../../src/rtl/myCPU/pipeline/rev01/controller.sv
+1701341484 ../../src/rtl/myCPU/pipeline/rev01/branch_logic.sv
+1701341488 ../../src/rtl/myCPU/pipeline/rev01/aludec.sv
+1701345752 ../../src/rtl/myCPU/pipeline/rev01/ASYNC_RAM_DP_WBE.v
+1701423743 ../../src/rtl/myCPU/pipeline/rev01/hazard_unit.sv
+1701341476 ../../src/rtl/myCPU/pipeline/rev01/PCSrc_logic.sv
+1701341489 ../../src/rtl/myCPU/pipeline/rev01/alu.sv
 1700616021 ./sim_define.v
-1700619982 run.f
+1701424414 run.f
 1615804056 /tools/synopsys/verdi/P-2019.06-SP2-12/share/PLI/VCS/LINUX64/verdi.tab
 1622257851 /tools/synopsys/vcs-all/R-2020.12-SP2/linux64/lib/vcsdp_lite.tab
 4
@@ -129,5 +127,5 @@ COLORTERM=truecolor
 1622258561 /tools/synopsys/vcs-all/R-2020.12-SP2/linux64/lib/liberrorinf.so
 1622258323 /tools/synopsys/vcs-all/R-2020.12-SP2/linux64/lib/libsnpsmalloc.so
 1622258557 /tools/synopsys/vcs-all/R-2020.12-SP2/linux64/lib/libvfs.so
-1700620419 simv.daidir
+1701427832 simv.daidir
 -1 partitionlib

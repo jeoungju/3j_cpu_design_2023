@@ -4886,3 +4886,12 @@ schZoomOut -win $_nSchema3 -pos 36106 30741
 schZoomOut -win $_nSchema3 -pos 36105 30740
 schZoomOut -win $_nSchema3 -pos 36105 30740
 schZoomOut -win $_nSchema3 -pos 36104 30740
+schDeselectAll -win $_nSchema3
+schPopViewUp -win $_nSchema3
+schZoomOut -win $_nSchema3 -pos 36828 3883
+schZoomOut -win $_nSchema3 -pos 36828 3883
+schZoomOut -win $_nSchema3 -pos 36828 3883
+schZoomOut -win $_nSchema3 -pos 36827 3882
+schZoomOut -win $_nSchema3 -pos 36946 4061
+schPopViewUp -win $_nSchema3
+debExit
