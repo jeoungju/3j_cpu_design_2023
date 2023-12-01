@@ -206,16 +206,16 @@ module datapath(
     flopenr_clr #( .WIDTH(32), .RESET_VALUE(0) ) u_SrcB_E ( 
         .clk(clk), .n_rst(n_rst), .en(lwstall), .clr(FlushE), .d(bef_SrcB_D), .q(bef_SrcB_E) );
     flopenr_clr #( .WIDTH(32), .RESET_VALUE(0) ) u_ImmExt_E ( 
-        .clk(clk), .n_rst(n_rst), .en(lwstall), .clr(FlushE), .d(ImmExt_D), .q(ImmExt_E) );
+        .clk(clk), .n_rst(n_rst), .en(lwstall), .clr(1'b0), .d(ImmExt_D), .q(ImmExt_E) );
 
     flopenr_clr #( .WIDTH(32), .RESET_VALUE(32'h0000_0033) ) u_Instr_E( 
         .clk(clk), .n_rst(n_rst), .en(lwstall), .clr(FlushE), .d(Instr), .q(Instr_E) );
     flopenr_clr #( .WIDTH(5), .RESET_VALUE(0) ) u_RS1_E( 
-        .clk(clk), .n_rst(n_rst), .en(lwstall), .clr(FlushE), .d(Instr[19:15]), .q(RS1_E) );
+        .clk(clk), .n_rst(n_rst), .en(lwstall), .clr(1'b0), .d(Instr[19:15]), .q(RS1_E) );
     flopenr_clr #( .WIDTH(5), .RESET_VALUE(0) ) u_RS2_E( 
-        .clk(clk), .n_rst(n_rst), .en(lwstall), .clr(FlushE), .d(Instr[24:20]), .q(RS2_E) );
+        .clk(clk), .n_rst(n_rst), .en(lwstall), .clr(1'b0), .d(Instr[24:20]), .q(RS2_E) );
     flopenr_clr #( .WIDTH(5), .RESET_VALUE(0) ) u_RD_E( 
-        .clk(clk), .n_rst(n_rst), .en(lwstall), .clr(FlushE), .d(Instr[11:7]), .q(RD_E) );
+        .clk(clk), .n_rst(n_rst), .en(lwstall), .clr(1'b0), .d(Instr[11:7]), .q(RD_E) );
     //flopr #( .WIDTH(5), .RESET_VALUE(0) ) u_ALUControl_E ( .clk(clk), .n_rst(n_rst), .d(ALUControl), .q(ALUControl_E) );
     
 

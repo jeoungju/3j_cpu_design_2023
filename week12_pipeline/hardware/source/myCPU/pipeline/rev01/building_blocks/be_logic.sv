@@ -1,14 +1,18 @@
 module be_logic(
-    funct3,
-    addr_last2,
+    funct3_M,
+    funct3_W,
+    addr_last2M,
+    addr_last2W,
     WD,
     RD,
     BE_WD,
     BE_RD,
     Byte_Enable
 );
-    input [2:0] funct3;
-    input [1:0] addr_last2;
+    input [2:0] funct3_M;
+    input [2:0] funct3_W;
+    input [1:0] addr_last2M;
+    input [1:0] addr_last2W;
     input [31:0] WD, RD;
     output reg [31:0] BE_RD, BE_WD;
     output reg [3:0] Byte_Enable;
@@ -21,54 +25,54 @@ module be_logic(
 */
 
     always @(*) begin
-        if  (funct3 == 3'b000)  begin //LB
-            if (addr_last2 == 2'b00) begin
+        if  (funct3_W == 3'b000)  begin //LB
+            if (addr_last2W == 2'b00) begin
                 BE_RD = {{24{RD[7]}},RD[7:0]};
             end
-            else if (addr_last2 == 2'b01) begin
+            else if (addr_last2W == 2'b01) begin
                 BE_RD = {{24{RD[15]}},RD[15:8]};
             end
-            else if (addr_last2 == 2'b10) begin
+            else if (addr_last2W == 2'b10) begin
                 BE_RD = {{24{RD[23]}},RD[23:16]};
             end
-            else if (addr_last2 == 2'b11) begin
+            else if (addr_last2W == 2'b11) begin
                 BE_RD = {{24{RD[31]}},RD[31:24]};
             end
             else begin
                 BE_RD = RD;
             end
         end
-        else if (funct3 == 3'b100) begin //LBU
-            if (addr_last2 == 2'b00) begin
+        else if (funct3_W == 3'b100) begin //LBU
+            if (addr_last2W == 2'b00) begin
                 BE_RD = {24'b0,RD[7:0]};
             end
-            else if (addr_last2 == 2'b01) begin
+            else if (addr_last2W == 2'b01) begin
                 BE_RD = {24'b0,RD[15:8]};
             end
-            else if (addr_last2 == 2'b10) begin
+            else if (addr_last2W == 2'b10) begin
                 BE_RD = {24'b0,RD[23:16]};
             end
             else begin
                 BE_RD = {24'b0,RD[31:24]};
             end
         end
-        else if (funct3 == 3'b001) begin  //LH
-            if (addr_last2 == 2'b00) begin
+        else if (funct3_W == 3'b001) begin  //LH
+            if (addr_last2W == 2'b00) begin
                 BE_RD = {{16{RD[15]}},RD[15:0]};
             end
-            else if (addr_last2 == 2'b10) begin
+            else if (addr_last2W == 2'b10) begin
                 BE_RD = {{16{RD[31]}},RD[31:16]};
             end
         end
-        else if (funct3 == 3'b101) begin  //LHU
-            if (addr_last2 == 2'b00) begin
+        else if (funct3_W == 3'b101) begin  //LHU
+            if (addr_last2W == 2'b00) begin
                 BE_RD = {16'b0,RD[15:0]};
             end
-            else if (addr_last2 == 2'b10) begin
+            else if (addr_last2W == 2'b10) begin
                 BE_RD = {16'b0,RD[31:16]};
             end
         end
-        else if ((funct3 == 3'b010) && (addr_last2 == 2'b00)) begin  //LW
+        else if ((funct3_W == 3'b010) && (addr_last2W == 2'b00)) begin  //LW
             BE_RD = RD;
         end
         else begin
@@ -77,16 +81,16 @@ module be_logic(
     end
 
     always @(*) begin
-        if  (funct3 == 3'b000)  begin //SB
-            if (addr_last2 == 2'b00) begin
+        if  (funct3_M == 3'b000)  begin //SB
+            if (addr_last2M == 2'b00) begin
                 BE_WD = {24'b0,WD[7:0]};
                 Byte_Enable = 4'b0001;
             end
-            else if (addr_last2 == 2'b01) begin
+            else if (addr_last2M == 2'b01) begin
                 BE_WD = {16'b0,WD[7:0],8'b0};
                 Byte_Enable = 4'b0010;
             end
-            else if (addr_last2 == 2'b10) begin
+            else if (addr_last2M == 2'b10) begin
                 BE_WD = {8'b0,WD[7:0],16'b0};
                 Byte_Enable = 4'b0100;
             end
@@ -96,24 +100,24 @@ module be_logic(
             end
         end
 
-        else if (funct3 == 3'b001) begin  //SH
-            if (addr_last2 == 2'b00) begin
+        else if (funct3_M == 3'b001) begin  //SH
+            if (addr_last2M == 2'b00) begin
                 BE_WD = {16'b0,WD[15:0]};
                 Byte_Enable = 4'b0011;
             end
-            else if (addr_last2 == 2'b10) begin
+            else if (addr_last2M == 2'b10) begin
                 BE_WD = {WD[15:0],16'b0};
                 Byte_Enable = 4'b1100;
             end
         end
 
-        else if ((funct3 == 3'b010) && (addr_last2 == 2'b00)) begin  //SW
+        else if ((funct3_M == 3'b010) && (addr_last2M == 2'b00)) begin  //SW
             BE_WD = WD;
             Byte_Enable = 4'b1111;
         end
         else begin
             BE_WD = WD;
-            Byte_Enable = 4'b0000;
+            Byte_Enable = 4'b1111;
         end
     end
 

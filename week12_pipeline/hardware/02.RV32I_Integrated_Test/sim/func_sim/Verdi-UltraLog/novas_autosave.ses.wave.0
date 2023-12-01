@@ -1,8 +1,8 @@
 Magic 271485
-Revision Verdi_P-2019.06-SP2-12
+Revision Verdi_R-2020.12-SP2
 
 ; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
-viewPort 0 25 1920 118 151 65
+viewPort 0 25 1920 411 151 177
 
 ; File list:
 ; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
@@ -16,16 +16,16 @@ signalSpacing 5
 
 ; windowTimeUnit is used for zoom, cursor & marker
 ; waveform viewport range
-zoom 2167.822348 2472.850775
-cursor 1830.000000
+zoom 6760.356960 7096.011047
+cursor 6910.000000
 marker 0.000000
 
 ; user define markers
 ; userMarker time_pos marker_name color linestyle
 ; visible top row signal index
-top 7
+top 39
 ; marker line index
-markerPos 17
+markerPos 77
 
 ; event list
 ; addEvent event_name event_expression
@@ -52,42 +52,80 @@ addSignal -h 15 -holdScope reset_ff
 addSignal -h 15 -holdScope fetch_addr[31:0]
 addSignal -h 15 -holdScope inst[31:0]
 addSignal -h 15 /cpu_tb/CPU/icpu/InstrD[31:0]
-addSignal -h 15 -holdScope ForwardAE[1:0]
-addSignal -h 15 -holdScope ForwardBE[1:0]
-addSubGroup "G2"
-addSignal -h 15 /cpu_tb/CPU/icpu/u_hazard_unit/FlushD
-addSignal -h 15 -holdScope FlushE
-addSignal -h 15 -UNSIGNED -BIN -holdScope PCSrc[1:0]
-addSignal -h 15 -holdScope lwstall_d
-addSubGroup "G2"
-addSignal -h 15 /cpu_tb/CPU/icpu/u_controller/brlg/Branch
-addSignal -h 15 -holdScope Btaken
-addSignal -h 15 -holdScope funct3[2:0]
-addSignal -h 15 -holdScope nzcv[3:0]
-addSubGroup "G2"
-endSubGroup "G2"
-addSignal -h 15 /cpu_tb/CPU/icpu/u_controller/brlg/Btaken
-addSignal -h 15 /cpu_tb/CPU/icpu/u_controller/Branch_D
-addSignal -h 15 -holdScope Jump_D
-addSignal -h 15 -holdScope Branch_E
-addSignal -h 15 -holdScope Jump_E
-addSignal -h 15 -holdScope funct3_E[2:0]
-addSignal -h 15 -holdScope opcode_E[6:0]
-addSignal -h 15 /cpu_tb/CPU/icpu/u_hazard_unit/RD_E[4:0]
-addSignal -h 15 -holdScope RS1_D[4:0]
-addSignal -h 15 -holdScope RS2_D[4:0]
-addSignal -h 15 -holdScope ResultSrc_E[1:0]
-endSubGroup "G2"
-addSignal -h 15 -UNSIGNED -UDEC /cpu_tb/CPU/icpu/i_datapath/bef_SrcB_E[31:0]
-addSignal -h 15 -holdScope Result_W[31:0]
-addSignal -h 15 -UNSIGNED -HEX -holdScope ALUResult_M[31:0]
-addSignal -h 15 -UNSIGNED -HEX -holdScope bef_SrcB_E_B[31:0]
-addSignal -h 15 -holdScope ImmExt_D[31:0]
-addSignal -h 15 -holdScope ImmExt_E[31:0]
-addSignal -h 15 /cpu_tb/CPU/icpu/u_controller/MemWrite_D
-addSignal -h 15 -holdScope MemWrite_E
-endSubGroup "G2"
 addGroup "G2"
+addSignal -h 15 /cpu_tb/CPU/icpu/i_datapath/rf/x2[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope x3[31:0]
+addSignal -h 15 -holdScope x4[31:0]
+addSubGroup "G3"
+addSignal -h 15 /cpu_tb/CPU/icpu/i_datapath/ReadData[31:0]
+addSignal -h 15 -holdScope WriteData[31:0]
+endSubGroup "G3"
+addSignal -h 15 /cpu_tb/CPU/icpu/i_datapath/ALUControl[4:0]
+addSignal -h 15 -holdScope ALUResult[31:0]
+addSignal -h 15 -holdScope ALUResult_E[31:0]
+addSignal -h 15 -holdScope ALUResult_M[31:0]
+addSignal -h 15 -holdScope ALUResult_W[31:0]
+addSignal -h 15 -holdScope SrcA[31:0]
+addSignal -h 15 -holdScope SrcB[31:0]
+addGroup "G3"
+addSignal -h 15 /cpu_tb/CPU/icpu/i_datapath/bef_SrcA_D_A[31:0]
+addSignal -h 15 -holdScope bef_SrcA_D[31:0]
+addSignal -h 15 -holdScope bef_SrcA_E[31:0]
+addSignal -h 15 -holdScope bef_SrcA_E_A[31:0]
+addSignal -h 15 /cpu_tb/CPU/icpu/u_hazard_unit/ForwardAE[1:0]
+addSignal -h 15 -holdScope ForwardBD[1:0]
+addSignal -h 15 -holdScope RS1_E[4:0]
+addSignal -h 15 -holdScope RS2_E[4:0]
+addSignal -h 15 -holdScope RD_M[4:0]
+addSignal -h 15 -holdScope RD_W[4:0]
+addSignal -h 15 -holdScope RegWrite_M
+addSignal -h 15 -holdScope RegWrite_W
+addGroup "G4"
+addSignal -h 15 /cpu_tb/CPU/icpu/i_datapath/WriteData_M[31:0]
+addSignal -h 15 -holdScope bef_SrcB_E_B[31:0]
+addSignal -h 15 -holdScope ForwardBE[1:0]
+addSignal -h 15 -holdScope Result_W[31:0]
+addSignal -h 15 -holdScope ResultSrc[1:0]
+addSignal -h 15 -holdScope BE_RD[31:0]
+addSignal -h 15 -holdScope ReadData_W[31:0]
+addSignal -h 15 -holdScope WriteData_M[31:0]
+addSignal -h 15 -holdScope bef_SrcA_D_A[31:0]
+addSignal -h 15 -holdScope bef_SrcA_E[31:0]
+addSignal -h 15 -holdScope bef_SrcA_D_A[31:0]
+addSignal -h 15 -holdScope bef_SrcA_E[31:0]
+addSignal -h 15 -holdScope lwstall
+addSignal -h 15 -holdScope FlushE
+addSignal -h 15 /cpu_tb/CPU/icpu/u_hazard_unit/PCSrc[1:0]
+addSignal -h 15 /cpu_tb/CPU/icpu/i_datapath/ForwardAE[1:0]
+addSignal -h 15 -holdScope bef_SrcA_E_A[31:0]
+addSignal -h 15 -holdScope PC_E[31:0]
+addSignal -h 15 /cpu_tb/CPU/icpu/i_datapath/rf/x2[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope x3[31:0]
+addSignal -h 15 /cpu_tb/CPU/icpu/i_datapath/bef_SrcA_D[31:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope bef_SrcB_D[31:0]
+addSignal -h 15 -holdScope ForwardBD[1:0]
+addSignal -h 15 -holdScope ALUResult_M[31:0]
+addSignal -h 15 -holdScope bef_SrcB_D_B[31:0]
+addSignal -h 15 -holdScope ForwardBD[1:0]
+addSignal -h 15 -holdScope ALUResult_M[31:0]
+addSignal -h 15 -holdScope ForwardBD[1:0]
+addSignal -h 15 -holdScope bef_SrcB_D_B[31:0]
+addSignal -h 15 -holdScope bef_SrcB_E[31:0]
+addSignal -h 15 -holdScope ForwardBE[1:0]
+addSignal -c ID_GREEN6 -ls solid -lw 1 -h 15 -holdScope Result_W[31:0]
+addSignal -c ID_RED5 -ls solid -lw 1 -h 15 -holdScope bef_SrcB_E_B[31:0]
+addSignal -h 15 -holdScope ALUSrcB
+addSignal -h 15 -holdScope SrcB[31:0]
+addSignal -h 15 -holdScope SrcA[31:0]
+addSignal -h 15 -holdScope ALUSrcA[1:0]
+addSignal -h 15 -holdScope bef_SrcA_E_A[31:0]
+addSignal -h 15 -holdScope ForwardAE[1:0]
+addSignal -c ID_RED5 -ls solid -lw 1 -h 15 -holdScope bef_SrcA_E[31:0]
+addSignal -h 15 -holdScope ALUResult_M[31:0]
+addSignal -h 15 -holdScope ALUResult_M[31:0]
+addSignal -h 15 -holdScope ForwardAE[1:0]
+addSignal -c ID_GREEN6 -ls solid -lw 1 -h 15 -holdScope Result_W[31:0]
+addGroup "G5"
 
 ; getSignalForm Scope Hierarchy Status
 ; active file of getSignalForm
@@ -99,21 +137,16 @@ getSignalForm close
 "/cpu_tb"
 "/cpu_tb/CPU"
 "/cpu_tb/CPU/icpu"
-"/cpu_tb/CPU/icpu/u_controller"
 "/cpu_tb/CPU/icpu/u_hazard_unit"
 
 SCOPE_LIST_BEGIN
 "/cpu_tb"
 "/cpu_tb/CPU/icpu"
 "/cpu_tb/CPU/icpu/i_datapath"
-"/cpu_tb/CPU/icpu/i_datapath/rf"
-"/cpu_tb/CPU/icpu/u_hazard_unit"
-"/cpu_tb/CPU/icpu/u_instrD"
-"/cpu_tb/CPU/icpu/u_controller"
 "/cpu_tb/CPU"
-"/cpu_tb/CPU/icpu/i_datapath/u_be_logic"
-"/cpu_tb/CPU/icpu/i_datapath/u_Extend"
-"/cpu_tb/CPU/icpu/u_controller/brlg"
+"/cpu_tb/CPU/icpu/i_datapath/rf"
+"/cpu_tb/CPU/icpu/u_controller"
+"/cpu_tb/CPU/icpu/u_hazard_unit"
 SCOPE_LIST_END
 
 GETSIGNALFORM_SCOPE_HIERARCHY_END

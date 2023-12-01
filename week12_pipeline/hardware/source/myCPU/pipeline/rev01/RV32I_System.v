@@ -40,14 +40,14 @@ module SMU_RV32I_System (
   wire [31:0] inst;
   wire [31:0] data_addr;
   wire [31:0] write_data;
-  wire [3:0]  Byte_Enable;
+  wire [3:0]  ByteEnable;
   wire  [31:0] read_data;
-  wire        cs_dmem_n;
+  wire        cs_mem_n;
   wire        cs_timer_n;
   wire        cs_gpio_n;
   wire        cs_uart_n;
-  wire        data_we;  
-  wire cs_tbman_n;
+  wire        data_we;
+
   wire clk = CLOCK_50;
   wire clkb;
 
@@ -66,10 +66,12 @@ module SMU_RV32I_System (
 
   wire [31:0] read_imem_data_mem;
 
-  assign data_re = ~data_we;
-  //assign read_data = read_imem_data_mem;
-  assign inst = imem_inst;
+  //wire [31:0] InstrD;
 
+  assign data_re = ~data_we;
+  assign read_data = read_imem_data_mem;
+  assign inst = imem_inst;
+  //~cs_mem_n
 
   riscvsingle #(
       .RESET_PC(RESET_PC)
@@ -78,11 +80,11 @@ module SMU_RV32I_System (
     .n_rst(reset_ff),
     .PC(fetch_addr),
     .Instr(inst),
-    .MemWrite(data_we),
+    .MemWriteM(data_we),
     .ALUResult(data_addr),
     .WriteData(write_data),
     .ReadData(read_data),
-    .Byte_Enable(Byte_Enable)
+    .Byte_Enable(ByteEnable)
   );
 
   ASYNC_RAM_DP_WBE #(
@@ -91,41 +93,16 @@ module SMU_RV32I_System (
       .MIF_HEX (MIF_HEX)
   ) imem (
     .clk      (clk),
-    .addr0    (fetch_addr[AWIDTH+2-1:2]),
-    .addr1    (data_addr[AWIDTH+2-1:2]),
+    .addr0    (fetch_addr[AWIDTH+2-1:2]), // Instr addr
+    .addr1    (data_addr[AWIDTH+2-1:2]),  // Data addr
     .wbe0     (4'd0),
-    .wbe1     (Byte_Enable),
+    .wbe1     (ByteEnable),
     .d0       (32'd0),
     .d1       (write_data),
     .wen0     (1'b0),
-    .wen1     (~cs_dmem_n & data_we),//~cs_mem_n &
+    .wen1     (data_we),//~cs_mem_n &
     .q0       (imem_inst),
     .q1       (read_imem_data_mem)
   );
-
-    Addr_Decoder u_Addr_Decoder (
-        .Addr(data_addr),
-        .cs_dmem_n(cs_dmem_n),
-        .cs_tbman_n(cs_tbman_n)
-    );
-
-wire [31:0] r_data;
-    data_mux u_data_mux (
-        .cs_dmem_n(cs_dmem_n), //in 
-        .read_data_dmem(read_imem_data_mem), //in
-        .cs_tbman_n(cs_tbman_n), //in
-        .read_data_tbman(r_data), // in
-        .read_data(read_data) //read_data output
-    );
-
-  tbman_wrap u_tbman_w(
-    .clk(clk), //in !!!
-    .rst_n(reset_ff), //in !!!
-    .tbman_sel(!cs_tbman_n),  // High Active in !!!
-    .tbman_write(data_we), // Write : 1, Read : 0 in WR
-    .tbman_addr(data_addr[15:0]), //in addr
-    .tbman_wdata(write_data), //in WR
-    .tbman_rdata(r_data) //output dataout
-);
 
 endmodule

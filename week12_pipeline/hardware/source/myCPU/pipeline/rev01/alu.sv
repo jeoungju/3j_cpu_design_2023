@@ -13,7 +13,6 @@ module alu(
     reg aN, aZ, aC, aV;           // FLAG 
     wire N, Z, C, V;
     wire [31:0] add_sub_b;
-    //wire [31:0] add_sub_b;
     wire [31:0] adder_result, and_result, or_result, SLT_result, SLTU_result;
 
     wire [31:0] xor_result;
@@ -23,10 +22,10 @@ module alu(
     wire signed [31:0] sra_result;
 
     wire [31:0] b_not;
-    //assign b_not = ~b_in;
+    assign b_not = ~b_in;
 
     wire [32:0] b_2s_carry;
-    //assign b_2s_carry = {1'b0,b_not} + 33'h1;
+    assign b_2s_carry = {1'b0,b_not} + 33'h1;
 
 
     assign add_sub_b = (ALUControl == 5'b10001 || ALUControl == 5'b00101 || ALUControl == 5'b00001 || ALUControl == 5'b01001) ? ~b_in : b_in;
@@ -91,7 +90,7 @@ module alu(
             5'b00101 : result = SLT_result;          // SLT                   5
             5'b01001 : result = SLTU_result;          // SLTU                   9
             5'b01000 : result = sra_result;          // sra                     8
-            default : result = 32'hx;
+            default : result = 32'h0;
         endcase
     end
 

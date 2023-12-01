@@ -40,7 +40,7 @@ module aludec(
             else if ((funct3 == 3'b101) && (funct7 == 1'b1))
                 ALUControl = 5'b01000;                                                                                              //sra                     8
             else 
-                ALUControl = 5'hx;
+                ALUControl = 5'h0;
         end
     end
         

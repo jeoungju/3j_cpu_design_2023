@@ -28,7 +28,7 @@ module extend(
         else if (ImmSrc == 3'b100)                                    // U-type LIU, 
             out = {in[24:5],12'b0}; 
         else
-            out = 32'hx;
+            out = 32'h0;
     end
 
 endmodule

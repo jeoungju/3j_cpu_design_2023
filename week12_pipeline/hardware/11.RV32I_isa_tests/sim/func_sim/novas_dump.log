@@ -161,7 +161,7 @@ Runtime environment variables:
 XDG_VTNR=1
 SYNOPSYS_LC_ROOT=/tools/synopsys/lc/Q-2019.12-SP5
 XDG_SESSION_ID=1
-SSH_AGENT_PID=2621
+SSH_AGENT_PID=2524
 HOSTNAME=smu409-24
 IMSETTINGS_INTEGRATE_DESKTOP=yes
 TERM=xterm-256color
@@ -170,7 +170,7 @@ VTE_VERSION=5204
 SHELL=/bin/bash
 HISTSIZE=1000
 MAKEFLAGS=test=all
-GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/fe1e8aa3_1890_4d24_8a74_ab6c1d4c3e9b
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/74c14ded_7c8a_46a8_94ad_ec041a7d0936
 QTDIR=/usr/lib64/qt-3.3
 QTINC=/usr/lib64/qt-3.3/include
 IMSETTINGS_MODULE=none
@@ -183,7 +183,7 @@ GNOME_TERMINAL_SERVICE=:1.105
 SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
 DVE_HOME=/tools/synopsys/vcs-all/R-2020.12-SP2/gui/dve
 MAKELEVEL=1
-SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/2476,unix/unix:/tmp/.ICE-unix/2476
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/2380,unix/unix:/tmp/.ICE-unix/2380
 USERNAME=user
 SNPSLMD_LICENSE_FILE=27020@smu409-01:27020@117.16.175.176
 MFLAGS=
@@ -213,7 +213,7 @@ DC_HOME=/tools/synopsys/syn/P-2019.03-SP5-6
 LOGNAME=user
 XDG_SESSION_DESKTOP=gnome-classic
 QTLIB=/usr/lib64/qt-3.3/lib
-DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-oM0DnBX4Cg,guid=b9ba25b804369efa9b4157936567ea23
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-tCldVf5ioy,guid=110024b22f49399af97e04d265695731
 XDG_DATA_DIRS=/home/user/.local/share/flatpak/exports/share/:/var/lib/flatpak/exports/share/:/usr/local/share/:/usr/share/
 LESSOPEN=||/usr/bin/lesspipe.sh %s
 WINDOWPATH=1
@@ -222,7 +222,7 @@ XDG_RUNTIME_DIR=/run/user/1000
 XDG_CURRENT_DESKTOP=GNOME-Classic:GNOME
 PLIOBJS=libvpi.so
 COLORTERM=truecolor
-XAUTHORITY=/run/gdm/auth-for-user-7LJXbn/database
+XAUTHORITY=/run/gdm/auth-for-user-27bjY8/database
 _=./simv
 VCS_PATHMAP_PRELOAD_DONE=1
 VCS_STACK_EXEC=true
@@ -235,8 +235,8 @@ Runtime command line arguments:
 argv[0]=./simv
 argv[1]=+MIF_FILE=xor.mif
 236 profile - 100
-          CPU/Mem usage: 0.020 sys,  0.170 user,  271.27M mem
-237 Elapsed time:    0:00:00    Fri Dec  1 00:50:49 2023
+          CPU/Mem usage: 0.020 sys,  0.210 user,  275.49M mem
+237 Elapsed time:    0:00:00    Fri Dec  1 18:48:57 2023
 238 pliAppInit
 239 FSDB_GATE is set.
 240 FSDB_RTL is set.
@@ -270,36 +270,36 @@ argv[1]=+MIF_FILE=xor.mif
 268 *Verdi* : Begin traversing the scopes, layer (0).
 269 *Verdi* : End of traversing.
 270 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 0.020 sys,  0.190 user,  372.05M mem
+          CPU/Mem usage: 0.030 sys,  0.220 user,  376.27M mem
                    incr: 0.000 sys,  0.010 user,  9.07M mem
                    accu: 0.000 sys,  0.010 user,  9.07M mem
               accu incr: 0.000 sys,  0.010 user,  9.07M mem
 
-          Count usage: 1320 var,  962 idcode,  186 callback
-                 incr: 1320 var,  962 idcode,  186 callback
-                 accu: 1320 var,  962 idcode,  186 callback
-            accu incr: 1320 var,  962 idcode,  186 callback
-271 Elapsed time:    0:00:00    Fri Dec  1 00:50:49 2023
+          Count usage: 1337 var,  973 idcode,  193 callback
+                 incr: 1337 var,  973 idcode,  193 callback
+                 accu: 1337 var,  973 idcode,  193 callback
+            accu incr: 1337 var,  973 idcode,  193 callback
+271 Elapsed time:    0:00:00    Fri Dec  1 18:48:57 2023
 272 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 0.020 sys,  0.190 user,  373.10M mem
+          CPU/Mem usage: 0.030 sys,  0.220 user,  377.32M mem
                    incr: 0.000 sys,  0.000 user,  1.05M mem
                    accu: 0.000 sys,  0.010 user,  10.13M mem
               accu incr: 0.000 sys,  0.000 user,  1.05M mem
 
-          Count usage: 1320 var,  962 idcode,  186 callback
+          Count usage: 1337 var,  973 idcode,  193 callback
                  incr: 0 var,  0 idcode,  0 callback
-                 accu: 1320 var,  962 idcode,  186 callback
+                 accu: 1337 var,  973 idcode,  193 callback
             accu incr: 0 var,  0 idcode,  0 callback
-273 Elapsed time:    0:00:00    Fri Dec  1 00:50:49 2023
+273 Elapsed time:    0:00:00    Fri Dec  1 18:48:57 2023
 274 End of simulation at 10350
-275 Elapsed time:    0:00:00    Fri Dec  1 00:50:49 2023
+275 Elapsed time:    0:00:00    Fri Dec  1 18:48:57 2023
 276 Begin FSDB profile info:
-277 FSDB Writer : bc1(9463) bcn(27496) mtf/stf(0/0)
-FSDB Writer elapsed time : flush(0.007840) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
+277 FSDB Writer : bc1(8943) bcn(27028) mtf/stf(0/0)
+FSDB Writer elapsed time : flush(0.007350) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
 FSDB Writer cpu time : MT Compression : 0
 278 End FSDB profile info
 279 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:0 BlockUsed:1
-280                        ProduceTime:0.240153689 ConsumerTime:0.000000000 Buffer:64MB
+280                        ProduceTime:0.279067342 ConsumerTime:0.000000000 Buffer:64MB
 281 SimExit
-282 Elapsed time:    0:00:00    Fri Dec  1 00:50:49 2023
+282 Elapsed time:    0:00:00    Fri Dec  1 18:48:57 2023
 283 Sim process exit
