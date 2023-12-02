@@ -378,11 +378,11 @@ savePropStat = FALSE
 savePropDtl = TRUE
 [QtDialog]
 saveSigDlg = 683,359,551,386
-openFileDlg = 658,311,602,483
 QwWarnMsgDlg = 614,717,600,250
 ChangeColorDialog = 847,399,223,307
 qWaveSignalDialog = 380,313,1158,479
 SigCPLDialog = 847,382,223,340
+openFileDlg = 658,311,602,483
 QwUserAskDlg = 798,487,324,134
 [Relationship]
 hideRecursiceNode = FALSE
@@ -672,27 +672,27 @@ isOneSearchVisible = TRUE
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0]
 parRuleSets = ""
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column0]
+name = Time
+width = 60
+visualIndex = 0
+isHidden = TRUE
+isUserChangeColumnVisible = FALSE
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
 name = Message
 width = 2000
 visualIndex = 4
 isHidden = FALSE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
 name = Code
 width = 60
 visualIndex = 2
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
 name = Type
 width = 60
 visualIndex = 3
-isHidden = TRUE
-isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
-name = Time
-width = 60
-visualIndex = 0
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
@@ -726,7 +726,7 @@ maskFsaCoreRule = TRUE
 maskFsaSfsmRule = TRUE
 maskFsaEcrRule = TRUE
 getSignalForm = 380 276 1158 479 362 381 746 183
-viewPort = 0 25 1920 198 151 177
+viewPort = 0 25 1920 264 151 177
 signalSpacing = 5
 digitalSignalHeight = 15
 analogSignalHeight = 98
@@ -1277,7 +1277,7 @@ schAsmTriColor_qt = #01ffff qt_solidLine
 pre_select = True
 ShowPassThroughNet = False
 ComputedAnnotColor = ID_PURPLE5
-viewport = 0 25 1280 591
+viewport = 0 25 1280 529
 [schematics_print]
 Signature = FALSE
 DesignName = PCU
@@ -1353,7 +1353,7 @@ AddImportArgument = FALSE
 LineBreakWithScope = TRUE
 StopAfterCompileOption = -s
 [wave.0]
-viewPort = 0 25 1920 198 151 177
+viewPort = 0 25 1920 264 151 177
 [wave.1]
 viewPort = 0 25 1920 738 250 65
 [wave.2]

@@ -2,7 +2,7 @@ Magic 271485
 Revision Verdi_P-2019.06-SP2-12
 
 ; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
-viewPort 0 25 1920 198 151 177
+viewPort 0 25 1920 264 151 177
 
 ; File list:
 ; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
@@ -16,16 +16,16 @@ signalSpacing 5
 
 ; windowTimeUnit is used for zoom, cursor & marker
 ; waveform viewport range
-zoom 7766.029310 8135.840230
-cursor 7870.000000
-marker 7910.000000
+zoom 0.000000 10150.500000
+cursor 7210.000000
+marker 0.000000
 
 ; user define markers
 ; userMarker time_pos marker_name color linestyle
 ; visible top row signal index
-top 21
+top 2
 ; marker line index
-markerPos 29
+markerPos 7
 
 ; event list
 ; addEvent event_name event_expression
@@ -42,102 +42,20 @@ COMPLEX_EVENT_END
 
 ; toolbar current search type
 ; curSTATUS search_type
-curSTATUS ByValue
+curSTATUS ByChange
 
 
 addGroup "G1"
 activeDirFile "" "/home/user/project/lab_cpu/3j_cpu_design_2023/week12_pipeline/hardware/02.RV32I_Integrated_Test/sim/func_sim/wave.fsdb"
+addSignal -h 15 /cpu_tb/CPU/icpu/FlushD_1d
+addSignal -h 15 -holdScope StallD_1d
 addSignal -h 15 /cpu_tb/CPU/fetch_addr[31:0]
-addSignal -h 15 -holdScope reset_ff
 addSignal -h 15 -holdScope clk
-addSignal -h 15 -holdScope inst[31:0]
-addSignal -h 15 /cpu_tb/CPU/icpu/InstrD[31:0]
-addSignal -h 15 /cpu_tb/CPU/icpu/i_datapath/Instr_E[31:0]
-addSignal -h 15 -holdScope Instr_M[31:0]
-addSignal -h 15 -holdScope Instr_W[31:0]
+addSignal -h 15 -holdScope reset_ff
+addSignal -h 15 -UNSIGNED -HEX -holdScope inst[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope read_data[31:0]
 addGroup "G2"
-addSignal -h 15 /cpu_tb/CPU/icpu/i_datapath/nzcv[3:0]
-addSignal -h 15 -holdScope ALUControl[4:0]
-addSignal -h 15 -UNSIGNED -HEX -holdScope SrcA[31:0]
-addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 -UNSIGNED -HEX /cpu_tb/CPU/icpu/i_datapath/rf/x1[31:0]
-addSignal -h 15 -UNSIGNED -HEX -holdScope x2[31:0]
-addSignal -h 15 -UNSIGNED -HEX -holdScope x3[31:0]
-addSignal -h 15 -UNSIGNED -HEX -holdScope x4[31:0]
-addSignal -h 15 -holdScope rd1[31:0]
-addSignal -h 15 -UNSIGNED -HEX /cpu_tb/CPU/icpu/i_datapath/SrcB[31:0]
-addSignal -h 15 -holdScope ALUResult_E[31:0]
-addGroup "G3"
-addSignal -h 15 /cpu_tb/CPU/icpu/i_datapath/ALUSrcA[1:0]
-addSignal -h 15 -holdScope ALUSrcB
-addSignal -h 15 /cpu_tb/CPU/icpu/ReadData[31:0]
-addSignal -h 15 -UNSIGNED -UDEC /cpu_tb/CPU/icpu/i_datapath/ReadData[31:0]
-addSignal -h 15 -holdScope ReadData_W[31:0]
-addSubGroup "G4"
-addSignal -h 15 /cpu_tb/CPU/icpu/u_hazard_unit/ForwardAD[1:0]
-addSignal -h 15 -holdScope ForwardBD[1:0]
-addSignal -h 15 -holdScope RS1_D[4:0]
-addSignal -h 15 -holdScope RD_M[4:0]
-addSignal -h 15 -holdScope RD_W[4:0]
-addSignal -h 15 /cpu_tb/CPU/icpu/i_datapath/ImmExt_D[31:0]
-addSignal -h 15 -holdScope ImmExt_E[31:0]
-addSignal -h 15 -holdScope PC_target[31:0]
-addSubGroup "G4"
-addSignal -h 15 -UNSIGNED -HEX /cpu_tb/CPU/icpu/i_datapath/SrcA[31:0]
-addSignal -h 15 -holdScope ALUSrcA[1:0]
-addSignal -h 15 -holdScope PC_D[31:0]
-addSignal -h 15 -UNSIGNED -BIN /cpu_tb/CPU/icpu/u_hazard_unit/ForwardAE[1:0]
-addSignal -h 15 /cpu_tb/CPU/icpu/i_datapath/ALUResult_M[31:0]
-addSignal -h 15 -holdScope Result_W[31:0]
-addSignal -h 15 -holdScope bef_SrcA_E[31:0]
-endSubGroup "G4"
-addSignal -h 15 /cpu_tb/CPU/icpu/u_hazard_unit/PCSrc[1:0]
-endSubGroup "G4"
-addSignal -h 15 /cpu_tb/CPU/icpu/i_datapath/ALUResult[31:0]
-addSignal -h 15 -holdScope ALUResult_E[31:0]
-addSignal -h 15 -holdScope ALUResult_M[31:0]
-addSignal -h 15 -holdScope ALUResult_W[31:0]
-addSignal -h 15 -holdScope bef_SrcA_D[31:0]
-addSignal -h 15 -holdScope bef_SrcA_D_A[31:0]
-addSignal -h 15 -holdScope bef_SrcA_E[31:0]
-addSignal -h 15 -holdScope bef_SrcA_E_A[31:0]
-addSignal -h 15 -UNSIGNED -HEX -holdScope SrcA[31:0]
-addSignal -h 15 -UNSIGNED -HEX -holdScope SrcB[31:0]
-addSignal -h 15 /cpu_tb/CPU/icpu/u_hazard_unit/FlushD
-addSignal -h 15 -holdScope FlushE
-addSignal -h 15 -holdScope StallD
-addSignal -h 15 -holdScope StallF
-addSignal -h 15 -holdScope lwstall
-addSignal -h 15 -UNSIGNED -BIN -holdScope ForwardAE[1:0]
-addSignal -h 15 -UNSIGNED -BIN -holdScope ForwardBE[1:0]
-addSignal -h 15 -holdScope RS1_D[4:0]
-addSignal -h 15 -holdScope RS1_E[4:0]
-addSignal -h 15 /cpu_tb/CPU/icpu/u_controller/RegWrite_D
-addSignal -h 15 -holdScope RegWrite_E
-addSignal -h 15 /cpu_tb/CPU/icpu/u_hazard_unit/RegWrite_M
-addSignal -h 15 -holdScope RegWrite_W
-addGroup "G4"
 
 ; getSignalForm Scope Hierarchy Status
 ; active file of getSignalForm
-activeDirFile "" "/home/user/project/lab_cpu/3j_cpu_design_2023/week12_pipeline/hardware/02.RV32I_Integrated_Test/sim/func_sim/wave.fsdb"
-
-GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
-getSignalForm close
-
-"/cpu_tb"
-"/cpu_tb/CPU"
-"/cpu_tb/CPU/icpu"
-"/cpu_tb/CPU/icpu/u_hazard_unit"
-
-SCOPE_LIST_BEGIN
-"/cpu_tb"
-"/cpu_tb/CPU/icpu/u_hazard_unit"
-"/cpu_tb/CPU"
-"/cpu_tb/CPU/icpu"
-"/cpu_tb/CPU/icpu/i_datapath"
-"/cpu_tb/CPU/icpu/u_controller"
-SCOPE_LIST_END
-
-GETSIGNALFORM_SCOPE_HIERARCHY_END
-
 

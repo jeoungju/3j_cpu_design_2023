@@ -11,11 +11,11 @@
         "module",
         13
     ],
-    "ASYNC_RAM_DP_WBE": [
-        "ASYNC_RAM_DP_WBE",
-        "TV9z4",
+    "adder": [
+        "adder",
+        "Qq4Ev",
         "module",
-        10
+        18
     ],
     "cla_8bit": [
         "cla_8bit",
@@ -34,6 +34,12 @@
         "rsgQu",
         "module",
         19
+    ],
+    "mux2_2": [
+        "mux2_2",
+        "HI8H8",
+        "module",
+        12
     ],
     "cpu_tb": [
         "cpu_tb",

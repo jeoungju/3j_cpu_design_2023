@@ -8,6 +8,7 @@
 uint32_t a = 0xdeadbeef;
 
 int main(void) {
+	tb_puts("Hello world from RISC-V!\n");
 	  tb_putc('a');
 	  tb_putc('d');
 	  tb_putc('\n');
