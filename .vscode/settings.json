@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "uart.h": "c",
+        "tb_cxxrtl_io.h": "c"
+    }
+}

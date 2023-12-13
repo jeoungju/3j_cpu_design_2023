@@ -1,0 +1,92 @@
+{
+    "std": [
+        "std",
+        "reYIK",
+        "module",
+        1
+    ],
+    "hazard_unit": [
+        "hazard_unit",
+        "g5vFt",
+        "module",
+        2
+    ],
+    "adder": [
+        "adder",
+        "Qq4Ev",
+        "module",
+        3
+    ],
+    "cla_8bit": [
+        "cla_8bit",
+        "c8pr1",
+        "module",
+        4
+    ],
+    "full_adder": [
+        "full_adder",
+        "BEdzp",
+        "module",
+        5
+    ],
+    "mux3": [
+        "mux3",
+        "rsgQu",
+        "module",
+        6
+    ],
+    "mux2_2": [
+        "mux2_2",
+        "HI8H8",
+        "module",
+        7
+    ],
+    "tbman_wrap": [
+        "tbman_wrap",
+        "Ln2ne",
+        "module",
+        10
+    ],
+    "GPIO": [
+        "GPIO",
+        "JWNVz",
+        "module",
+        13
+    ],
+    "pulse_gen": [
+        "pulse_gen",
+        "T7HIq",
+        "module",
+        14
+    ],
+    "SEG7_LUT": [
+        "SEG7_LUT",
+        "HiIcb",
+        "module",
+        15
+    ],
+    "Addr_Decoder": [
+        "Addr_Decoder",
+        "gMGVA",
+        "module",
+        8
+    ],
+    "data_mux": [
+        "data_mux",
+        "Dxf2Z",
+        "module",
+        9
+    ],
+    "c_tests_tb": [
+        "c_tests_tb",
+        "e7D59",
+        "module",
+        11
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        12
+    ]
+}

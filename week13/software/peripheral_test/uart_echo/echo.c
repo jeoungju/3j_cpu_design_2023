@@ -8,7 +8,7 @@
 
 int main(void)
 {
-    tb_puts("[INFO]UART Echo Tests\n");
+    //tb_puts("[INFO]UART Echo Tests\n");
     for ( ; ; )
     {
         while (!RECV_CTRL) ;

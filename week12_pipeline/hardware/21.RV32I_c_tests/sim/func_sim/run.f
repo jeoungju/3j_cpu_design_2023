@@ -22,13 +22,4 @@
 ../../src/rtl/myCPU/pipeline/rev01/building_blocks/mux2.sv
 ../../src/rtl/myCPU/pipeline/rev01/building_blocks/mux3.sv
 
-/*
-../../src/rtl/myCPU/pipeline/rev01/10peripheral_tbman/Addr_Decoder.v
-../../src/rtl/myCPU/pipeline/rev01/10peripheral_tbman/data_mux.v
-
-../../src/rtl/myCPU/pipeline/rev01/10peripheral_tbman/01.tbman/tbman_apbs.v
-../../src/rtl/myCPU/pipeline/rev01/10peripheral_tbman/01.tbman/tbman_regs.v
-../../src/rtl/myCPU/pipeline/rev01/10peripheral_tbman/01.tbman/tbman_wrap.v
-*/
-
 ../../testbench/c_tests_tb.v

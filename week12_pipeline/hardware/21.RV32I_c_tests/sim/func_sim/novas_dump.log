@@ -147,7 +147,7 @@ Limit information:
 cputime		unlimited
 filesize		unlimited
 datasize		unlimited
-stacksize		8192 kbytes
+stacksize		unlimited
 coredumpsize		0 kbytes
 memoryuse		unlimited
 vmemoryuse		unlimited
@@ -160,7 +160,7 @@ maxproc		4096
 Runtime environment variables:
 XDG_VTNR=1
 SYNOPSYS_LC_ROOT=/tools/synopsys/lc/Q-2019.12-SP5
-SSH_AGENT_PID=2524
+SSH_AGENT_PID=2565
 XDG_SESSION_ID=1
 HOSTNAME=smu409-24
 IMSETTINGS_INTEGRATE_DESKTOP=yes
@@ -169,7 +169,7 @@ SHELL=/bin/bash
 XDG_MENU_PREFIX=gnome-
 VTE_VERSION=5204
 HISTSIZE=1000
-GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/98a26daf_476c_4ed6_8f5a_0a15c0594e09
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/945fdffb_b7a2_4017_89c3_231d98ea1301
 QTDIR=/usr/lib64/qt-3.3
 QTINC=/usr/lib64/qt-3.3/include
 IMSETTINGS_MODULE=none
@@ -181,7 +181,7 @@ GNOME_TERMINAL_SERVICE=:1.105
 SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
 DVE_HOME=/tools/synopsys/vcs-all/R-2020.12-SP2/gui/dve
 SNPSLMD_LICENSE_FILE=27020@smu409-01:27020@117.16.175.176
-SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/2380,unix/unix:/tmp/.ICE-unix/2380
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/2421,unix/unix:/tmp/.ICE-unix/2421
 USERNAME=user
 GNOME_SHELL_SESSION_MODE=classic
 PATH=/tools/synopsys/pts/P-2019.03-SP5-1/bin:/tools/synopsys/syn/P-2019.03-SP5-6/bin:/tools/synopsys/lc/Q-2019.12-SP5/bin:/tools/synopsys/icc2/Q-2019.12-SP6/bin:/tools/synopsys/verdi/P-2019.06-SP2-12/bin:/tools/synopsys/vcs-all/R-2020.12-SP2/bin:/tools/synopsys/pts/P-2019.03-SP5-1/bin:/tools/synopsys/syn/P-2019.03-SP5-6/bin:/tools/synopsys/lc/Q-2019.12-SP5/bin:/tools/synopsys/icc2/Q-2019.12-SP6/bin:/tools/synopsys/verdi/P-2019.06-SP2-12/bin:/tools/synopsys/vcs-all/R-2020.12-SP2/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/user/toolchain/riscv-toolchain-fa19/bin:/home/user/.local/bin:/home/user/bin:/home/user/toolchain/riscv-toolchain-fa19/bin
@@ -209,16 +209,16 @@ XDG_SESSION_DESKTOP=gnome-classic
 LOGNAME=user
 QTLIB=/usr/lib64/qt-3.3/lib
 XDG_DATA_DIRS=/home/user/.local/share/flatpak/exports/share/:/var/lib/flatpak/exports/share/:/usr/local/share/:/usr/share/
-DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-tCldVf5ioy,guid=110024b22f49399af97e04d265695731
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-cPV2JgbP7v,guid=833b96925c4911778f00761065794bee
 LESSOPEN=||/usr/bin/lesspipe.sh %s
 WINDOWPATH=1
 XDG_RUNTIME_DIR=/run/user/1000
 DISPLAY=:0
 XDG_CURRENT_DESKTOP=GNOME-Classic:GNOME
 COLORTERM=truecolor
-XAUTHORITY=/run/gdm/auth-for-user-27bjY8/database
+XAUTHORITY=/run/gdm/auth-for-user-RRVQnf/database
 PLIOBJS=libvpi.so
-OLDPWD=/home/user/project/lab_cpu/3j_cpu_design_2023/week12_pipeline/hardware/21.RV32I_c_tests
+OLDPWD=/home/user/project/lab_cpu/3j_cpu_design_2023/week12_pipeline/hardware/21.RV32I_c_tests/sim
 _=./simv
 VCS_PATHMAP_PRELOAD_DONE=1
 VCS_STACK_EXEC=true
@@ -231,8 +231,8 @@ Runtime command line arguments:
 argv[0]=./simv
 argv[1]=+hex_file=vecadd.hex
 232 profile - 100
-          CPU/Mem usage: 0.040 sys,  0.200 user,  279.00M mem
-233 Elapsed time:    0:00:00    Fri Dec  1 19:50:52 2023
+          CPU/Mem usage: 0.030 sys,  0.190 user,  283.22M mem
+233 Elapsed time:    0:00:00    Thu Dec 14 00:54:45 2023
 234 pliAppInit
 235 FSDB_GATE is set.
 236 FSDB_RTL is set.
@@ -266,7 +266,7 @@ argv[1]=+hex_file=vecadd.hex
 264 *Verdi* : Begin traversing the scopes, layer (0).
 265 *Verdi* : End of traversing.
 266 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 0.050 sys,  0.210 user,  379.82M mem
+          CPU/Mem usage: 0.040 sys,  0.200 user,  384.05M mem
                    incr: 0.000 sys,  0.010 user,  9.06M mem
                    accu: 0.000 sys,  0.010 user,  9.06M mem
               accu incr: 0.000 sys,  0.010 user,  9.06M mem
@@ -275,27 +275,27 @@ argv[1]=+hex_file=vecadd.hex
                  incr: 1336 var,  972 idcode,  193 callback
                  accu: 1336 var,  972 idcode,  193 callback
             accu incr: 1336 var,  972 idcode,  193 callback
-267 Elapsed time:    0:00:00    Fri Dec  1 19:50:52 2023
+267 Elapsed time:    0:00:00    Thu Dec 14 00:54:45 2023
 268 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 0.050 sys,  0.210 user,  380.87M mem
+          CPU/Mem usage: 0.040 sys,  0.200 user,  385.10M mem
                    incr: 0.000 sys,  0.000 user,  1.05M mem
-                   accu: 0.000 sys,  0.010 user,  10.11M mem
+                   accu: 0.000 sys,  0.010 user,  10.12M mem
               accu incr: 0.000 sys,  0.000 user,  1.05M mem
 
           Count usage: 1336 var,  972 idcode,  193 callback
                  incr: 0 var,  0 idcode,  0 callback
                  accu: 1336 var,  972 idcode,  193 callback
             accu incr: 0 var,  0 idcode,  0 callback
-269 Elapsed time:    0:00:00    Fri Dec  1 19:50:52 2023
+269 Elapsed time:    0:00:00    Thu Dec 14 00:54:45 2023
 270 End of simulation at 494310
-271 Elapsed time:    0:00:01    Fri Dec  1 19:50:53 2023
+271 Elapsed time:    0:00:01    Thu Dec 14 00:54:46 2023
 272 Begin FSDB profile info:
 273 FSDB Writer : bc1(218919) bcn(1078421) mtf/stf(0/0)
-FSDB Writer elapsed time : flush(0.070202) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
+FSDB Writer elapsed time : flush(0.084398) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
 FSDB Writer cpu time : MT Compression : 0
 274 End FSDB profile info
 275 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:10 BlockUsed:12
-276                        ProduceTime:0.801980043 ConsumerTime:0.066822949 Buffer:64MB
+276                        ProduceTime:0.797878764 ConsumerTime:0.071187613 Buffer:64MB
 277 SimExit
-278 Elapsed time:    0:00:01    Fri Dec  1 19:50:53 2023
+278 Elapsed time:    0:00:01    Thu Dec 14 00:54:46 2023
 279 Sim process exit

@@ -151,6 +151,8 @@ module SMU_RV32I_System (
     );
 
     data_mux u_data_mux (
+       .clk(clk), //in !!!
+       .n_rst(reset_ff), //in !!!
         .cs_dmem_n(cs_dmem_n), //in 
         .read_data_dmem(read_imem_data_mem), //in
         .cs_tbman_n(cs_tbman_n), //in

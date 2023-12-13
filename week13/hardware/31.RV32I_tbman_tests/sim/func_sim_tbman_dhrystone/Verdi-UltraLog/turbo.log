@@ -1,0 +1,42 @@
+Command Line: /tools/synopsys/verdi/P-2019.06-SP2-12/platform/LINUXAMD64/bin/Novas -Ultra -sv -ssf wave.fsdb -dbdir ./simv.daidir -f run.f
+uname(Linux smu409-24 3.10.0-1160.83.1.el7.x86_64 #1 SMP Wed Jan 25 16:41:43 UTC 2023 x86_64)
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/c_tests_tb/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/SMU_RV32I_System/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/rv32i_cpu/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/flopr/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/mux2_2/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/controller/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/maindec/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/flopenr_clr/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/aludec/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/branch_logic/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/PCSrc_logic/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/datapath/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/mux3/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/flopenr/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/adder/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/cla_8bit/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/full_adder/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/cla_unit_8bit/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/reg_file_async/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/extend/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/mux2/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/alu/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/be_logic/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/hazard_unit/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/dualport_mem_synch_rw_dualclk/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/Addr_Decoder/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/data_mux/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/tbman_wrap/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/tbman_apbs/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/tbman_regs/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/GPIO/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/SEG7_LUT/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/pulse_gen/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/TimerCounter/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/uart_wrap/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/uart/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/uart_transmitter/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/uart_receiver/hdl) error!!
+Read sm file (/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/simv.daidir/kdb.elab++/work.lib++/std/hdl) error!!
+au time 2708.279565 27.390420 27.065296 delta 405000192 405000192 total 844574720 844574720

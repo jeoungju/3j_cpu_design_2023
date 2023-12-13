@@ -1,0 +1,94 @@
+Magic 271485
+Revision Verdi_P-2019.06-SP2-12
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 25 1485 345 142 65
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/wave.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 2161908.137818
+cursor 670000.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 6
+; marker line index
+markerPos 17
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/wave.fsdb"
+addSignal -h 15 /c_tests_tb/CPU/clk
+addSignal -h 15 -holdScope cs_dmem_n
+addSignal -h 15 -holdScope cs_gpio_n
+addSignal -h 15 -holdScope cs_tbman_n
+addSignal -h 15 -holdScope imem_inst[31:0]
+addSignal -h 15 -holdScope inst[31:0]
+addSignal -h 15 -holdScope reset
+addSignal -h 15 /c_tests_tb/CPU/icpu/i_datapath/Csr
+addSignal -h 15 /c_tests_tb/CPU/icpu/u_controller/Csr_D
+addSignal -h 15 -holdScope Csr_E
+addSignal -h 15 /c_tests_tb/CPU/icpu/i_datapath/tohost_csr[31:0]
+addSignal -h 15 /c_tests_tb/CPU/icpu/u_controller/funct3_E[2:0]
+addSignal -h 15 -holdScope funct3_M[2:0]
+addGroup "G2"
+addSignal -h 15 /c_tests_tb/CPU/icpu/i_datapath/ImmExt_E[31:0]
+addSignal -h 15 -holdScope bef_SrcA_E_A[31:0]
+addGroup "G3"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+activeDirFile "" "/home/user/project/lab_cpu/3j_cpu_design_2023/week13/hardware/31.RV32I_tbman_tests/sim/func_sim_tbman_dhrystone/wave.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm close
+
+"/c_tests_tb"
+"/c_tests_tb/CPU"
+"/c_tests_tb/CPU/icpu"
+"/c_tests_tb/CPU/icpu/i_datapath"
+"/c_tests_tb/CPU/icpu/u_controller"
+
+SCOPE_LIST_BEGIN
+"/c_tests_tb"
+"/c_tests_tb/CPU"
+"/c_tests_tb/CPU/icpu/i_datapath"
+"/c_tests_tb/CPU/icpu"
+"/c_tests_tb/CPU/icpu/i_datapath/u_Extend"
+"/c_tests_tb/CPU/icpu/i_datapath/u_ALUResult_M"
+"/c_tests_tb/CPU/icpu/i_datapath/u_ALUResult_W"
+"/c_tests_tb/CPU/icpu/u_controller"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
+

@@ -4,7 +4,7 @@
 ../../src/rtl/myCPU/pipeline/rev02/PCSrc_logic.sv
 ../../src/rtl/myCPU/pipeline/rev02/hazard_unit.sv
 ../../src/rtl/myCPU/pipeline/rev02/ASYNC_RAM_DP_WBE.v
-//../../src/rtl/myCPU/pipeline/rev02/dualport_mem_synch_rw_dualclk.sv
+//../../src/rtl/myCPU/pipeline/rev02/dualport_memh_rw_dualclk.sv
 ../../src/rtl/myCPU/pipeline/rev02/aludec.sv
 ../../src/rtl/myCPU/pipeline/rev02/branch_logic.sv
 ../../src/rtl/myCPU/pipeline/rev02/controller.sv
@@ -22,8 +22,6 @@
 ../../src/rtl/myCPU/pipeline/rev02/building_blocks/flopr.sv
 ../../src/rtl/myCPU/pipeline/rev02/building_blocks/mux2.sv
 ../../src/rtl/myCPU/pipeline/rev02/building_blocks/mux3.sv
-//../../src/rtl/myCPU/pipeline/rev02/building_blocks/mux2_2.sv
-
 
 ../../src/rtl/myCPU/pipeline/rev02/10peripheral_tbman/Addr_Decoder.v
 ../../src/rtl/myCPU/pipeline/rev02/10peripheral_tbman/data_mux.v

@@ -1,0 +1,289 @@
+Analysis & Synthesis report for SMU_RV32I_System
+Thu Dec  7 14:21:56 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Thu Dec  7 14:21:56 2023           ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; SMU_RV32I_System                            ;
+; Top-level Entity Name              ; SMU_RV32I_System                            ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; SMU_RV32I_System   ; SMU_RV32I_System   ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Thu Dec  7 14:21:51 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SMU_RV32I_System -c SMU_RV32I_System
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file 10peripheral_tbman/01.tbman/tbman_wrap.v
+    Info (12023): Found entity 1: tbman_wrap File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/10peripheral_tbman/01.tbman/tbman_wrap.v Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file 10peripheral_tbman/01.tbman/tbman_regs.v
+    Info (12023): Found entity 1: tbman_regs File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/10peripheral_tbman/01.tbman/tbman_regs.v Line: 12
+Info (12021): Found 1 design units, including 1 entities, in source file 10peripheral_tbman/01.tbman/tbman_apbs.v
+    Info (12023): Found entity 1: tbman_apbs File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/10peripheral_tbman/01.tbman/tbman_apbs.v Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file 11peripheral_gpio/SEG7_LUT.v
+    Info (12023): Found entity 1: SEG7_LUT File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/11peripheral_gpio/SEG7_LUT.v Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file 11peripheral_gpio/GPIO.v
+    Info (12023): Found entity 1: GPIO File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/11peripheral_gpio/GPIO.v Line: 37
+    Info (12023): Found entity 2: pulse_gen File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/11peripheral_gpio/GPIO.v Line: 264
+Info (12021): Found 1 design units, including 1 entities, in source file 12peripheral_timer/TimerCounter.v
+    Info (12023): Found entity 1: TimerCounter File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/12peripheral_timer/TimerCounter.v Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file 13peripheral_uart/uart_transmitter.v
+    Info (12023): Found entity 1: uart_transmitter File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/13peripheral_uart/uart_transmitter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file 13peripheral_uart/uart_receiver.v
+    Info (12023): Found entity 1: uart_receiver File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/13peripheral_uart/uart_receiver.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file 13peripheral_uart/uart.v
+    Info (12023): Found entity 1: uart File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/13peripheral_uart/uart.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file 13peripheral_uart/uart_wrap.v
+    Info (12023): Found entity 1: uart_wrap File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/13peripheral_uart/uart_wrap.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file building_blocks/mux2_2.sv
+    Info (12023): Found entity 1: mux2_2 File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/building_blocks/mux2_2.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file building_blocks/mux2.sv
+    Info (12023): Found entity 1: mux2 File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/building_blocks/mux2.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file building_blocks/flopr.sv
+    Info (12023): Found entity 1: flopr File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/building_blocks/flopr.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file building_blocks/flopenr_clr.sv
+    Info (12023): Found entity 1: flopenr_clr File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/building_blocks/flopenr_clr.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file building_blocks/flopenr.sv
+    Info (12023): Found entity 1: flopenr File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/building_blocks/flopenr.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file building_blocks/extend.sv
+    Info (12023): Found entity 1: extend File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/building_blocks/extend.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file building_blocks/be_logic.sv
+    Info (12023): Found entity 1: be_logic File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/building_blocks/be_logic.sv Line: 1
+Info (12021): Found 4 design units, including 4 entities, in source file building_blocks/adder.sv
+    Info (12023): Found entity 1: adder File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/building_blocks/adder.sv Line: 1
+    Info (12023): Found entity 2: cla_8bit File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/building_blocks/adder.sv Line: 33
+    Info (12023): Found entity 3: cla_unit_8bit File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/building_blocks/adder.sv Line: 70
+    Info (12023): Found entity 4: full_adder File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/building_blocks/adder.sv Line: 91
+Info (12021): Found 1 design units, including 1 entities, in source file building_blocks/mux3.sv
+    Info (12023): Found entity 1: mux3 File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/building_blocks/mux3.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Addr_Decoder.v
+    Info (12023): Found entity 1: Addr_Decoder File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/Addr_Decoder.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
+    Info (12023): Found entity 1: alu File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/alu.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file aludec.sv
+    Info (12023): Found entity 1: aludec File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/aludec.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file branch_logic.sv
+    Info (12023): Found entity 1: branch_logic File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/branch_logic.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file controller.sv
+    Info (12023): Found entity 1: controller File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/controller.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file data_mux.v
+    Info (12023): Found entity 1: data_mux File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/data_mux.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file datapath.sv
+    Info (12023): Found entity 1: datapath File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/datapath.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file dualport_mem_synch_rw_dualclk.sv
+    Info (12023): Found entity 1: dualport_mem_synch_rw_dualclk File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/dualport_mem_synch_rw_dualclk.sv Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file hazard_unit.sv
+    Info (12023): Found entity 1: hazard_unit File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/hazard_unit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file maindec.sv
+    Info (12023): Found entity 1: maindec File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/maindec.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file PCSrc_logic.sv
+    Info (12023): Found entity 1: PCSrc_logic File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/PCSrc_logic.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file reg_file_async.v
+    Info (12023): Found entity 1: reg_file_async File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/reg_file_async.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file rv32i_cpu.sv
+    Info (12023): Found entity 1: rv32i_cpu File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/rv32i_cpu.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file SMU_RV32I_System.v
+    Info (12023): Found entity 1: SMU_RV32I_System File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/SMU_RV32I_System.v Line: 12
+Info (12127): Elaborating entity "SMU_RV32I_System" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at SMU_RV32I_System.v(59): object "clkb" assigned a value but never read File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/SMU_RV32I_System.v Line: 59
+Info (12128): Elaborating entity "rv32i_cpu" for hierarchy "rv32i_cpu:icpu" File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/SMU_RV32I_System.v Line: 108
+Info (12128): Elaborating entity "flopr" for hierarchy "rv32i_cpu:icpu|flopr:u_Instr_1d" File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/rv32i_cpu.sv Line: 56
+Info (12128): Elaborating entity "flopr" for hierarchy "rv32i_cpu:icpu|flopr:u_StallD_1d" File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/rv32i_cpu.sv Line: 57
+Warning (10230): Verilog HDL assignment warning at flopr.sv(20): truncated value with size 32 to match size of target (1) File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/building_blocks/flopr.sv Line: 20
+Info (12128): Elaborating entity "mux2_2" for hierarchy "rv32i_cpu:icpu|mux2_2:mux_InstrD" File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/rv32i_cpu.sv Line: 68
+Info (12128): Elaborating entity "controller" for hierarchy "rv32i_cpu:icpu|controller:i_controller" File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/rv32i_cpu.sv Line: 106
+Info (12128): Elaborating entity "maindec" for hierarchy "rv32i_cpu:icpu|controller:i_controller|maindec:mdec" File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/controller.sv Line: 89
+Warning (10230): Verilog HDL assignment warning at maindec.sv(61): truncated value with size 15 to match size of target (14) File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/maindec.sv Line: 61
+Warning (10240): Verilog HDL Always Construct warning at maindec.sv(50): inferring latch(es) for variable "Csr", which holds its previous value in one or more paths through the always construct File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/maindec.sv Line: 50
+Info (10041): Inferred latch for "Csr" at maindec.sv(50) File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/maindec.sv Line: 50
+Info (12128): Elaborating entity "flopenr_clr" for hierarchy "rv32i_cpu:icpu|controller:i_controller|flopenr_clr:u_ALUSA_E" File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/controller.sv Line: 92
+Warning (10230): Verilog HDL assignment warning at flopenr_clr.sv(19): truncated value with size 32 to match size of target (2) File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/building_blocks/flopenr_clr.sv Line: 19
+Warning (10230): Verilog HDL assignment warning at flopenr_clr.sv(22): truncated value with size 32 to match size of target (2) File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/building_blocks/flopenr_clr.sv Line: 22
+Info (12128): Elaborating entity "flopenr_clr" for hierarchy "rv32i_cpu:icpu|controller:i_controller|flopenr_clr:u_ALUSB_E" File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/controller.sv Line: 94
+Warning (10230): Verilog HDL assignment warning at flopenr_clr.sv(19): truncated value with size 32 to match size of target (1) File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/building_blocks/flopenr_clr.sv Line: 19
+Warning (10230): Verilog HDL assignment warning at flopenr_clr.sv(22): truncated value with size 32 to match size of target (1) File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/building_blocks/flopenr_clr.sv Line: 22
+Info (12128): Elaborating entity "flopenr_clr" for hierarchy "rv32i_cpu:icpu|controller:i_controller|flopenr_clr:u_funct3_DE" File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/controller.sv Line: 97
+Warning (10230): Verilog HDL assignment warning at flopenr_clr.sv(19): truncated value with size 32 to match size of target (3) File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/building_blocks/flopenr_clr.sv Line: 19
+Warning (10230): Verilog HDL assignment warning at flopenr_clr.sv(22): truncated value with size 32 to match size of target (3) File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/building_blocks/flopenr_clr.sv Line: 22
+Info (12128): Elaborating entity "flopr" for hierarchy "rv32i_cpu:icpu|controller:i_controller|flopr:u_funct3_EM" File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/controller.sv Line: 98
+Warning (10230): Verilog HDL assignment warning at flopr.sv(20): truncated value with size 32 to match size of target (3) File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/building_blocks/flopr.sv Line: 20
+Info (12128): Elaborating entity "flopenr_clr" for hierarchy "rv32i_cpu:icpu|controller:i_controller|flopenr_clr:u_opcode_E" File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/controller.sv Line: 102
+Warning (10230): Verilog HDL assignment warning at flopenr_clr.sv(19): truncated value with size 32 to match size of target (7) File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/building_blocks/flopenr_clr.sv Line: 19
+Warning (10230): Verilog HDL assignment warning at flopenr_clr.sv(22): truncated value with size 32 to match size of target (7) File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/building_blocks/flopenr_clr.sv Line: 22
+Info (12128): Elaborating entity "flopr" for hierarchy "rv32i_cpu:icpu|controller:i_controller|flopr:u_RSC_M" File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/controller.sv Line: 109
+Warning (10230): Verilog HDL assignment warning at flopr.sv(20): truncated value with size 32 to match size of target (2) File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/building_blocks/flopr.sv Line: 20
+Info (12128): Elaborating entity "aludec" for hierarchy "rv32i_cpu:icpu|controller:i_controller|aludec:adec" File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/controller.sv Line: 134
+Warning (10240): Verilog HDL Always Construct warning at aludec.sv(17): inferring latch(es) for variable "ALUControl", which holds its previous value in one or more paths through the always construct File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/aludec.sv Line: 17
+Info (10041): Inferred latch for "ALUControl[0]" at aludec.sv(19) File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/aludec.sv Line: 19
+Info (10041): Inferred latch for "ALUControl[1]" at aludec.sv(19) File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/aludec.sv Line: 19
+Info (10041): Inferred latch for "ALUControl[2]" at aludec.sv(19) File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/aludec.sv Line: 19
+Info (10041): Inferred latch for "ALUControl[3]" at aludec.sv(19) File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/aludec.sv Line: 19
+Info (10041): Inferred latch for "ALUControl[4]" at aludec.sv(19) File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/aludec.sv Line: 19
+Info (12128): Elaborating entity "flopenr_clr" for hierarchy "rv32i_cpu:icpu|controller:i_controller|flopenr_clr:u_ALUC_E" File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/controller.sv Line: 137
+Warning (10230): Verilog HDL assignment warning at flopenr_clr.sv(19): truncated value with size 32 to match size of target (5) File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/building_blocks/flopenr_clr.sv Line: 19
+Warning (10230): Verilog HDL assignment warning at flopenr_clr.sv(22): truncated value with size 32 to match size of target (5) File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/building_blocks/flopenr_clr.sv Line: 22
+Info (12128): Elaborating entity "branch_logic" for hierarchy "rv32i_cpu:icpu|controller:i_controller|branch_logic:brlg" File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/controller.sv Line: 145
+Info (12128): Elaborating entity "PCSrc_logic" for hierarchy "rv32i_cpu:icpu|controller:i_controller|PCSrc_logic:u_PCSrc_logic" File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/controller.sv Line: 152
+Info (12128): Elaborating entity "datapath" for hierarchy "rv32i_cpu:icpu|datapath:i_datapath" File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/rv32i_cpu.sv Line: 144
+Warning (10036): Verilog HDL or VHDL warning at datapath.sv(348): object "tohost_csr" assigned a value but never read File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/datapath.sv Line: 348
+Error (10200): Verilog HDL Conditional Statement error at datapath.sv(351): cannot match operand(s) in the condition to the corresponding edges in the enclosing event control of the always construct File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/datapath.sv Line: 351
+Error (12152): Can't elaborate user hierarchy "rv32i_cpu:icpu|datapath:i_datapath" File: /home/user/project/lab_cpu/3j_cpu_design_2023/FPGA/rv32i_cpu.sv Line: 144
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 19 warnings
+    Error: Peak virtual memory: 472 megabytes
+    Error: Processing ended: Thu Dec  7 14:21:56 2023
+    Error: Elapsed time: 00:00:05
+    Error: Total CPU time (on all processors): 00:00:18
+
+

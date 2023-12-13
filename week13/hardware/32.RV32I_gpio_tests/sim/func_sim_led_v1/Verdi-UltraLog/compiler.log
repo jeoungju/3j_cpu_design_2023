@@ -1,0 +1,361 @@
+*design* DebussyLib (btIdent Verdi_P-2019.06-SP2-12)
+Command arguments:  -elab  ./simv.daidir/kdb.elab++ 
+*design* DebussyLib (btIdent Verdi_P-2019.06-SP2-12)
+
+*Error* Failed to open the cell (c_tests_tb hdl) in library work.
+
+
+
+*Error* Failed to open the cell (SMU_RV32I_System hdl) in library work.
+
+
+
+*Error* Failed to open the cell (rv32i_cpu hdl) in library work.
+
+
+
+*Error* Failed to open the cell (flopr hdl) in library work.
+
+
+
+*Error* Failed to open the cell (mux2_2 hdl) in library work.
+
+
+
+*Error* Failed to open the cell (controller hdl) in library work.
+
+
+
+*Error* Failed to open the cell (maindec hdl) in library work.
+
+
+
+*Error* Failed to open the cell (flopenr_clr hdl) in library work.
+
+
+
+*Error* Failed to open the cell (aludec hdl) in library work.
+
+
+
+*Error* Failed to open the cell (branch_logic hdl) in library work.
+
+
+
+*Error* Failed to open the cell (PCSrc_logic hdl) in library work.
+
+
+
+*Error* Failed to open the cell (datapath hdl) in library work.
+
+
+
+*Error* Failed to open the cell (mux3 hdl) in library work.
+
+
+
+*Error* Failed to open the cell (flopenr hdl) in library work.
+
+
+
+*Error* Failed to open the cell (adder hdl) in library work.
+
+
+
+*Error* Failed to open the cell (cla_8bit hdl) in library work.
+
+
+
+*Error* Failed to open the cell (full_adder hdl) in library work.
+
+
+
+*Error* Failed to open the cell (cla_unit_8bit hdl) in library work.
+
+
+
+*Error* Failed to open the cell (reg_file_async hdl) in library work.
+
+
+
+*Error* Failed to open the cell (extend hdl) in library work.
+
+
+
+*Error* Failed to open the cell (mux2 hdl) in library work.
+
+
+
+*Error* Failed to open the cell (alu hdl) in library work.
+
+
+
+*Error* Failed to open the cell (be_logic hdl) in library work.
+
+
+
+*Error* Failed to open the cell (hazard_unit hdl) in library work.
+
+
+
+*Error* Failed to open the cell (dualport_mem_synch_rw_dualclk hdl) in library work.
+
+
+
+*Error* Failed to open the cell (Addr_Decoder hdl) in library work.
+
+
+
+*Error* Failed to open the cell (data_mux hdl) in library work.
+
+
+
+*Error* Failed to open the cell (tbman_wrap hdl) in library work.
+
+
+
+*Error* Failed to open the cell (tbman_apbs hdl) in library work.
+
+
+
+*Error* Failed to open the cell (tbman_regs hdl) in library work.
+
+
+
+*Error* Failed to open the cell (GPIO hdl) in library work.
+
+
+
+*Error* Failed to open the cell (SEG7_LUT hdl) in library work.
+
+
+
+*Error* Failed to open the cell (pulse_gen hdl) in library work.
+
+
+
+*Error* Failed to open the cell (TimerCounter hdl) in library work.
+
+
+
+*Error* Failed to open the cell (uart_wrap hdl) in library work.
+
+
+
+*Error* Failed to open the cell (uart hdl) in library work.
+
+
+
+*Error* Failed to open the cell (uart_transmitter hdl) in library work.
+
+
+
+*Error* Failed to open the cell (uart_receiver hdl) in library work.
+
+
+
+*Error* Failed to open the cell (std hdl) in library work.
+
+
+
+*Error* instance 65 with null master
+
+
+*Error* instance 92 with null master
+
+
+*Error* instance 67 with null master
+
+
+*Error* instance 67 with null master
+
+
+*Error* instance 67 with null master
+
+
+*Error* instance 68 with null master
+
+
+*Error* instance 75 with null master
+
+
+*Error* instance 66 with null master
+
+
+*Error* instance 88 with null master
+
+
+*Error* instance 67 with null master
+
+
+*Error* instance 67 with null master
+
+
+*Error* instance 67 with null master
+
+
+*Error* instance 67 with null master
+
+
+*Error* instance 98 with null master
+
+
+*Error* instance 71 with null master
+
+
+*Error* instance 71 with null master
+
+
+*Error* instance 67 with null master
+
+
+*Error* instance 67 with null master
+
+
+*Error* instance 71 with null master
+
+
+*Error* instance 67 with null master
+
+
+*Error* instance 71 with null master
+
+
+*Error* instance 71 with null master
+
+
+*Error* instance 71 with null master
+
+
+*Error* instance 67 with null master
+
+
+*Error* instance 67 with null master
+
+
+*Error* instance 71 with null master
+
+
+*Error* instance 71 with null master
+
+
+*Error* instance 71 with null master
+
+
+*Error* instance 71 with null master
+
+
+*Error* instance 67 with null master
+
+
+*Error* instance 67 with null master
+
+
+*Error* instance 71 with null master
+
+
+*Error* instance 96 with null master
+
+
+*Error* instance 96 with null master
+
+
+*Error* instance 96 with null master
+
+
+*Error* instance 96 with null master
+
+
+*Error* instance 96 with null master
+
+
+*Error* instance 96 with null master
+
+
+*Error* instance 96 with null master
+
+
+*Error* instance 96 with null master
+
+
+*Error* instance 96 with null master
+
+
+*Error* instance 96 with null master
+
+
+*Error* instance 96 with null master
+
+
+*Error* instance 96 with null master
+
+
+*Error* instance 77 with null master
+
+
+*Error* instance 71 with null master
+
+
+*Error* instance 82 with null master
+
+
+*Error* instance 71 with null master
+
+
+*Error* instance 71 with null master
+
+
+*Error* instance 71 with null master
+
+
+*Error* instance 71 with null master
+
+
+*Error* instance 71 with null master
+
+
+*Error* instance 71 with null master
+
+
+*Error* instance 71 with null master
+
+
+*Error* instance 71 with null master
+
+
+*Error* instance 67 with null master
+
+
+*Error* instance 67 with null master
+
+
+*Error* instance 67 with null master
+
+
+*Error* instance 67 with null master
+
+
+*Error* instance 67 with null master
+
+
+*Error* instance 67 with null master
+
+
+*Error* instance 67 with null master
+
+
+*Error* instance 67 with null master
+
+
+*Error* instance 67 with null master
+
+
+*Error* instance 99 with null master
+
+
+*Error* instance 100 with null master
+
+
+*Error* instance 101 with null master
+
+Total	106 error(s),   0 warning(s)
